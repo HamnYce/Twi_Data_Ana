@@ -1,7 +1,26 @@
 {
   "dashboardAuthorizations": {
     "allAuthorized": false,
-    "authorizations": []
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "Twitter_Data_Proper",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Twitter_Data_Date_Split",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      }
+    ]
   },
   "exposedObjects": {
     "objects": []
@@ -188,11 +207,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 24,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666314699843
+    "lastModifiedOn": 1666349060660
   },
   "creationTag": {
     "versionNumber": 0,
