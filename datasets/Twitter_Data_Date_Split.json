@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666313989105
+    "lastModifiedOn": 1666314024375
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,7 +89,6 @@
     "columns": [
       {"name":"userid","type":"double"},
       {"name":"language","type":"string"},
-      {"name":"date_local","type":"string"},
       {"name":"tweet_text","type":"string"},
       {"name":"lat","type":"double"},
       {"name":"lng","type":"double"},
