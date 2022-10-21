@@ -21,7 +21,7 @@ Twitter_Data_Proper_df[['date','time']] = Twitter_Data_Date_Split_df['date_local
 Twitter_Data_Date_Split_df = Twitter_Data_Proper_df.drop({'date_local'}, axis=1)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twitter_Data_Date_Split_df = Twitter_Data_Date_Split_df['userid','date', 'time', 'language', 'tweet_text', 'lat', 'lng', 'screen_name', 'governorate', 'Area']
+Twitter_Data_Date_Split_df = Twitter_Data_Date_Split_df[['userid','date', 'time', 'language', 'tweet_text', 'lat', 'lng', 'screen_name', 'governorate', 'Area']]
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
