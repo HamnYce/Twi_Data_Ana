@@ -188,11 +188,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666314596456
+    "lastModifiedOn": 1666314699843
   },
   "creationTag": {
     "versionNumber": 0,
@@ -222,6 +222,20 @@
             "done": false,
             "text": "See if you can split date_local into 2 columns using prep recipe, with flow",
             "createdOn": 1666314588245,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "change log and lat meanings",
+            "createdOn": 1666314669252,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "make initial summary statistics ",
+            "createdOn": 1666314693710,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
