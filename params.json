@@ -207,11 +207,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 35,
+    "versionNumber": 37,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666352106187
+    "lastModifiedOn": 1666391115224
   },
   "creationTag": {
     "versionNumber": 0,
@@ -262,6 +262,13 @@
             "done": false,
             "text": "Clean Tweet Text (starting with u), using RegExpressions!",
             "createdOn": 1666352102936,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "make new location column (cafe or whatever) from the link or the text (in tweet_text \"I\u0027m at ____\"",
+            "createdOn": 1666391115064,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
