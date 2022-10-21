@@ -207,11 +207,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 25,
+    "versionNumber": 31,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666350668079
+    "lastModifiedOn": 1666352006840
   },
   "creationTag": {
     "versionNumber": 0,
@@ -231,21 +231,21 @@
         "createdOn": 0,
         "items": [
           {
-            "done": false,
+            "done": true,
             "text": "Normalize language column",
             "createdOn": 1666314564737,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "See if you can split date_local into 2 columns using prep recipe, with flow",
             "createdOn": 1666314588245,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "change log and lat meanings",
             "createdOn": 1666314669252,
             "createdBy": "admin",
