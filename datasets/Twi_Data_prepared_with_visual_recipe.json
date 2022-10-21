@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666351100918
+    "lastModifiedOn": 1666351772473
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,15 +87,16 @@
   },
   "schema": {
     "columns": [
-      {"name":"userid","type":"double"},
+      {"name":"userid","type":"string","meaning":"DoubleMeaning"},
+      {"name":"date","type":"string"},
+      {"name":"time","type":"string"},
       {"name":"language","type":"string"},
-      {"name":"date_local","type":"string","meaning":"DateSource"},
       {"name":"tweet_text","type":"string"},
-      {"name":"lat","type":"double"},
-      {"name":"lng","type":"double"},
+      {"name":"latitude","type":"double","meaning":"Latitude"},
+      {"name":"longitude","type":"double","meaning":"Longitude"},
       {"name":"screen_name","type":"string"},
       {"name":"governorate","type":"string"},
-      {"name":"Area","type":"string"}
+      {"name":"area","type":"string"}
     ],
     "userModified": true
   },
