@@ -27,8 +27,87 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "columns": [
+          "date"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Tokenizer",
+      "params": {
+        "inCol": "language",
+        "sortAlphabetically": false,
+        "normalize": false,
+        "language": "english",
+        "operation": "TO_JSON",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Tokenizer",
+      "params": {
+        "inCol": "tweet_text",
+        "sortAlphabetically": false,
+        "normalize": false,
+        "language": "english",
+        "operation": "TO_JSON",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "columns": [
+          "language"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "language",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -54,7 +133,18 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "date": 100,
+    "Area": 148,
+    "lng": 141,
+    "screen_name": 127,
+    "governorate": 134,
+    "language": 100,
+    "time": 100,
+    "userid": 100,
+    "tweet_text": 300,
+    "lat": 141
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
