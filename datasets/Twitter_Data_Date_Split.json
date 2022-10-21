@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666313276422
+    "lastModifiedOn": 1666313989105
   },
   "creationTag": {
     "versionNumber": 0,
@@ -96,7 +96,8 @@
       {"name":"screen_name","type":"string"},
       {"name":"governorate","type":"string"},
       {"name":"Area","type":"string"},
-      {"name":"date","type":"string"}
+      {"name":"date","type":"string"},
+      {"name":"time","type":"string"}
     ],
     "userModified": false
   },
