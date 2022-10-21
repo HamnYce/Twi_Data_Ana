@@ -207,11 +207,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 31,
+    "versionNumber": 35,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666352006840
+    "lastModifiedOn": 1666352106187
   },
   "creationTag": {
     "versionNumber": 0,
@@ -227,7 +227,7 @@
     "checklists": [
       {
         "id": "9f49b7",
-        "title": "Todo list",
+        "title": "Prepping Twitter Data",
         "createdOn": 0,
         "items": [
           {
@@ -255,6 +255,13 @@
             "done": false,
             "text": "make initial summary statistics ",
             "createdOn": 1666314693710,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Clean Tweet Text (starting with u), using RegExpressions!",
+            "createdOn": 1666352102936,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
