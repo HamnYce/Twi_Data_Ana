@@ -132,6 +132,7 @@
   },
   "name": "Twitter Geo Analysis",
   "projectStatus": "Sandbox",
+  "imgPattern": 3,
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -187,11 +188,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666314532802
+    "lastModifiedOn": 1666314596456
   },
   "creationTag": {
     "versionNumber": 0,
@@ -206,34 +207,21 @@
   "checklists": {
     "checklists": [
       {
-        "title": "Your new project\u0027s Todo",
+        "id": "9f49b7",
+        "title": "Todo list",
         "createdOn": 0,
         "items": [
           {
-            "done": true,
-            "text": "Create the project",
-            "createdOn": 1666312020080,
+            "done": false,
+            "text": "Normalize language column",
+            "createdOn": 1666314564737,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
             "done": false,
-            "text": "Set a project image (click on the color next to the project title)",
-            "createdOn": 1666312020080,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": false,
-            "text": "Import your [first dataset](projects/TWITTERGEOANALYSIS/datasets/new/)",
-            "createdOn": 1666312020080,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": false,
-            "text": "Organize your work by replacing this with a real todo",
-            "createdOn": 1666312020080,
+            "text": "See if you can split date_local into 2 columns using prep recipe, with flow",
+            "createdOn": 1666314588245,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
