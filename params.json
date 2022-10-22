@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 38,
+    "versionNumber": 44,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666391206447
+    "lastModifiedOn": 1666464536546
   },
   "creationTag": {
     "versionNumber": 0,
@@ -260,8 +260,8 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
-            "text": "Clean Tweet Text (starting with u), using RegExpressions!",
+            "done": true,
+            "text": "Clean Tweet Text ",
             "createdOn": 1666352102936,
             "createdBy": "admin",
             "stateChangedOn": 0
@@ -270,6 +270,13 @@
             "done": false,
             "text": "make new location column (cafe or whatever) from the link or the text (in tweet_text \"I\u0027m at ____\"",
             "createdOn": 1666391115064,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "add column for weekend vs weekday tweet",
+            "createdOn": 1666464536495,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
