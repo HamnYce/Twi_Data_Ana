@@ -27,7 +27,10 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
   "steps": [],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
@@ -54,7 +57,17 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "area": 148,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "latitude": 141,
+    "lang": 100,
+    "userid": 148,
+    "tweet_text": 300,
+    "longitude": 141
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
