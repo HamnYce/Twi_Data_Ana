@@ -34,27 +34,6 @@
   "steps": [
     {
       "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 2
-        }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "date_local",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": " ",
-        "outColPrefix": "date_local_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "ColumnReorder",
@@ -65,36 +44,6 @@
         ],
         "reorderAction": "BEFORE_COLUMN",
         "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "date_local"
-        ],
-        "keep": false,
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "referenceColumn": "language",
-        "columns": [
-          "date_local_0",
-          "date_local_1"
-        ],
-        "reorderAction": "BEFORE_COLUMN",
-        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     },
@@ -105,14 +54,6 @@
       "type": "ColumnRenamer",
       "params": {
         "renamings": [
-          {
-            "from": "date_local_0",
-            "to": "date"
-          },
-          {
-            "from": "date_local_1",
-            "to": "time"
-          },
           {
             "from": "lat",
             "to": "latitude"
@@ -206,6 +147,54 @@
         "truncate_limit": 0
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "date_local_parsed",
+        "formats": [
+          "MM/dd/yyyy HH:mm"
+        ],
+        "columns": [
+          "date_local"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "date_local_parsed",
+            "to": "date_time"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "date_local"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -246,6 +235,7 @@
     "language": 100,
     "lan1": 100,
     "userid": 100,
+    "date_time": 183,
     "screen_name": 127,
     "governorate": 134,
     "lang2": 100,
@@ -255,6 +245,7 @@
     "lat": 100,
     "longitude": 113,
     "area": 148,
+    "date_local_parsed": 183,
     "date_local": 127,
     "lng": 100,
     "language1": 100,
