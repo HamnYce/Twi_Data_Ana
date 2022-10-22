@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666359926150
+    "lastModifiedOn": 1666451923695
   },
   "creationTag": {
     "versionNumber": 0,
@@ -86,8 +86,19 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"userid","type":"bigint"},
+      {"name":"date","type":"string"},
+      {"name":"time","type":"string"},
+      {"name":"lang_cleaned","type":"string"},
+      {"name":"tweet_text","type":"string"},
+      {"name":"latitude","type":"double"},
+      {"name":"longitude","type":"double"},
+      {"name":"screen_name","type":"string"},
+      {"name":"governorate","type":"string"},
+      {"name":"area","type":"string"}
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
