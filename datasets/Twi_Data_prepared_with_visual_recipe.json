@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666351956055
+    "lastModifiedOn": 1666464886412
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,8 +88,7 @@
   "schema": {
     "columns": [
       {"name":"userid","type":"string","meaning":"DoubleMeaning"},
-      {"name":"date","type":"string"},
-      {"name":"time","type":"string"},
+      {"name":"date_time","type":"date"},
       {"name":"lang_cleaned","type":"string"},
       {"name":"tweet_text","type":"string"},
       {"name":"latitude","type":"double","meaning":"Latitude"},
