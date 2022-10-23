@@ -138,6 +138,35 @@
         "inputColumn": "screen_name"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "columns": [
+          "screen_name_copy"
+        ],
+        "reorderAction": "AT_START",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "screen_name_copy",
+            "to": "uniq_index"
+          }
+        ]
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -180,7 +209,8 @@
     "governorate": 134,
     "lang": 100,
     "tweet_text": 300,
-    "longitude": 141
+    "longitude": 141,
+    "uniq_index": 120
   },
   "sorting": [
     {
