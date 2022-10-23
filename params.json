@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 67,
+    "versionNumber": 72,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666542461482
+    "lastModifiedOn": 1666544144234
   },
   "creationTag": {
     "versionNumber": 0,
@@ -281,9 +281,16 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "clean tweet text, link1, and link2 from start and end quotes",
             "createdOn": 1666542461417,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "move links from text to first_link",
+            "createdOn": 1666544144181,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
