@@ -31,7 +31,26 @@
   "exploreUIParams": {
     "autoRefresh": true
   },
-  "steps": [],
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "HolidaysComputer",
+      "params": {
+        "flagWeekends": true,
+        "inCol": "date_time",
+        "calendar_id": "US",
+        "flagBankHolidays": false,
+        "extractReasons": false,
+        "extractZones": false,
+        "timezone_id": "Asia/Kuwait",
+        "flagSchoolHolidays": false,
+        "outColPrefix": "holiday_"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,12 +78,17 @@
   "analysisColumnData": {},
   "columnWidthsByName": {
     "area": 148,
+    "holiday_weekend": 128,
+    "latitude": 141,
+    "date_time_year": 120,
+    "date_time_day": 113,
+    "userid": 148,
+    "date_time_month": 128,
     "date_time": 204,
+    "holiday_bank": 105,
     "screen_name": 127,
     "governorate": 134,
-    "latitude": 141,
     "lang": 100,
-    "userid": 148,
     "tweet_text": 300,
     "longitude": 141
   },
