@@ -36,7 +36,7 @@ for text in first_link:
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 second_link_clean = []
-for text in first_link:
+for text in second_link:
     clean_text = text
     if type(clean_text) == str:
         if text[0] == "'" or text[0] == '"':
