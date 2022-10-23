@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666465352559
+    "lastModifiedOn": 1666529361493
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,6 +89,7 @@
     "columns": [
       {"name":"userid","type":"bigint"},
       {"name":"date_time","type":"date"},
+      {"name":"holiday_weekend","type":"boolean"},
       {"name":"lang","type":"string"},
       {"name":"tweet_text","type":"string"},
       {"name":"latitude","type":"double"},
