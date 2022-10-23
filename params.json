@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 63,
+    "versionNumber": 65,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666533940829
+    "lastModifiedOn": 1666533953385
   },
   "creationTag": {
     "versionNumber": 0,
@@ -267,7 +267,7 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "add weekend vs weekday column",
             "createdOn": 1666464536495,
             "createdBy": "admin",
