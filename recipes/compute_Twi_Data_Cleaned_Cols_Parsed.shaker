@@ -176,20 +176,6 @@
       "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "tweet_text"
-        ],
-        "keep": false,
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
       "type": "ColumnRenamer",
       "params": {
         "renamings": [
@@ -198,6 +184,20 @@
             "to": "is_weekend"
           }
         ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "tweet_text"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
       },
       "alwaysShowComment": false
     }
