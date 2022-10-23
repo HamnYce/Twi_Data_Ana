@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 72,
+    "versionNumber": 88,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666544144234
+    "lastModifiedOn": 1666545496206
   },
   "creationTag": {
     "versionNumber": 0,
@@ -253,13 +253,6 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
-            "text": "make initial summary statistics ",
-            "createdOn": 1666314693710,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
             "done": true,
             "text": "Clean Tweet Text ",
             "createdOn": 1666352102936,
@@ -274,8 +267,8 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
-            "text": "- split links from tweet text into link column\n- extract location name column from tweet text (I\u0027m at....)",
+            "done": true,
+            "text": "- split links from tweet text into link column\n",
             "createdOn": 1666465124696,
             "createdBy": "admin",
             "stateChangedOn": 0
@@ -288,9 +281,37 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "move links from text to first_link",
             "createdOn": 1666544144181,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          }
+        ]
+      },
+      {
+        "id": "121bb1",
+        "title": "Extracting Locations",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": false,
+            "text": "- extract location name column from tweet text (I\u0027m at....)",
+            "createdOn": 1666545456568,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          }
+        ]
+      },
+      {
+        "id": "743d3c",
+        "title": "Statistics",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": false,
+            "text": "make initial summary statistics ",
+            "createdOn": 1666545496172,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
