@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 65,
+    "versionNumber": 67,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666533953385
+    "lastModifiedOn": 1666542461482
   },
   "creationTag": {
     "versionNumber": 0,
@@ -277,6 +277,13 @@
             "done": false,
             "text": "- split links from tweet text into link column\n- extract location name column from tweet text (I\u0027m at....)",
             "createdOn": 1666465124696,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "clean tweet text, link1, and link2 from start and end quotes",
+            "createdOn": 1666542461417,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
