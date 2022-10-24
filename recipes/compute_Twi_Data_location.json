@@ -15,7 +15,7 @@
       "column_prefix": "loc",
       "lat_column": "latitude",
       "lng_column": "longitude",
-      "provider": "arcgis"
+      "provider": "yandex"
     },
     "containerSelection": {
       "containerMode": "INHERIT"
@@ -50,11 +50,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666593653365
+    "lastModifiedOn": 1666593747390
   },
   "creationTag": {
     "versionNumber": 0,
