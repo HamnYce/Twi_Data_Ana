@@ -15,12 +15,16 @@ place_names = []
 for text in Twi_Data_prepared_df['tweet_text_clean']:
     split_text = text.lower().split()
     if split_text[0] == "i'm" and split_text[1] == 'at':
-        place_names.append(''.join(split_text[2:4]))
+        index = 4
+        if 'in' in split_text:
+            index = split_text.index('in')
+        place_names.append(' '.join(split_text[2:index]))
     else:
         place_names.append(text)
-    # TODO: split text
-    # TODO: if first 2 elements are I'm and at then grab the next 2 words
-    # TODO: work from there
+place_names
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+Twi_Data_prepared_df['place_name'] = place_names
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Place_Name_Extract_df = Twi_Data_prepared_df # For this sample code, simply copy input to output
