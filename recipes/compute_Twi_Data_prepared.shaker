@@ -26,42 +26,7 @@
     },
     "autoRefreshSample": false
   },
-  "explorationFilters": [
-    {
-      "validityFilter": {
-        "column": "tweet_text_clean",
-        "type": "validity",
-        "params": {
-          "nok": true,
-          "type": "FreeText",
-          "ok": true,
-          "empty": true
-        }
-      },
-      "column": "tweet_text_clean",
-      "active": true,
-      "alphanumFilter": {
-        "values": [],
-        "column": "tweet_text_clean",
-        "type": "alphanum",
-        "params": {
-          "mode": "full_string",
-          "normalization": "exact"
-        }
-      },
-      "type": "columnFilter",
-      "$$hashKey": "object:15860",
-      "facet": {
-        "columnType": "ALPHANUM",
-        "selectedValues": {},
-        "column": "tweet_text_clean",
-        "sort": "count",
-        "type": "facet",
-        "currentMode": "ALPHANUM"
-      },
-      "currentMode": "SIMPLE_ALPHANUM"
-    }
-  ],
+  "explorationFilters": [],
   "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
