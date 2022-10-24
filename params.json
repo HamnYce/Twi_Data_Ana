@@ -208,11 +208,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 101,
+    "versionNumber": 103,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666603111705
+    "lastModifiedOn": 1666603257094
   },
   "creationTag": {
     "versionNumber": 0,
@@ -296,7 +296,7 @@
         "items": [
           {
             "done": false,
-            "text": "extract location name column from tweet text (I\u0027m at....)\n(can use python with requests library to parse HTML)",
+            "text": "extract location name column from tweet text (I\u0027m at....)\n(can use python with requests library to parse HTML)\ncall it place_name",
             "createdOn": 1666545456568,
             "createdBy": "admin",
             "stateChangedOn": 0
