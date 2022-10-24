@@ -3,7 +3,20 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "cache_enabled": true,
+      "batch_enabled": true,
+      "batch_size_bing": 50,
+      "address": true,
+      "city": true,
+      "postal": true,
+      "state": true,
+      "country": true,
+      "column_prefix": "location_name",
+      "lat_column": "latitude",
+      "lng_column": "longitude",
+      "provider": "arcgis"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -37,11 +50,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666592516664
+    "lastModifiedOn": 1666592910341
   },
   "creationTag": {
     "versionNumber": 0,
