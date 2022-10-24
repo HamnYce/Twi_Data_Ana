@@ -26,7 +26,42 @@
     },
     "autoRefreshSample": false
   },
-  "explorationFilters": [],
+  "explorationFilters": [
+    {
+      "validityFilter": {
+        "column": "tweet_text_clean",
+        "type": "validity",
+        "params": {
+          "nok": true,
+          "type": "FreeText",
+          "ok": true,
+          "empty": true
+        }
+      },
+      "column": "tweet_text_clean",
+      "active": true,
+      "alphanumFilter": {
+        "values": [],
+        "column": "tweet_text_clean",
+        "type": "alphanum",
+        "params": {
+          "mode": "full_string",
+          "normalization": "exact"
+        }
+      },
+      "type": "columnFilter",
+      "$$hashKey": "object:15860",
+      "facet": {
+        "columnType": "ALPHANUM",
+        "selectedValues": {},
+        "column": "tweet_text_clean",
+        "sort": "count",
+        "type": "facet",
+        "currentMode": "ALPHANUM"
+      },
+      "currentMode": "SIMPLE_ALPHANUM"
+    }
+  ],
   "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
@@ -101,6 +136,48 @@
             "to": "text_first_link"
           }
         ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "tweet_text_clean"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "null"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "text_first_link"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "null"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "text_second_link"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "null"
       },
       "alwaysShowComment": false
     }
