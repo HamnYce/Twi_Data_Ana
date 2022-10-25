@@ -46,6 +46,18 @@
         "appliesTo": "SINGLE_COLUMN"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoPointCreator",
+      "params": {
+        "out_column": "geopoint",
+        "lat_column": "latitude",
+        "lon_column": "longitude"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -77,12 +89,13 @@
     "text_first_link": 225,
     "area": 148,
     "place_name": 300,
+    "latitude": 141,
+    "text_second_link": 135,
+    "geopoint": 300,
+    "tweet_text_clean": 300,
     "date_time": 204,
     "screen_name": 127,
     "governorate": 134,
-    "latitude": 141,
-    "text_second_link": 135,
-    "tweet_text_clean": 300,
     "lang": 100,
     "is_weekend": 100,
     "longitude": 141
