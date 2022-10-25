@@ -226,11 +226,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 142,
+    "versionNumber": 144,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666723124408
+    "lastModifiedOn": 1666723659892
   },
   "creationTag": {
     "versionNumber": 0,
@@ -327,7 +327,7 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "get website  name, from link\n(can use python with requests library to parse HTML)\n",
             "createdOn": 1666603094292,
             "createdBy": "admin",
