@@ -26,9 +26,64 @@
     },
     "autoRefreshSample": false
   },
-  "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "explorationFilters": [
+    {
+      "validityFilter": {
+        "column": "app",
+        "type": "validity",
+        "params": {
+          "nok": true,
+          "type": "Text",
+          "ok": true,
+          "empty": true
+        }
+      },
+      "column": "app",
+      "active": true,
+      "alphanumFilter": {
+        "values": [],
+        "column": "app",
+        "type": "alphanum",
+        "params": {
+          "mode": "full_string",
+          "normalization": "exact"
+        }
+      },
+      "type": "columnFilter",
+      "$$hashKey": "object:49703",
+      "facet": {
+        "columnType": "ALPHANUM",
+        "selectedValues": {},
+        "column": "app",
+        "sort": "count",
+        "type": "facet",
+        "currentMode": "ALPHANUM"
+      },
+      "currentMode": "FACET"
+    }
+  ],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Tokenizer",
+      "params": {
+        "inCol": "app",
+        "sortAlphabetically": false,
+        "normalize": false,
+        "language": "english",
+        "operation": "TO_JSON",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -54,7 +109,26 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 300,
+    "text_first_link": 225,
+    "place_name": 300,
+    "country": 100,
+    "hashtags": 204,
+    "latitude": 141,
+    "districts": 148,
+    "text_second_link": 135,
+    "geopoint": 300,
+    "tweet_text_clean": 300,
+    "place_text_name": 218,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "text_third_link": 128,
+    "lang": 100,
+    "is_weekend": 100,
+    "longitude": 141
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
