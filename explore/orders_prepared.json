@@ -1,0 +1,323 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {},
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "engineType": "LINO",
+      "def": {
+        "type": "grouped_columns",
+        "variant": "normal",
+        "name": "Avg of tshirt_price by order_date",
+        "userEditedName": false,
+        "displayEchart": false,
+        "genericDimension0": [
+          {
+            "column": "order_date",
+            "type": "ALPHANUM",
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            },
+            "maxValues": 20,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of tshirt_price, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of tshirt_price, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
+        "genericDimension1": [],
+        "facetDimension": [],
+        "animationDimension": [
+          {
+            "column": "tshirt_price",
+            "type": "NUMERICAL",
+            "numParams": {
+              "mode": "FIXED_NB",
+              "nbBins": 5,
+              "binSize": 100,
+              "emptyBinsMode": "ZEROS"
+            },
+            "maxValues": 100,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of tshirt_price, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of tshirt_price, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
+        "genericMeasures": [
+          {
+            "column": "tshirt_price",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0
+          }
+        ],
+        "xDimension": [],
+        "yDimension": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "uaSize": [],
+        "uaShape": [],
+        "uaColor": [],
+        "uaTooltip": [],
+        "groupDimension": [],
+        "xMeasure": [],
+        "yMeasure": [],
+        "colorMeasure": [],
+        "sizeMeasure": [],
+        "geometry": [],
+        "geoLayers": [
+          {
+            "geometry": [],
+            "colorOptions": {
+              "singleColor": "#2678B1",
+              "transparency": 0.75,
+              "colorPalette": "default",
+              "ccScaleMode": "NORMAL",
+              "customPalette": {
+                "id": "__dku_custom__",
+                "name": "Custom Palette",
+                "colors": [],
+                "values": [],
+                "fixedValues": false
+              },
+              "paletteType": "CONTINUOUS",
+              "quantizationMode": "NONE",
+              "numQuantizeSteps": 5,
+              "paletteMiddleValue": 0.0,
+              "customColors": {},
+              "heatDensityMapIntensity": 0.5,
+              "heatDensityMapRadius": 0.5
+            },
+            "uaColor": []
+          }
+        ],
+        "tooltipMeasures": [],
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "filters": [],
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "includeZero": true,
+        "smoothing": true,
+        "showLegend": true,
+        "showXAxis": false,
+        "showInChartValues": false,
+        "showInChartLabels": true,
+        "strokeWidth": 1,
+        "fillOpacity": 0.6,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "yAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "xAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "displayXAxis": true,
+        "displayYAxis": true,
+        "hexbinRadius": 20,
+        "hexbinNumber": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "chartHeight": 200,
+        "singleXAxis": true,
+        "multiTooltips": false,
+        "animationFrameDuration": 500,
+        "animationRepeat": true,
+        "colorOptions": {
+          "singleColor": "#2678B1",
+          "transparency": 0.75,
+          "colorPalette": "default",
+          "ccScaleMode": "NORMAL",
+          "customPalette": {
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "colors": [],
+            "values": [],
+            "fixedValues": false
+          },
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
+        },
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "computeMode": "NORMAL",
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "mapOptions": {
+          "tilesLayer": "cartodb-positron",
+          "lockSquareGrid": false
+        },
+        "mapGridOptions": {
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
+        },
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAABMFJREFUeF7tXc1rVUccPb+5STWxiiIu/EhCbdqlRaRi/4EKiaE7F8W2dq3VavGjXYSslMbWJIWCOz8iFroTNQguREoxdCdFS9WFRqmCXRUaaV7u/MrTS7wz7754ny9vfB8nuwxz32/mnDsz53dm7r0C/jU1AtLUvWPnQIKb/CYgwfMQ3Ds0sWz2X+33q9w71v9To9wXNSV43b6fO6R90QofjAfDH/3ll3UdPL+mBDRt74AUnua5vlrAs+K3AUutRCec31b8cn9422A18TL7WuYHs7CqJHbNCY7e6JxIN0ihk1PfDnztN7LnwIU+GDmQLhfYUYX50rle9frU8MA3lXQyT93uQxcGBLLfa+txvwwLQHD3oUujAn3PaZfoD1DZ4/TfmKF7R/uu5Wl/uTotSXDX4YkPSwCxcacR2UuCK7idilN0PY7gnoMXv4NgU7orVnWMBFdAbrFqrQhuE7jrIoDFHU8f3xraPpOniSQ4D0o56tSKYIFpg+j76SYs6ZjeSoJLSWnINZgE5xhdSRUSnADRkmtw7xcTi2aW2LV57hf73/SjhyPbnZy1labo7sMX1/s4mViW2Uj/KcFPZU+eNCky7d/PauFWHvwFshFWP3CEY4Tz847gIsGFTnvZzU3lNwtrBbIlXR7PTPe1CsESyaWM1W61WuumWbEel8jLrUWuQbE8L8GxLXzlpm64akRWquqGuXKFwsiPUN3tEGwwSIJfYYqG4E0AGz1TYqypCbaKEQOsSnfaRNETa+N9nnkwKSp3/REgIn8r1HGtyjlZr1tktS7BAodMY6KRLIIBGIFs9qb+0WoIVmN22dm44N84D48N3PHLqs2DSXCCaEiCRXVMfatR5cjUcP8VElxGplUisp5N0a9xBJPgGouseiS42CYRWV2y3qu+U40XzSm6TqborJsOgl9hsZgEA2j0KZoEL2AeXK9TtK8LOIJTCxZHsGae6OAazDX4GQLaTFYlp2jTAlZlneXBFFkUWXOKo5L9YK7BXIO5Bi/0ZkOWVckpmlM0p+i8Jzqooqmin69L0Mla7Adzim7R3SRalfMc2aNVSasyJVLqb8OfKpoqmiqaKto911x8PphOFp0sOll0sl7+hH/x0ZW6ebKBRgeNDhodRaOnUZ9N4gjmCOYI5gh+9YfP6EXTi36evPHg+wtzml40vWh60QkCYiiyKLIosiiy0ru3dLJSaFBFU0VTRfuHO6iiqaKpoqmiS1+jxFOVDfgiNG42MA9mHsw8mHkw82DV61mvMmQezDyYeTDz4HxfXeGxWR6b5bFZHpvlsVlU8r5oiiyKLIqsMiLrXLpcIHeTbza8my63itNG8Fm6zJjotLWxU6bQ24lV2ev97hmFfuqW2TMK45Sp6p9JmvS2U1d1XEU+eVmbIPgjeRnpW25dHTfe9Qo9JZCdDi6Km4nI6nHiGzOu1jrxNdZTErnXq8jvyTcbupzfFT0LlR1eHnwytoXP02UK3Ei+2bDOvV7OQfVjp08GozX9rI5/w/D/8AiQ4PCYB41IgoPCHT4YCQ6PedCIJDgo3OGDkeDwmAeNSIKDwh0+GAkOj3nQiCQ4KNzhg5Hg8JgHjUiCg8IdPhgJDo950IgkOCjc4YOR4PCYB434P7v5iMp72T7cAAAAAElFTkSuQmCC",
+        "disableSafetyLimits": false,
+        "useLiveProcessingIfAvailable": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "pivotMeasureDisplayMode": "ROWS",
+        "pivotDisplayTotals": {
+          "subTotals": {
+            "rows": true,
+            "columns": true
+          },
+          "grandTotal": {
+            "row": true,
+            "column": true
+          }
+        }
+      },
+      "maxDataBytes": 157286400
+    }
+  ],
+  "interactiveSearch": {
+    "savedQueries": []
+  }
+}
