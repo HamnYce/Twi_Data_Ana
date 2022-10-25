@@ -226,11 +226,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 124,
+    "versionNumber": 126,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666713753545
+    "lastModifiedOn": 1666713916697
   },
   "creationTag": {
     "versionNumber": 0,
@@ -335,7 +335,7 @@
         "items": [
           {
             "done": false,
-            "text": "make initial summary statistics ",
+            "text": "make some initial charts",
             "createdOn": 1666545496172,
             "createdBy": "admin",
             "stateChangedOn": 0
