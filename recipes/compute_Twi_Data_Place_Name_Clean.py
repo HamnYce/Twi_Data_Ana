@@ -14,8 +14,30 @@ place_names = Twi_Data_Place_Name_From_Text_df['place_name']
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 stripped_place_names = []
 for place in place_names:
-    stripped_place_names.append(place..strip("'").strip('"'))
+    place = place.replace('"','').replace("'","")
+    if place.endswith(','):
+        place = place[:-1]
+    stripped_place_names.append(place)
 stripped_place_names
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+import codecs
+decoded_places = []
+for place in stripped_place_names:
+    place = codecs.unicode_escape_decode(place)[0]
+    decoded_places.append(place)
+decoded_places
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+cleaned_decoded = []
+for place in decoded_places:
+    if 'Ø' in place:
+        cleaned_decoded.append('nu')
+    else:
+        cleaned_decoded.append(place)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+Twi_Data_Place_Name_Clean_df['place_name'] = cleaned_decoded
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Place_Name_Clean_df = Twi_Data_Place_Name_From_Text_df # For this sample code, simply copy input to output
