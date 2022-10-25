@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666723808400
+    "lastModifiedOn": 1666724430054
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,7 +91,8 @@
       {"name":"date_time","type":"date"},
       {"name":"is_weekend","type":"boolean"},
       {"name":"lang","type":"string"},
-      {"name":"app","type":"string"},
+      {"name":"app","type":"array","meaning":"BagOfWordsMeaning","arrayContent":{"type":"string"}
+      },
       {"name":"tweet_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
