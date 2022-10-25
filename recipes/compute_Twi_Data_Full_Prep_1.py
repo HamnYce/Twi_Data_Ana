@@ -49,7 +49,7 @@ for t in clean_tweet_text:
     s = codecs.unicode_escape_encode(t)[0]
     # removing the python added "b'" at the beginning generated from previous statement
     s = str(s)[2:]
-    # removing double or triple backslash from some unicode characters 
+    # removing double or triple backslash from some unicode characters
     # (this one took a while to find a solution for)
     s = s.replace('\\\\','\\').replace('\\\\','\\')
     # re-encoding text back into normal characters
