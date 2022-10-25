@@ -27,8 +27,126 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(not(isBlank(text_first_link)),\n    text_first_link,\n    \tif(startsWith(text, \"t.co\"),\n    \t\ttext,\n        \t\"\")\n    )\n)",
+        "column": "culm_text_first_link"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(text \u003d\u003d culm_text_first_link,\n\t\"\",\n    text)",
+        "column": "text_without_links"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "text_first_link",
+        "columns": [
+          "text_without_links",
+          "culm_text_first_link"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "text",
+          "text_first_link"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "text_without_links",
+            "to": "tweet_text_clean"
+          },
+          {
+            "from": "culm_text_first_link",
+            "to": "text_first_link"
+          }
+        ]
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "tweet_text_clean"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "nu"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "text_first_link"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "nu"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "text_second_link"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "nu"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -54,7 +172,25 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 300,
+    "text_first_link": 225,
+    "place_name": 246,
+    "country": 100,
+    "hashtags": 300,
+    "latitude": 141,
+    "districts": 148,
+    "text_second_link": 135,
+    "tweet_text_clean": 300,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "text_third_link": 128,
+    "text": 300,
+    "lang": 100,
+    "is_weekend": 100,
+    "longitude": 141
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
