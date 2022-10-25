@@ -226,11 +226,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 114,
+    "versionNumber": 124,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666713443619
+    "lastModifiedOn": 1666713753545
   },
   "creationTag": {
     "versionNumber": 0,
@@ -313,15 +313,15 @@
         "createdOn": 0,
         "items": [
           {
-            "done": false,
-            "text": "extract location name column from tweet text (I\u0027m at....)\n(can use python with requests library to parse HTML)\ncall it place_name",
+            "done": true,
+            "text": "extract location name column from tweet text (I\u0027m at....)\n\ncall it place_name",
             "createdOn": 1666545456568,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
             "done": false,
-            "text": "get website  name, from link\n",
+            "text": "get website  name, from link\n(can use python with requests library to parse HTML)\n",
             "createdOn": 1666603094292,
             "createdBy": "admin",
             "stateChangedOn": 0
