@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666718243152
+    "lastModifiedOn": 1666718247646
   },
   "creationTag": {
     "versionNumber": 0,
@@ -86,7 +86,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"user_id","type":"int"},
+      {"name":"user_id","type":"string"},
       {"name":"lang","type":"string"},
       {"name":"date_local","type":"string"},
       {"name":"app","type":"string"},
