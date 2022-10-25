@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666681312860
+    "lastModifiedOn": 1666681316412
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,7 +89,7 @@
       {"name":"order_date","type":"string"},
       {"name":"pages_visited","type":"string"},
       {"name":"order_id","type":"string"},
-      {"name":"customer_id","type":"string","meaning":"Text"},
+      {"name":"customer_id","type":"string","meaning":"LongMeaning"},
       {"name":"tshirt_category","type":"string"},
       {"name":"tshirt_price","type":"string"},
       {"name":"tshirt_quantity","type":"string"}
