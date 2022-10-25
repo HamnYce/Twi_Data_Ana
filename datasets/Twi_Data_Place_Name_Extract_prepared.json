@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666673896360
+    "lastModifiedOn": 1666688683353
   },
   "creationTag": {
     "versionNumber": 0,
@@ -98,7 +98,8 @@
       {"name":"latitude","type":"double"},
       {"name":"longitude","type":"double"},
       {"name":"governorate","type":"string"},
-      {"name":"area","type":"string"}
+      {"name":"area","type":"string"},
+      {"name":"geopoint","type":"string"}
     ],
     "userModified": true
   },
