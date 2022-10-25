@@ -1,0 +1,249 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "Twi_Data_Place_Name_Extract_prepared_clustered",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "def": {
+      "type": "scatter_map",
+      "variant": "normal",
+      "name": "latitude vs longitude",
+      "userEditedName": false,
+      "displayEchart": false,
+      "genericDimension0": [],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [
+        {
+          "column": "latitude",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua"
+        }
+      ],
+      "uaYDimension": [
+        {
+          "column": "longitude",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua"
+        }
+      ],
+      "uaSize": [],
+      "uaShape": [],
+      "uaColor": [
+        {
+          "column": "cluster_labels",
+          "type": "ALPHANUM",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0,
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        }
+      ],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [
+        {
+          "column": "geopoint",
+          "type": "GEOPOINT",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0
+        }
+      ],
+      "geoLayers": [
+        {
+          "geometry": [],
+          "colorOptions": {
+            "singleColor": "#2678B1",
+            "transparency": 0.75,
+            "colorPalette": "default",
+            "ccScaleMode": "NORMAL",
+            "customPalette": {
+              "id": "__dku_custom__",
+              "name": "Custom Palette",
+              "colors": [],
+              "values": [],
+              "fixedValues": false
+            },
+            "paletteType": "CONTINUOUS",
+            "quantizationMode": "NONE",
+            "numQuantizeSteps": 5,
+            "paletteMiddleValue": 0.0,
+            "customColors": {},
+            "heatDensityMapIntensity": 0.5,
+            "heatDensityMapRadius": 0.5
+          },
+          "uaColor": []
+        }
+      ],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "yAxisNumberFormattingOptions": {
+        "multiplier": "Auto",
+        "prefix": "",
+        "suffix": ""
+      },
+      "xAxisNumberFormattingOptions": {
+        "multiplier": "Auto",
+        "prefix": "",
+        "suffix": ""
+      },
+      "displayXAxis": true,
+      "displayYAxis": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "yCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "xCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#ECD941",
+        "transparency": 0.75,
+        "colorPalette": "default",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0,
+        "customColors": {},
+        "heatDensityMapIntensity": 0.5,
+        "heatDensityMapRadius": 0.5
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.5,
+        "gridLatDeg": 0.5
+      },
+      "thumbnailData": "data:image/png;base64,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\u003d\u003d",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "OUTER_RIGHT",
+      "pivotMeasureDisplayMode": "ROWS",
+      "pivotDisplayTotals": {
+        "subTotals": {
+          "rows": true,
+          "columns": true
+        },
+        "grandTotal": {
+          "row": true,
+          "column": true
+        }
+      }
+    },
+    "maxDataBytes": 157286400
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "latitude vs longitude on Twi_Data_Place_Name_Extract_prepared_clustered",
+  "dashboardCreationId": "sRz3L5H",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1666689617846
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1666689617846
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
