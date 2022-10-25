@@ -28,6 +28,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Twi_Data_Place_Name_Extract_prepared_clustered",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -217,11 +226,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 110,
+    "versionNumber": 111,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666682685485
+    "lastModifiedOn": 1666689617782
   },
   "creationTag": {
     "versionNumber": 0,
