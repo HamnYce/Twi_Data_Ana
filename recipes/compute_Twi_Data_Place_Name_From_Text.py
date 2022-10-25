@@ -9,6 +9,9 @@ Twi_Data_Split_Text_Clean_prepared = dataiku.Dataset("Twi_Data_Split_Text_Clean_
 Twi_Data_Split_Text_Clean_prepared_df = Twi_Data_Split_Text_Clean_prepared.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+Twi_Data_Split_Text_Clean_prepared_df.dropna(inplace=True)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # make new column that says place_name
 place_names = []
 # TODO: loop through text and extract 1 or 2 words after "I'm at"
@@ -23,7 +26,6 @@ for text in Twi_Data_Split_Text_Clean_prepared_df['tweet_text_clean']:
         place_names.append(' '.join(split_text[2:index]))
     else:
         place_names.append("no name")
-place_names
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_prepared_df['place_text_name'] = place_names
