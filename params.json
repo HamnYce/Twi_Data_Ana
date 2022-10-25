@@ -19,6 +19,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "orders_prepared",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -208,11 +217,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 107,
+    "versionNumber": 108,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666643901203
+    "lastModifiedOn": 1666681872611
   },
   "creationTag": {
     "versionNumber": 0,
