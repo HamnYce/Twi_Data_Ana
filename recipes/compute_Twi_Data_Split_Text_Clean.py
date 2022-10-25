@@ -9,10 +9,10 @@ Twi_Data_cols_parsed = dataiku.Dataset("Twi_Data_cols_parsed")
 Twi_Data_cols_parsed_df = Twi_Data_cols_parsed.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_cols_parsed_df['text'] = tweet_text_clean
-Twi_Data_cols_parsed_df['text_first_link'] = first_link_clean
-Twi_Data_cols_parsed_df['text_second_link'] = second_link_clean
-Twi_Data_cols_parsed_df['text_third_link'] = third_link_clean
+tweet_text = Twi_Data_cols_parsed_df['text']
+first_link = Twi_Data_cols_parsed_df['text_first_link']
+second_link = Twi_Data_cols_parsed_df['text_second_link']
+third_link = Twi_Data_cols_parsed_df['text_third_link']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 tweet_text_clean = []
