@@ -65,14 +65,184 @@
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
   },
-  "charts": [],
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "type": "scatter_map",
+        "variant": "normal",
+        "name": "New chart",
+        "userEditedName": false,
+        "displayEchart": false,
+        "genericDimension0": [],
+        "genericDimension1": [],
+        "facetDimension": [],
+        "animationDimension": [],
+        "genericMeasures": [],
+        "xDimension": [],
+        "yDimension": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "uaSize": [],
+        "uaShape": [],
+        "uaColor": [],
+        "uaTooltip": [],
+        "groupDimension": [],
+        "xMeasure": [],
+        "yMeasure": [],
+        "colorMeasure": [],
+        "sizeMeasure": [],
+        "geometry": [
+          {
+            "column": "geopoint",
+            "type": "GEOPOINT",
+            "treatAsAlphanum": false,
+            "isA": "ua",
+            "adminLevel": 0
+          }
+        ],
+        "geoLayers": [
+          {
+            "geometry": [],
+            "colorOptions": {
+              "singleColor": "#2678B1",
+              "transparency": 0.75,
+              "colorPalette": "default",
+              "ccScaleMode": "NORMAL",
+              "customPalette": {
+                "id": "__dku_custom__",
+                "name": "Custom Palette",
+                "colors": [],
+                "values": [],
+                "fixedValues": false
+              },
+              "paletteType": "CONTINUOUS",
+              "quantizationMode": "NONE",
+              "numQuantizeSteps": 5,
+              "paletteMiddleValue": 0.0,
+              "customColors": {},
+              "heatDensityMapIntensity": 0.5,
+              "heatDensityMapRadius": 0.5
+            },
+            "uaColor": []
+          }
+        ],
+        "tooltipMeasures": [],
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "filters": [],
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "includeZero": true,
+        "smoothing": true,
+        "showLegend": true,
+        "showXAxis": false,
+        "showInChartValues": false,
+        "showInChartLabels": true,
+        "strokeWidth": 1,
+        "fillOpacity": 0.6,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "yAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "xAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "displayXAxis": true,
+        "displayYAxis": true,
+        "hexbinRadius": 20,
+        "hexbinNumber": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "chartHeight": 200,
+        "singleXAxis": true,
+        "multiTooltips": false,
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "colorOptions": {
+          "singleColor": "#2678B1",
+          "transparency": 0.75,
+          "colorPalette": "default",
+          "ccScaleMode": "NORMAL",
+          "customPalette": {
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "colors": [],
+            "values": [],
+            "fixedValues": false
+          },
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
+        },
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "mapOptions": {
+          "tilesLayer": "cartodb-positron",
+          "lockSquareGrid": false
+        },
+        "mapGridOptions": {
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
+        },
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAA+JJREFUeF7tmj9o1FAcx3/vrqhVqxbcLCp4ibiIg39ACrUK1aFNTid3l+IgDtJ7pw4dCpcDF7fq5OpQeu8qolKsRQUdnJyanKDi4KC0Kki1bZ68tinh7EWhU7753XSQO8j3+8kneXnvCeIPdAMCOh2HIwYMfhEwYAYM3gB4PDaYAYM3AB6PDWbA4A2Ax2ODGTB4A+Dx2GAGDN4AeDw2mAGDNwAejw1mwOANgMdjgxkweAPg8dhgBgzeAHg8NpgBYzZglWpzJHKXAs8Zw0y4kiqzBttSfSeiDt9zoTuADpdkpi2V1pq+CUHtvuduRrU4s4AtWZ9qX5zrn2/b8dn3ih0MGKiBg1K9DEl0BZ6zDyjWulEyazA62CgfAwYnzYAZMHgD4PEyYbBVrj8JKk5fxNIq1UeDqjPYzLYw9LArl/895FeKV1C4ZwJwBKtwc/xAY+T8O7usnvoV93QconltWpn50T2axHTgOb0IkDMFeA10qXa2US0+XjNaqg+B5y6/Mtnl+mu/4pxAgJupqUqrpB4FVffcMkQzi0XiWWSpLWs/UCc7MmmwVVKLQdVtQ7E0KUcmARuDzSKDee4mPWv/dTwNF0hmAa8upt33PediEqi0Q84sYGOwLevPiXT3ynelDWi05cPMAI4GWbZUM2aclWQtEuTMALZvjB+npfxoKPSwCOmyIDpJpLeSEPlm2Aw4DaOL2DnaUn3xPXd3/LT3D09teT/cO2+V1KwQtCt+jAGnBLAllSIKx4nEp8ArThbkxK2GN3AtNsExJ4h2EpFeyuUP58Olt+aY1nowqBbvpCRm4mnC3aL3ygedH73+2Vapo1ek1QmPeyTIJU1tIYmRhudU0QZbcIBtqX79zx4r8zsi2iR07upMdeB2dEEwYIT7FhFZZXVBaBprft4y4JQDNoOqoOp2mhitJjFsWVvyveJfo+s0Roe7RW8UAhu80QZT8H8kyGxw0wVnS7Wghe4WWrwSgn7OVNxtKbgmW55iZgHHn8XN7dhSlTWJPrO7w/fcHANOcwPxGa/rE2coDCejkXX8nTmtETNr8HrA7LJqdHzdc+jN3aMLqxMhZoXJrB2n1mIGnKBmtLWHtD4SvVqlzWQGvA6xQrne06g409Fo2vwkrQsQDDhBSTMRIkifYsBpu2+1OF9bqtDsiRakj/meuz3aK53mPdJscAx2ZKzZUitId2sSL8xhYzHfokEsRovBBqMRbcrDgBkweAPg8dhgBgzeAHg8NpgBgzcAHo8NZsDgDYDHY4MZMHgD4PHYYAYM3gB4PDaYAYM3AB6PDWbA4A2Ax2ODGTB4A+Dx2GAGDN4AeLw/A9dAYJjYLvgAAAAASUVORK5CYII\u003d",
+        "disableSafetyLimits": false,
+        "useLiveProcessingIfAvailable": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "pivotMeasureDisplayMode": "ROWS",
+        "pivotDisplayTotals": {
+          "subTotals": {
+            "rows": true,
+            "columns": true
+          },
+          "grandTotal": {
+            "row": true,
+            "column": true
+          }
+        }
+      }
+    }
+  ],
   "name": "Clustering on Twi_Data_Place_Name_Extract_prepared",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666688887269
+    "lastModifiedOn": 1666689034284
   },
   "creationTag": {
     "versionNumber": 0,
