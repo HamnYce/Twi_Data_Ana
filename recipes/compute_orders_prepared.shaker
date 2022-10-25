@@ -27,8 +27,46 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "customer_id",
+        "columns": [
+          "tshirt_category"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "order_date_parsed",
+        "formats": [
+          "yyyy/MM/dd"
+        ],
+        "columns": [
+          "order_date"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -58,7 +96,16 @@
       "meaning": "LongMeaning"
     }
   },
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "pages_visited": 113,
+    "tshirt_category": 155,
+    "order_date": 120,
+    "order_date_parsed": 183,
+    "tshirt_quantity": 128,
+    "tshirt_price": 105,
+    "customer_id": 100,
+    "order_id": 120
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
