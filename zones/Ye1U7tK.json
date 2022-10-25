@@ -1,7 +1,12 @@
 {
   "name": "f",
   "color": "#087ABF",
-  "items": [],
+  "items": [
+    {
+      "objectId": "twi_data_18_19",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
