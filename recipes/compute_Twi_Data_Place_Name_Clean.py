@@ -37,7 +37,7 @@ for place in decoded_places:
         cleaned_decoded.append(place)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_Place_Name_Clean_df['place_name'] = cleaned_decoded
+Twi_Data_Place_Name_From_Text_df['place_name'] = cleaned_decoded
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Place_Name_Clean_df = Twi_Data_Place_Name_From_Text_df # For this sample code, simply copy input to output
