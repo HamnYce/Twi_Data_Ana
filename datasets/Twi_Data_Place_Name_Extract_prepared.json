@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666643928539
+    "lastModifiedOn": 1666673896360
   },
   "creationTag": {
     "versionNumber": 0,
@@ -94,11 +94,11 @@
       {"name":"tweet_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
+      {"name":"place_name","type":"string"},
       {"name":"latitude","type":"double"},
       {"name":"longitude","type":"double"},
       {"name":"governorate","type":"string"},
-      {"name":"area","type":"string"},
-      {"name":"place_name","type":"string"}
+      {"name":"area","type":"string"}
     ],
     "userModified": true
   },
