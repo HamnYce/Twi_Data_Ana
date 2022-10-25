@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666729499699
+    "lastModifiedOn": 1666729614378
   },
   "creationTag": {
     "versionNumber": 0,
@@ -86,8 +86,26 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"screen_name","type":"string"},
+      {"name":"date_time","type":"date"},
+      {"name":"is_weekend","type":"boolean"},
+      {"name":"lang","type":"string"},
+      {"name":"app","type":"string"},
+      {"name":"tweet_text_clean","type":"string"},
+      {"name":"text_first_link","type":"string"},
+      {"name":"text_second_link","type":"string"},
+      {"name":"text_third_link","type":"string"},
+      {"name":"latitude","type":"double"},
+      {"name":"longitude","type":"double"},
+      {"name":"place_name","type":"string"},
+      {"name":"hashtags","type":"string"},
+      {"name":"country","type":"string"},
+      {"name":"governorate","type":"string"},
+      {"name":"districts","type":"string"},
+      {"name":"place_text_name","type":"string"}
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
