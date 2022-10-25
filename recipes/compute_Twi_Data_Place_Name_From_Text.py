@@ -8,8 +8,14 @@ from dataiku import pandasutils as pdu
 Twi_Data_Split_Text_Clean_prepared = dataiku.Dataset("Twi_Data_Split_Text_Clean_prepared")
 Twi_Data_Split_Text_Clean_prepared_df = Twi_Data_Split_Text_Clean_prepared.get_dataframe()
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
+# #### dropping nill values (about 600ish, hopefully doesn't make a big difference)
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_prepared_df.dropna(inplace=True)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
+# #### cleaning text_tweets
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # make new column that says place_name
@@ -30,12 +36,22 @@ for text in Twi_Data_Split_Text_Clean_prepared_df['tweet_text_clean']:
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_prepared_df['place_text_name'] = place_names
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
+# #### Getting app name from the HTML
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+apps = Twi_Data_Split_Text_Clean_prepared_df['app']
+clean_apps = []
+for app in apps:
+    app = apps[0].split(',')
+    app_com_index = app.index('"com"')
+    app = app[app_com_index - 1].strip('"')
+    clean_apps.append(app)
 
-# Compute recipe outputs from inputs
-# TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
-# NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+Twi_Data_Split_Text_Clean_prepared_df['app'] = clean_apps
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Place_Name_From_Text_df = Twi_Data_Split_Text_Clean_prepared_df # For this sample code, simply copy input to output
 
 
