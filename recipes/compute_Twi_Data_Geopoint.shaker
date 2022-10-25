@@ -27,8 +27,39 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "latitude",
+        "columns": [
+          "place_text_name"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoPointCreator",
+      "params": {
+        "out_column": "geopoint",
+        "lat_column": "latitude",
+        "lon_column": "longitude"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -54,7 +85,26 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 300,
+    "text_first_link": 225,
+    "place_name": 246,
+    "country": 100,
+    "hashtags": 300,
+    "latitude": 141,
+    "districts": 148,
+    "text_second_link": 135,
+    "geopoint": 300,
+    "tweet_text_clean": 300,
+    "place_text_name": 218,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "text_third_link": 128,
+    "lang": 100,
+    "is_weekend": 100,
+    "longitude": 141
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
