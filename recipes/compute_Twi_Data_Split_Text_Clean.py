@@ -12,7 +12,6 @@ Twi_Data_cols_parsed_df = Twi_Data_cols_parsed.get_dataframe()
 tweet_text = Twi_Data_cols_parsed_df['text']
 first_link = Twi_Data_cols_parsed_df['text_first_link']
 second_link = Twi_Data_cols_parsed_df['text_second_link']
-third_link = Twi_Data_cols_parsed_df['text_third_link']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 tweet_text_clean = []
@@ -47,21 +46,9 @@ for text in second_link:
     second_link_clean.append(clean_text)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-third_link_clean = []
-for text in third_link:
-    clean_text = text
-    if type(clean_text) == str:
-        if text[0] == "'" or text[0] == '"':
-            clean_text = text[1:]
-        if text[-1] == "'" or text[-1] == '"':
-            clean_text = text[:-1]
-    third_link_clean.append(clean_text)
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_cols_parsed_df['text'] = tweet_text_clean
 Twi_Data_cols_parsed_df['text_first_link'] = first_link_clean
 Twi_Data_cols_parsed_df['text_second_link'] = second_link_clean
-Twi_Data_cols_parsed_df['text_third_link'] = third_link_clean
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_df = Twi_Data_cols_parsed_df # For this sample code, simply copy input to output
