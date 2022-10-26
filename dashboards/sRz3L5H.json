@@ -96,14 +96,14 @@
   ],
   "owner": "admin",
   "listed": true,
-  "name": "Twitter Geo Analysis\u0027s default dashboard",
+  "name": "Density Map of Geopoints",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666818599861
+    "lastModifiedOn": 1666818690940
   },
   "creationTag": {
     "versionNumber": 0,
