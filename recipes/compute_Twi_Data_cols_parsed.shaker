@@ -115,7 +115,7 @@
     },
     {
       "preview": false,
-      "name": "extract tweet_text links",
+      "name": "extract and clean tweet_text from links",
       "metaType": "GROUP",
       "disabled": false,
       "steps": [
