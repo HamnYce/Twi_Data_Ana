@@ -22,7 +22,7 @@ Twi_Data_Split_Text_Clean_prepared_df.dropna(inplace=True)
 place_names = []
 # TODO: loop through text and extract 1 or 2 words after "I'm at"
 for text in Twi_Data_Split_Text_Clean_prepared_df['tweet_text_clean']:
-    split_text = text.lower().split()
+    split_text = text.split()
     if len(split_text) == 1:
         place_names.append(split_text[0])
     elif split_text[0] == "i'm" and split_text[1] == 'at':
