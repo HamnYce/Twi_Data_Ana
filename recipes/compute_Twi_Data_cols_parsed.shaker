@@ -149,7 +149,7 @@
             "renamings": [
               {
                 "from": "tweet_text_0",
-                "to": "text"
+                "to": "text_text_clean"
               },
               {
                 "from": "tweet_text_1",
@@ -237,6 +237,7 @@
     "governorate": 134,
     "tweet_text_3": 105,
     "tweet_text_2": 105,
+    "text_text_clean": 300,
     "text_third_link": 128,
     "text": 300,
     "lang": 100,
