@@ -149,7 +149,7 @@
             "renamings": [
               {
                 "from": "tweet_text_0",
-                "to": "text_text_clean"
+                "to": "tweet_text_clean"
               },
               {
                 "from": "tweet_text_1",
@@ -229,6 +229,7 @@
     "latitude": 141,
     "districts": 148,
     "text_second_link": 135,
+    "tweet_text_clean": 300,
     "te": 100,
     "date_time": 204,
     "tweet_text_1": 134,
