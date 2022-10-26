@@ -27,6 +27,7 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
+  "columnUseScientificNotationByName": {},
   "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
@@ -34,154 +35,163 @@
   "steps": [
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "extract weekend/weekday",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "HolidaysComputer",
-      "params": {
-        "flagWeekends": true,
-        "inCol": "date_time",
-        "calendar_id": "US",
-        "flagBankHolidays": false,
-        "extractReasons": false,
-        "extractZones": false,
-        "timezone_id": "Asia/Kuwait",
-        "flagSchoolHolidays": false,
-        "outColPrefix": "holiday_"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "StringTransformer",
-      "params": {
-        "mode": "TO_LOWER",
-        "columns": [
-          "screen_name"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "truncate_limit": 0
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "columns": [
-          "screen_name"
-        ],
-        "reorderAction": "AT_START",
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 4
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "HolidaysComputer",
+          "params": {
+            "flagWeekends": true,
+            "inCol": "date_time",
+            "calendar_id": "US",
+            "flagBankHolidays": false,
+            "extractReasons": false,
+            "extractZones": false,
+            "timezone_id": "Asia/Kuwait",
+            "flagSchoolHolidays": false,
+            "outColPrefix": "holiday_"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "holiday_weekend",
+                "to": "is_weekend"
+              }
+            ]
+          },
+          "alwaysShowComment": false
         }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "tweet_text",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": "https://",
-        "outColPrefix": "tweet_text_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
+      ],
       "alwaysShowComment": false
     },
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "clean screen_name",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "ColumnRenamer",
-      "params": {
-        "renamings": [
-          {
-            "from": "tweet_text_0",
-            "to": "text"
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "StringTransformer",
+          "params": {
+            "mode": "TO_LOWER",
+            "columns": [
+              "screen_name"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "truncate_limit": 0
           },
-          {
-            "from": "tweet_text_1",
-            "to": "text_first_link"
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "columns": [
+              "screen_name"
+            ],
+            "reorderAction": "AT_START",
+            "appliesTo": "SINGLE_COLUMN"
           },
-          {
-            "from": "tweet_text_2",
-            "to": "text_second_link"
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "extract tweet_text links",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "designTimeReport": {
+            "report": {
+              "createdColumnCount": 3
+            }
           },
-          {
-            "from": "tweet_text_3",
-            "to": "text_third_link"
-          }
-        ]
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnRenamer",
-      "params": {
-        "renamings": [
-          {
-            "from": "holiday_weekend",
-            "to": "is_weekend"
-          }
-        ]
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "tweet_text"
-        ],
-        "keep": false,
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FillEmptyWithValue",
-      "params": {
-        "columns": [
-          "text_second_link"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "value": "nu"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FillEmptyWithValue",
-      "params": {
-        "columns": [
-          "text_third_link"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "value": "nu"
-      },
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnSplitter",
+          "params": {
+            "inCol": "tweet_text",
+            "keepEmptyChunks": false,
+            "limit": 0,
+            "separator": "https://",
+            "outColPrefix": "tweet_text_",
+            "limitOutput": false,
+            "target": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "tweet_text_0",
+                "to": "text"
+              },
+              {
+                "from": "tweet_text_1",
+                "to": "text_first_link"
+              },
+              {
+                "from": "tweet_text_2",
+                "to": "text_second_link"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "tweet_text"
+            ],
+            "keep": false,
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FillEmptyWithValue",
+          "params": {
+            "columns": [
+              "text_second_link"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "value": "nu"
+          },
+          "alwaysShowComment": false
+        }
+      ],
       "alwaysShowComment": false
     }
   ],
@@ -221,9 +231,12 @@
     "text_second_link": 135,
     "te": 100,
     "date_time": 204,
+    "tweet_text_1": 134,
     "screen_name": 127,
+    "tweet_text_0": 300,
     "governorate": 134,
     "tweet_text_3": 105,
+    "tweet_text_2": 105,
     "text_third_link": 128,
     "text": 300,
     "lang": 100,
