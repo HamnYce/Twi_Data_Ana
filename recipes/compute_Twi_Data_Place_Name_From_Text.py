@@ -12,7 +12,7 @@ Twi_Data_Split_Text_Clean_df = Twi_Data_Split_Text_Clean.get_dataframe()
 # #### dropping nill values (about 600ish, hopefully doesn't make a big difference)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_Split_Text_Clean.dropna(inplace=True)
+Twi_Data_Split_Text_Clean_df.dropna(inplace=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # #### cleaning text_tweets
@@ -42,11 +42,14 @@ Twi_Data_Split_Text_Clean_df['place_text_name'] = place_names
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 apps = Twi_Data_Split_Text_Clean_df['app']
 clean_apps = []
-for app in apps:
-    app = apps[0].split(',')
-    app_com_index = app.index('"com"')
-    app = app[app_com_index - 1].strip('"')
-    clean_apps.append(app)
+try:
+    for app in apps:
+        app = apps[0].split(',')
+        app_com_index = app.index('"com"')
+        app = app[app_com_index - 1].strip('"')
+        clean_apps.append(app)
+except:
+    print(app)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_df['app'] = clean_apps
