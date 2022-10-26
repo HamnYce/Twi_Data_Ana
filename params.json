@@ -226,11 +226,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 173,
+    "versionNumber": 181,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666804446693
+    "lastModifiedOn": 1666805377103
   },
   "creationTag": {
     "versionNumber": 0,
@@ -306,7 +306,7 @@
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "cluster place_text_names",
             "createdOn": 1666714003041,
             "createdBy": "admin",
