@@ -37,6 +37,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Twi_Data_geopoint",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -226,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 181,
+    "versionNumber": 182,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666805377103
+    "lastModifiedOn": 1666817747168
   },
   "creationTag": {
     "versionNumber": 0,
