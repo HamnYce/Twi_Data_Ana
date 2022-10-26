@@ -91,7 +91,8 @@
       "type": "ColumnsSelector",
       "params": {
         "columns": [
-          "hashtags"
+          "hashtags",
+          "country"
         ],
         "keep": false,
         "appliesTo": "COLUMNS"
