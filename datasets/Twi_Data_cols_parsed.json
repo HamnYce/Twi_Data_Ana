@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666720814095
+    "lastModifiedOn": 1666791601035
   },
   "creationTag": {
     "versionNumber": 0,
@@ -95,7 +95,6 @@
       {"name":"text","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
-      {"name":"text_third_link","type":"string"},
       {"name":"latitude","type":"double"},
       {"name":"longitude","type":"double"},
       {"name":"place_name","type":"string"},
