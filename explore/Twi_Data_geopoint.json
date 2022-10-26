@@ -89,7 +89,7 @@
           "maxReadUncompressedBytes": -1
         },
         "autoRefreshSample": false,
-        "_refreshTrigger": 1666817432965
+        "_refreshTrigger": 1666817688068
       },
       "def": {
         "type": "density_heat_map",
@@ -107,15 +107,7 @@
         "yDimension": [],
         "uaXDimension": [],
         "uaYDimension": [],
-        "uaSize": [
-          {
-            "column": "is_weekend",
-            "type": "ALPHANUM",
-            "treatAsAlphanum": false,
-            "isA": "ua",
-            "adminLevel": 0
-          }
-        ],
+        "uaSize": [],
         "uaShape": [],
         "uaColor": [],
         "uaTooltip": [],
@@ -223,8 +215,8 @@
         "animationFrameDuration": 3000,
         "animationRepeat": true,
         "colorOptions": {
-          "singleColor": "#2678B1",
-          "transparency": 0.3,
+          "singleColor": "#1f77b4",
+          "transparency": 0.75,
           "colorPalette": "default",
           "ccScaleMode": "NORMAL",
           "customPalette": {
@@ -238,10 +230,7 @@
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
           "paletteMiddleValue": 0.0,
-          "customColors": {
-            "v_False": "#ff7f0e",
-            "v_True": "#2ca02c"
-          },
+          "customColors": {},
           "heatDensityMapIntensity": 0.5,
           "heatDensityMapRadius": 0.5
         },
@@ -267,7 +256,7 @@
           "gridLonDeg": 0.6,
           "gridLatDeg": 0.6
         },
-        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAASJJREFUeF7t0wERAAAIg0DXv7Q9/rAB4HYdbWA0XXBXYPwJClxg3ACO14ILjBvA8VpwgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI7XgguMG8DxWnCBcQM4XgsuMG4Ax2vBBcYN4HgtuMC4ARyvBRcYN4DjteAC4wZwvBZcYNwAjteCC4wbwPFacIFxAzheCy4wbgDHa8EFxg3geC24wLgBHK8FFxg3gOO14ALjBnC8Flxg3ACO14ILjBvA8VpwgXEDOF4LLjBuAMdrwQXGDeB4LbjAuAEcrwUXGDeA47XgAuMGcLwWXGDcAI7XgguMG8DxWnCBcQM4XgsuMG4Ax2vBBcYN4HgtuMC4ARyvBeOBH19gAFG6yohcAAAAAElFTkSuQmCC",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
