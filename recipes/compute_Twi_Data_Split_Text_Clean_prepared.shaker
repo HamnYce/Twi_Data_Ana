@@ -32,38 +32,7 @@
   "exploreUIParams": {
     "autoRefresh": true
   },
-  "steps": [
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FillEmptyWithValue",
-      "params": {
-        "columns": [
-          "text_first_link"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "value": "nu"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "Tokenizer",
-      "params": {
-        "inCol": "app",
-        "sortAlphabetically": false,
-        "normalize": false,
-        "language": "english",
-        "operation": "TO_JSON",
-        "clearStopWords": false,
-        "stem": false
-      },
-      "alwaysShowComment": false
-    }
-  ],
+  "steps": [],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
