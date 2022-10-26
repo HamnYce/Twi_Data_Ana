@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666718247646
+    "lastModifiedOn": 1666804221192
   },
   "creationTag": {
     "versionNumber": 0,
@@ -73,7 +73,9 @@
     },
     "lastModifiedOn": 1666718201539
   },
-  "tags": [],
+  "tags": [
+    "initial-data-cleanse"
+  ],
   "params": {
     "uploadConnection": "Default (in DSS data dir.)",
     "notReadyIfEmpty": false,

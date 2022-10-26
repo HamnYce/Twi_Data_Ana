@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666720403093
+    "lastModifiedOn": 1666804221227
   },
   "creationTag": {
     "versionNumber": 0,
@@ -73,7 +73,9 @@
     },
     "lastModifiedOn": 1666719496635
   },
-  "tags": [],
+  "tags": [
+    "initial-data-cleanse"
+  ],
   "params": {
     "connection": "filesystem_managed",
     "path": "${projectKey}/Twi_Data_tweet_text_cleaned",
@@ -100,7 +102,7 @@
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"}
     ],
-    "userModified": false
+    "userModified": true
   },
   "dkuProperties": [],
   "metrics": {

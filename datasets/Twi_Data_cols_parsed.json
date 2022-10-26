@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666801816870
+    "lastModifiedOn": 1666804221221
   },
   "creationTag": {
     "versionNumber": 0,
@@ -73,7 +73,9 @@
     },
     "lastModifiedOn": 1666720663767
   },
-  "tags": [],
+  "tags": [
+    "initial-data-cleanse"
+  ],
   "params": {
     "connection": "filesystem_managed",
     "path": "${projectKey}/Twi_Data_cols_parsed",
