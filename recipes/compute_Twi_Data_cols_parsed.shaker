@@ -248,7 +248,7 @@
             "columns": [
               "hashtags"
             ],
-            "action": "REMOVE_ROW",
+            "action": "CLEAR_CELL",
             "appliesTo": "SINGLE_COLUMN",
             "type": "JSONArrayMeaning"
           },
