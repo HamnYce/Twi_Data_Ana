@@ -1,11 +1,7 @@
 {
   "tags": {
-    "recipe-editor": {
-      "color": "#1ac2ab"
-    },
-    "data_prep": {
-      "color": "#90a8b7"
-    },
-    "deleted-recipe-editor": {}
+    "initial-data-cleanse": {
+      "color": "#ff666b"
+    }
   }
 }
