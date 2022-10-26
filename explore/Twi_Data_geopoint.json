@@ -70,7 +70,7 @@
       "copySelectionFromScript": true,
       "engineType": "LINO",
       "def": {
-        "type": "grouped_columns",
+        "type": "geom_map",
         "variant": "normal",
         "name": "New chart",
         "userEditedName": false,
@@ -97,9 +97,52 @@
         "geometry": [],
         "geoLayers": [
           {
-            "geometry": [],
+            "geometry": [
+              {
+                "column": "geopoint",
+                "type": "GEOPOINT",
+                "treatAsAlphanum": false,
+                "isA": "ua",
+                "adminLevel": 0
+              }
+            ],
             "colorOptions": {
               "singleColor": "#2678B1",
+              "transparency": 0.75,
+              "colorPalette": "default",
+              "ccScaleMode": "NORMAL",
+              "customPalette": {
+                "id": "__dku_custom__",
+                "name": "Custom Palette",
+                "colors": [],
+                "values": [],
+                "fixedValues": false
+              },
+              "paletteType": "CONTINUOUS",
+              "quantizationMode": "NONE",
+              "numQuantizeSteps": 5,
+              "paletteMiddleValue": 0.0,
+              "customColors": {
+                "v_False": "#ff7f0e",
+                "v_True": "#2ca02c"
+              },
+              "heatDensityMapIntensity": 0.5,
+              "heatDensityMapRadius": 0.5
+            },
+            "uaColor": [
+              {
+                "column": "is_weekend",
+                "type": "ALPHANUM",
+                "treatAsAlphanum": false,
+                "isA": "ua",
+                "adminLevel": 0
+              }
+            ]
+          },
+          {
+            "geometry": [],
+            "colorOptions": {
+              "singleColor": "#aec7e8",
               "transparency": 0.75,
               "colorPalette": "default",
               "ccScaleMode": "NORMAL",
@@ -124,6 +167,7 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
+        "filters": [],
         "axis1LogScale": false,
         "axis2LogScale": false,
         "includeZero": true,
@@ -194,6 +238,7 @@
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
         },
+        "computeMode": "NORMAL",
         "xAxisMode": "NORMAL",
         "yAxisMode": "NORMAL",
         "pieOptions": {
@@ -211,6 +256,7 @@
           "gridLonDeg": 0.6,
           "gridLatDeg": 0.6
         },
+        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
