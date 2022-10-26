@@ -67,6 +67,7 @@
       "type": "ColumnsSelector",
       "params": {
         "columns": [
+          "hashtags",
           "longitude",
           "latitude"
         ],
@@ -81,11 +82,13 @@
       "disabled": false,
       "type": "ColumnReorder",
       "params": {
+        "referenceColumn": "text_first_link",
         "columns": [
-          "hashtags"
+          "place_text_name",
+          "place_name"
         ],
-        "reorderAction": "AT_END",
-        "appliesTo": "SINGLE_COLUMN"
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     }
