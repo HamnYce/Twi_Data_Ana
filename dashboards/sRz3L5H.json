@@ -39,7 +39,7 @@
             "tileParams": {
               "text": "Weekend",
               "textAlign": "CENTER",
-              "isTransparent": false
+              "isTransparent": true
             },
             "autoLoad": true,
             "showTitle": "NO",
@@ -57,8 +57,8 @@
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "text": "Weekday",
-              "textAlign": "LEFT",
-              "isTransparent": false
+              "textAlign": "CENTER",
+              "isTransparent": true
             },
             "autoLoad": true,
             "showTitle": "NO",
@@ -70,8 +70,8 @@
             "box": {
               "top": 1,
               "left": 6,
-              "width": 2,
-              "height": 2
+              "width": 6,
+              "height": 6
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -99,11 +99,11 @@
   "name": "Twitter Geo Analysis\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666818578879
+    "lastModifiedOn": 1666818599861
   },
   "creationTag": {
     "versionNumber": 0,
