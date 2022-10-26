@@ -225,6 +225,75 @@
         }
       ],
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TO_LOWER",
+        "columns": [
+          "governorate"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TO_LOWER",
+        "columns": [
+          "districts"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "truncate_limit": 0
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "mapping": [
+          {
+            "from": "[],",
+            "to": "[]"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "hashtags"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FilterOnBadType",
+      "params": {
+        "booleanMode": "AND",
+        "columns": [
+          "hashtags"
+        ],
+        "action": "REMOVE_ROW",
+        "appliesTo": "SINGLE_COLUMN",
+        "type": "JSONArrayMeaning"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
