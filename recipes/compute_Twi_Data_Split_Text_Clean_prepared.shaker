@@ -27,6 +27,7 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
+  "columnUseScientificNotationByName": {},
   "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
@@ -126,20 +127,6 @@
       "params": {
         "columns": [
           "text_first_link"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "value": "nu"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FillEmptyWithValue",
-      "params": {
-        "columns": [
-          "text_second_link"
         ],
         "appliesTo": "SINGLE_COLUMN",
         "value": "nu"
