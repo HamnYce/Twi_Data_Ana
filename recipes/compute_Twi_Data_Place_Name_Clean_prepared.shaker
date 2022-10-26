@@ -28,8 +28,83 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "place_name",
+        "columns": [
+          "place_text_name"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "text_third_link"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoPointCreator",
+      "params": {
+        "out_column": "Geopoint",
+        "lat_column": "latitude",
+        "lon_column": "longitude"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "place_text_name",
+        "columns": [
+          "Geopoint"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "latitude",
+          "longitude"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -55,7 +130,27 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 100,
+    "text_first_link": 225,
+    "place_name": 218,
+    "country": 100,
+    "hashtags": 204,
+    "latitude": 141,
+    "districts": 148,
+    "newcolumn_expression": 165,
+    "text_second_link": 135,
+    "tweet_text_clean": 300,
+    "place_text_name": 211,
+    "Geopoint": 300,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "text_third_link": 128,
+    "lang": 100,
+    "is_weekend": 100,
+    "longitude": 141
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
