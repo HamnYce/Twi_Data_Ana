@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666791601035
+    "lastModifiedOn": 1666792146548
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,7 +92,7 @@
       {"name":"is_weekend","type":"boolean"},
       {"name":"lang","type":"string"},
       {"name":"app","type":"string"},
-      {"name":"text","type":"string"},
+      {"name":"text_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
       {"name":"latitude","type":"double"},
