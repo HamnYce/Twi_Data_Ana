@@ -31,7 +31,7 @@ for text in Twi_Data_Split_Text_Clean_prepared_df['tweet_text_clean']:
             index = split_text.index('in')
         place_names.append(' '.join(split_text[2:index]))
     else:
-        place_names.append("no name")
+        place_names.append("nu")
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_prepared_df['place_text_name'] = place_names
