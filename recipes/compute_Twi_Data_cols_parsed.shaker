@@ -3,7 +3,7 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 0,
+    "_refreshTrigger": 1666801705040,
     "selection": {
       "filter": {
         "distinct": false,
@@ -21,7 +21,7 @@
       "maxStoredBytes": 104857600,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "RANDOM_FIXED_NB_EXACT",
       "timeout": -1
     },
     "autoRefreshSample": false
@@ -203,6 +203,614 @@
             ],
             "appliesTo": "SINGLE_COLUMN",
             "truncate_limit": 0
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "Clean hashtags",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "[],",
+                "to": "[]"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "hashtags"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "FULL_STRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FilterOnBadType",
+          "params": {
+            "booleanMode": "AND",
+            "columns": [
+              "hashtags"
+            ],
+            "action": "REMOVE_ROW",
+            "appliesTo": "SINGLE_COLUMN",
+            "type": "JSONArrayMeaning"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "clean app",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "Tokenizer",
+          "params": {
+            "inCol": "app",
+            "sortAlphabetically": false,
+            "normalize": false,
+            "language": "english",
+            "operation": "TO_JSON",
+            "clearStopWords": false,
+            "stem": false
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "clean place_name",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "TextSimplifierProcessor",
+          "params": {
+            "inCol": "place_name",
+            "sortAlphabetically": false,
+            "normalize": true,
+            "language": "english",
+            "clearStopWords": false,
+            "stem": false
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "xd8 xb5 xd9 x87 xd9 x8a xd8 xaf xd8 xa7 xd9 x84 xd8 xb9 xd9 x88 xd8 xa7 xd8 xb2 xd9 x85 xd8 xa7 xd9 x84 xd9 x85 xd8 xb7 xd8 xa7 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x81 xd9 x8a xd8 xad xd8 xa7 xd8 xa1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb1 xd9 x8a xd8 xb7 xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd8 xad xd9 x84 xd9 x89 xd8 xa3 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb1 xd9 x8a xd8 xb7 xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd8 xad xd9 x84 xd9 x89 xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb1 xd9 x8a xd8 xb7 xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd8 xad xd9 x84 xd9 x89 xd8 xac xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb1 xd9 x8a xd8 xb7 xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd8 xad xd9 x84 xd9 x89 xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb5 xd9 x84 xd9 x8a xd8 xa8 xd9 x8a xd8 xa9 xd8 xa7 xd9 x84 xd8 xb2 xd8 xb1 xd8 xa7 xd8 xb9 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xac xd8 xa7 xd8 xa8 xd8 xb1 xd8 xa7 xd9 x84 xd8 xb9 xd9 x84 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd8 xa7 xd9 x84 xd8 xa8 xd8 xad xd8 xb1 xd9 x8a xd8 xa9 xd9 x84 xd8 xa4 xd9 x84 xd8 xa4 xd8 xa9 xd8 xa7 xd9 x84 xd8 xae xd9 x8a xd8 xb1 xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xac xd8 xa7 xd8 xa8 xd8 xb1 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xa7 xd8 xad xd9 x85 xd8 xaf xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xb2 xd8 xa7 xd8 xb1 xd8 xb9 xd8 xa7 xd9 x84 xd9 x88 xd9 x81 xd8 xb1 xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd8 xa7 xd8 xb1 xd8 xb6 xd9 x8a xd8 xa9 xd8 xa7 xd9 x84 xd8 xad xd8 xb1 xd9 x81 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb6 xd8 xa7 xd8 xad xd9 x8a xd8 xa9 xd9 x85 xd8 xa8 xd8 xa7 xd8 xb1 xd9 x83 xd8 xa7 xd9 x84 xd8 xb9 xd8 xa8 xd8 xaf xd8 xa7 xd9 x84 xd9 x84 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xae xd9 x8a xd8 xb7 xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd9 x86 xd8 xb7 xd9 x82 xd8 xa9 xd8 xa7 xd9 x84 xd9 x85 xd8 xb7 xd8 xa7 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xad xd9 x88 xd9 x84 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb3 xd9 x84 xd9 x88 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb9 xd8 xb1 xd9 x8a xd9 x81 xd8 xac xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb6 xd8 xac xd9 x8a xd8 xac xd8 xac xd9 x86 xd9 x88 xd8 xa8 xd8 xa7 xd9 x84 xd9 x81 xd8 xb1 xd9 x88 xd8 xa7 xd9 x86 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb6 xd8 xa7 xd8 xad xd9 x8a xd9 x87 xd8 xb9 xd8 xa8 xd8 xaf xd8 xa7 xd9 x84 xd9 x84 xd9 x87 xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd9 x84 xd9 x85 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xad xd8 xb7 xd9 x8a xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xa3 xd9 x86 xd8 xaf xd9 x84 xd8 xb3 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x86 xd8 xb2 xd9 x87 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb6 xd9 x84 xd9 x8a xd8 xb9 xd8 xa7 xd9 x84 xd8 xb2 xd9 x86 xd9 x8a xd9 x81 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x85 xd9 x86 xd8 xb5 xd9 x88 xd8 xb1 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd9 x88 xd9 x8a xd8 xae xd8 xa7 xd9 x84 xd8 xb5 xd8 xad xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd9 x84 xd9 x85 xd8 xa7 xd9 x84 xd8 xac xd8 xa7 xd9 x85 xd8 xb9 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd9 x87 xd8 xaf xd8 xa7 xd8 xa1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb5 xd8 xaf xd9 x8a xd9 x82 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd9 x8a xd9 x86 xd8 xa7 xd8 xa1 xd8 xa7 xd9 x84 xd8 xb4 xd9 x88 xd9 x8a xd8 xae xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd9 x88 xd9 x8a xd8 xae xd8 xa7 xd9 x84 xd8 xb5 xd9 x86 xd8 xa7 xd8 xb9 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd9 x88 xd9 x8a xd8 xae xd8 xa7 xd9 x84 xd8 xa5 xd8 xaf xd8 xa7 xd8 xb1 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd9 x88 xd9 x8a xd8 xae xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa5 xd8 xb4 xd8 xa8 xd9 x8a xd9 x84 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xae xd8 xa7 xd9 x84 xd8 xaf xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd8 xaf xd9 x8a xd9 x84 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb9 xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xac xd9 x84 xd9 x8a xd8 xa8 xd8 xa7 xd9 x84 xd8 xb4 xd9 x8a xd9 x88 xd8 xae xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x81 xd8 xad xd9 x8a xd8 xad xd9 x8a xd9 x84 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x82 xd8 xb1 xd8 xb7 xd8 xa8 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd9 x88 xd9 x8a xd8 xae xd8 xa7 xd9 x84 xd8 xaa xd8 xb9 xd9 x84 xd9 x8a xd9 x85 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd9 x84 xd9 x85 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd9 x84 xd9 x85 xd8 xa7 xd9 x84 xd8 xac xd8 xa7 xd9 x85 xd8 xb9 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb5 xd9 x84 xd9 x8a xd8 xa8 xd8 xae xd8 xa7 xd8 xaa xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd8 xaf xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x83 xd9 x8a xd9 x81 xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xac xd9 x86 xd9 x88 xd8 xa8 xd8 xa7 xd9 x84 xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb5 xd9 x84 xd9 x8a xd8 xa8 xd9 x8a xd8 xa9 xd8 xa7 xd9 x84 xd8 xb3 xd9 x83 xd9 x86 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x86 xd9 x88 xd9 x8a xd8 xb5 xd9 x8a xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd8 xa7 xd9 x84 xd9 x86 xd8 xa7 xd8 xb5 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb5 xd8 xa8 xd8 xad xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x88 xd8 xa7 xd8 xac xd9 x87 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa8 xd8 xad xd8 xb1 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x85 xd9 x82 xd9 x88 xd8 xb9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd9 x82 xd9 x8a xd9 x84 xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x85 xd8 xb3 xd8 xa7 xd9 x8a xd9 x84 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd9 x84 xd9 x85 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb3 xd9 x84 xd8 xa7 xd9 x85 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd8 xa7 xd8 xb1 xd8 xb6 xd9 x8a xd8 xa9 xd8 xa7 xd8 xb3 xd8 xaa xd8 xb9 xd9 x85 xd8 xa7 xd9 x84 xd8 xa7 xd8 xaa xd8 xad xd9 x83 xd9 x88 xd9 x85 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xba xd8 xb1 xd9 x86 xd8 xa7 xd8 xb7 xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x82 xd8 xb1 xd8 xa7 xd8 xaf xd8 xa7 xd9 x86 xd9 x88 xd8 xa7 xd9 x84 xd8 xad xd9 x81 xd9 x8a xd8 xb1 xd8 xa9 xd9 x88 xd8 xa7 xd9 x84 xd9 x81 xd9 x88 xd8 xa7 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x85 xd9 x86 xd9 x82 xd9 x81 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x82 xd8 xa7 xd8 xaf xd8 xb3 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xae xd9 x8a xd8 xb1 xd8 xa7 xd9 x86 xd8 xa7 xd9 x84 xd8 xb3 xd9 x83 xd9 x86 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xaf xd9 x88 xd8 xad xd9 x87 xd8 xa7 xd9 x84 xd8 xb3 xd9 x83 xd9 x86 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xaf xd8 xa7 xd8 xaf xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xaf xd8 xb9 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x81 xd8 xb1 xd8 xaf xd9 x88 xd8 xb3 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd8 xa7 xd8 xb1 xd8 xb6 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x85 xd8 xba xd8 xb1 xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xb9 xd8 xb3 xd9 x83 xd8 xb1 xd8 xa7 xd8 xaa xd8 xa7 xd9 x84 xd9 x85 xd8 xa8 xd8 xa7 xd8 xb1 xd9 x83 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x8a xd8 xb1 xd9 x85 xd9 x88 xd9 x83 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xb4 xd8 xb1 xd9 x81 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd8 xa8 xd8 xa7 xd8 xb1 xd9 x83 xd8 xa7 xd9 x84 xd9 x83 xd8 xa8 xd9 x8a xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb1 xd8 xad xd8 xa7 xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb1 xd8 xa7 xd8 xa8 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb3 xd8 xb9 xd8 xaf xd8 xa7 xd9 x84 xd8 xb9 xd8 xa8 xd8 xaf xd8 xa7 xd9 x84 xd9 x84 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x85 xd9 x87 xd8 xa8 xd9 x88 xd9 x84 xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xaf xd8 xb3 xd9 x85 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb5 xd8 xa8 xd8 xa7 xd8 xad xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd9 x8a xd9 x86 xd8 xa7 xd8 xa1 xd8 xb9 xd8 xa8 xd8 xaf xd8 xa7 xd9 x84 xd9 x84 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd8 xa8 xd9 x88 xd8 xad xd9 x84 xd9 x8a xd9 x81 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb4 xd9 x85 xd8 xa7 xd9 x84 xd8 xa7 xd9 x84 xd8 xb4 xd8 xb9 xd9 x8a xd8 xa8 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa3 xd9 x85 xd8 xa7 xd9 x84 xd9 x87 xd9 x8a xd9 x85 xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x82 xd8 xb1 xd9 x8a xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x81 xd8 xb1 xd9 x88 xd8 xa7 xd9 x86 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xac xd8 xa7 xd8 xa8 xd8 xb1 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb1 xd9 x82 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x82 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x87 xd8 xaf xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x82 xd8 xb5 xd9 x88 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb3 xd8 xb1 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xac xd9 x87 xd8 xb1 xd8 xa7 xd8 xa1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd9 x85 xd8 xb1 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x85 xd9 x8a xd8 xab xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x82 xd8 xb9 xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb2 xd9 x87 xd8 xb1 xd8 xa7 xd8 xa1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x85 xd8 xb1 xd9 x82 xd8 xa7 xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa8 xd9 x86 xd9 x8a xd8 xaf xd8 xa7 xd9 x84 xd9 x82 xd8 xa7 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd9 x85 xd9 x82 xd8 xa8 xd8 xb1 xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x82 xd8 xa8 xd9 x84 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xac xd9 x84 xd9 x8a xd8 xb9 xd8 xa9 xd9 x88 xd8 xa7 xd9 x84 xd8 xb2 xd9 x88 xd8 xb1 xd9 x88 xd8 xb5 xd9 x88 xd9 x84 xd8 xa9 xd9 x88 xd8 xa7 xd9 x84 xd8 xb6 xd8 xa8 xd8 xa7 xd8 xb9 xd9 x8a xd8 xa9 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xac xd8 xa7 xd8 xa8 xd8 xb1 xd8 xa7 xd9 x84 xd8 xb9 xd9 x84 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "",
+                "to": ""
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_name"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "FULL_STRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FilterOnValue",
+          "params": {
+            "normalizationMode": "EXACT",
+            "booleanMode": "AND",
+            "columns": [
+              "place_name"
+            ],
+            "values": [
+              "xd8 xa7 xd9 x84 xd8 xb1 xd9 x88 xd8 xb6 xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+            ],
+            "matchingMode": "FULL_STRING",
+            "action": "CLEAR_CELL",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "xd9 x81 xd9 x87 xd8 xaf xd8 xa7 xd9 x84 xd8 xa7 xd8 xad xd9 x85 xd8 xaf xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd8 xb9 xd8 xa7 xd8 xb1 xd8 xb6 xd9 x8a xd8 xa9 xd9 x85 xd8 xae xd8 xa7 xd8 xb2 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd8 xad xd8 xb2 xd8 xa7 xd9 x85 xd8 xa7 xd9 x84 xd8 xa7 xd8 xae xd8 xb6 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xb4 xd9 x85 xd8 xa7 xd9 x84 xd8 xba xd8 xb1 xd8 xa8 xd8 xa7 xd9 x84 xd8 xb5 xd9 x84 xd9 x8a xd8 xa8 xd8 xae xd8 xa7 xd8 xaa xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xb9 xd8 xa8 xd8 xaf xd8 xa7 xd9 x84 xd9 x84 xd9 x87 xd8 xa7 xd9 x84 xd9 x85 xd8 xa8 xd8 xa7 xd8 xb1 xd9 x83 xd8 xba xd8 xac xd9 x84 xd9 x8a xd8 xa8 xd8 xa7 xd9 x84 xd8 xb4 xd9 x8a xd9 x88 xd8 xae xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x81 xd9 x86 xd8 xb7 xd8 xa7 xd8 xb3 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd9 x88 xd8 xb3 xd8 xb7 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xaf xd8 xb3 xd9 x85 xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd9 x88 xd8 xb3 xd8 xb7 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              },
+              {
+                "from": "xd8 xa7 xd9 x84 xd9 x81 xd9 x86 xd9 x8a xd8 xb7 xd9 x8a xd8 xb3 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+                "to": "xd8 xa7 xd9 x84 xd9 x88 xd8 xb3 xd8 xb7 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_name"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "FULL_STRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FilterOnValue",
+          "params": {
+            "normalizationMode": "EXACT",
+            "booleanMode": "AND",
+            "columns": [
+              "place_name"
+            ],
+            "values": [
+              "xd8 xa7 xd9 x84 xd8 xb4 xd8 xa7 xd9 x85 xd9 x8a xd9 x87 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+              "xd9 x85 xd8 xaf xd9 x8a xd9 x86 xd8 xa9 xd8 xa7 xd9 x84 xd8 xa3 xd8 xad xd9 x85 xd8 xaf xd9 x8a xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+              "xd8 xa8 xd9 x8a xd8 xa7 xd9 x86 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+              "xd8 xa7 xd9 x84 xd8 xb4 xd8 xb1 xd9 x8a xd8 xb7 xd8 xa7 xd9 x84 xd8 xb3 xd8 xa7 xd8 xad xd9 x84 xd9 x89 xd8 xa8 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+              "xd8 xa7 xd9 x84 xd9 x88 xd8 xb3 xd8 xb7 xd9 x89 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa",
+              "xd9 x85 xd9 x86 xd8 xb7 xd9 x82 xd8 xa9 xd8 xa7 xd9 x84 xd9 x85 xd8 xb7 xd8 xa7 xd8 xb1 xd8 xaf xd9 x88 xd9 x84 xd8 xa9 xd8 xa7 xd9 x84 xd9 x83 xd9 x88 xd9 x8a xd8 xaa"
+            ],
+            "matchingMode": "FULL_STRING",
+            "action": "CLEAR_CELL",
+            "appliesTo": "SINGLE_COLUMN"
           },
           "alwaysShowComment": false
         }
