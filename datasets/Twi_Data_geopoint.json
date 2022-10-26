@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666804303001
+    "lastModifiedOn": 1666804430379
   },
   "creationTag": {
     "versionNumber": 0,
@@ -95,15 +95,14 @@
       {"name":"tweet_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
-      {"name":"latitude","type":"double"},
-      {"name":"longitude","type":"double"},
+      {"name":"geopoint","type":"string"},
       {"name":"place_name","type":"string"},
-      {"name":"hashtags","type":"array","arrayContent":{"type":"string"}
-      },
       {"name":"country","type":"string"},
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"},
-      {"name":"place_text_name","type":"string"}
+      {"name":"place_text_name","type":"string"},
+      {"name":"hashtags","type":"array","arrayContent":{"type":"string"}
+      }
     ],
     "userModified": true
   },
