@@ -133,6 +133,95 @@
             "stem": false
           },
           "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "RemoveRowsOnEmpty",
+          "params": {
+            "columns": [
+              "place_text_name"
+            ],
+            "keep": false,
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "t g i friday s فرايديز",
+                "to": "fridays"
+              },
+              {
+                "from": "t g i friday s",
+                "to": "fridays"
+              },
+              {
+                "from": "movenpick hotel resort al bida a movenpickhotels",
+                "to": "movenpick hotel resort"
+              },
+              {
+                "from": "movenpick hotel resort al bida a",
+                "to": "movenpick hotel resort"
+              },
+              {
+                "from": "b f open flame kitchen ofk360",
+                "to": "b f open flame kitchen"
+              },
+              {
+                "from": "american college of the middle east acm",
+                "to": "american college of the middle east acm acm college"
+              },
+              {
+                "from": "burger classic",
+                "to": "classic burger"
+              },
+              {
+                "from": "الشويخ شارع الزينه",
+                "to": "شارع الزينه الشويخ"
+              },
+              {
+                "from": "bank boubyan",
+                "to": "boubyan bank"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa jumeirahmb",
+                "to": "jumeirah messilah beach hotel"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa messilah 1 jumeirahmb",
+                "to": "jumeirah messilah beach hotel"
+              },
+              {
+                "from": "شيك شاك shakeshack",
+                "to": "shakeshack"
+              },
+              {
+                "from": "shakeshack شيك شاك",
+                "to": "shakeshack"
+              },
+              {
+                "from": "melenzane melenzane",
+                "to": "melenzane"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_text_name"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "FULL_STRING"
+          },
+          "alwaysShowComment": false
         }
       ],
       "alwaysShowComment": false
