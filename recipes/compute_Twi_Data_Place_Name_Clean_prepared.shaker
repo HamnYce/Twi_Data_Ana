@@ -64,44 +64,77 @@
     },
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "Create GeoPoint",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "GeoPointCreator",
-      "params": {
-        "out_column": "Geopoint",
-        "lat_column": "latitude",
-        "lon_column": "longitude"
-      },
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "GeoPointCreator",
+          "params": {
+            "out_column": "Geopoint",
+            "lat_column": "latitude",
+            "lon_column": "longitude"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "place_text_name",
+            "columns": [
+              "Geopoint"
+            ],
+            "reorderAction": "BEFORE_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "latitude",
+              "longitude"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        }
+      ],
       "alwaysShowComment": false
     },
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "Clean place_text_name",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "referenceColumn": "place_text_name",
-        "columns": [
-          "Geopoint"
-        ],
-        "reorderAction": "BEFORE_COLUMN",
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "latitude",
-          "longitude"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
-      },
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "TextSimplifierProcessor",
+          "params": {
+            "inCol": "place_text_name",
+            "sortAlphabetically": false,
+            "normalize": true,
+            "language": "english",
+            "clearStopWords": false,
+            "stem": false
+          },
+          "alwaysShowComment": false
+        }
+      ],
       "alwaysShowComment": false
     }
   ],
