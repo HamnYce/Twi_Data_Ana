@@ -53,8 +53,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 4,
+              "left": 0,
               "width": 2,
               "height": 2
             },
@@ -83,11 +83,11 @@
   "name": "Twitter Geo Analysis\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666817747362
+    "lastModifiedOn": 1666817747911
   },
   "creationTag": {
     "versionNumber": 0,
