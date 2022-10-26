@@ -67,10 +67,32 @@
   },
   "charts": [
     {
-      "copySelectionFromScript": true,
+      "copySelectionFromScript": false,
       "engineType": "LINO",
+      "refreshableSelection": {
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": 10000,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        },
+        "autoRefreshSample": false,
+        "_refreshTrigger": 1666817432965
+      },
       "def": {
-        "type": "geom_map",
+        "type": "density_heat_map",
         "variant": "normal",
         "name": "New chart",
         "userEditedName": false,
@@ -85,7 +107,15 @@
         "yDimension": [],
         "uaXDimension": [],
         "uaYDimension": [],
-        "uaSize": [],
+        "uaSize": [
+          {
+            "column": "is_weekend",
+            "type": "ALPHANUM",
+            "treatAsAlphanum": false,
+            "isA": "ua",
+            "adminLevel": 0
+          }
+        ],
         "uaShape": [],
         "uaColor": [],
         "uaTooltip": [],
@@ -94,55 +124,20 @@
         "yMeasure": [],
         "colorMeasure": [],
         "sizeMeasure": [],
-        "geometry": [],
-        "geoLayers": [
+        "geometry": [
           {
-            "geometry": [
-              {
-                "column": "geopoint",
-                "type": "GEOPOINT",
-                "treatAsAlphanum": false,
-                "isA": "ua",
-                "adminLevel": 0
-              }
-            ],
-            "colorOptions": {
-              "singleColor": "#2678B1",
-              "transparency": 0.75,
-              "colorPalette": "default",
-              "ccScaleMode": "NORMAL",
-              "customPalette": {
-                "id": "__dku_custom__",
-                "name": "Custom Palette",
-                "colors": [],
-                "values": [],
-                "fixedValues": false
-              },
-              "paletteType": "CONTINUOUS",
-              "quantizationMode": "NONE",
-              "numQuantizeSteps": 5,
-              "paletteMiddleValue": 0.0,
-              "customColors": {
-                "v_False": "#ff7f0e",
-                "v_True": "#2ca02c"
-              },
-              "heatDensityMapIntensity": 0.5,
-              "heatDensityMapRadius": 0.5
-            },
-            "uaColor": [
-              {
-                "column": "is_weekend",
-                "type": "ALPHANUM",
-                "treatAsAlphanum": false,
-                "isA": "ua",
-                "adminLevel": 0
-              }
-            ]
-          },
+            "column": "geopoint",
+            "type": "GEOPOINT",
+            "treatAsAlphanum": false,
+            "isA": "ua",
+            "adminLevel": 0
+          }
+        ],
+        "geoLayers": [
           {
             "geometry": [],
             "colorOptions": {
-              "singleColor": "#aec7e8",
+              "singleColor": "#1f77b4",
               "transparency": 0.75,
               "colorPalette": "default",
               "ccScaleMode": "NORMAL",
@@ -167,7 +162,20 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
-        "filters": [],
+        "filters": [
+          {
+            "filterType": "ALPHANUM_FACET",
+            "column": "is_weekend",
+            "columnType": "ALPHANUM",
+            "isA": "filter",
+            "excludedValues": {
+              "False": true
+            },
+            "isAGlobalFilter": false,
+            "active": true,
+            "explicitExclude": false
+          }
+        ],
         "axis1LogScale": false,
         "axis2LogScale": false,
         "includeZero": true,
@@ -216,7 +224,7 @@
         "animationRepeat": true,
         "colorOptions": {
           "singleColor": "#2678B1",
-          "transparency": 0.75,
+          "transparency": 0.3,
           "colorPalette": "default",
           "ccScaleMode": "NORMAL",
           "customPalette": {
@@ -230,7 +238,10 @@
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
           "paletteMiddleValue": 0.0,
-          "customColors": {},
+          "customColors": {
+            "v_False": "#ff7f0e",
+            "v_True": "#2ca02c"
+          },
           "heatDensityMapIntensity": 0.5,
           "heatDensityMapRadius": 0.5
         },
@@ -256,7 +267,7 @@
           "gridLonDeg": 0.6,
           "gridLatDeg": 0.6
         },
-        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
@@ -272,7 +283,7 @@
           }
         }
       },
-      "maxDataBytes": 157286400
+      "maxDataBytes": 209715200
     }
   ],
   "interactiveSearch": {
