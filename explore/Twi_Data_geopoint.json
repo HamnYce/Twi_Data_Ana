@@ -89,13 +89,13 @@
           "maxReadUncompressedBytes": -1
         },
         "autoRefreshSample": false,
-        "_refreshTrigger": 1666817688068
+        "_refreshTrigger": 1666818494710
       },
       "def": {
         "type": "density_heat_map",
         "variant": "normal",
-        "name": "New chart",
-        "userEditedName": false,
+        "name": "Density map on Weekdays",
+        "userEditedName": true,
         "displayEchart": false,
         "useEChartsImplementation": false,
         "genericDimension0": [],
