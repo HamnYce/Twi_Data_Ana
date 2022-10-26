@@ -161,7 +161,7 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "False": true
+              "True": true
             },
             "isAGlobalFilter": false,
             "active": true,
