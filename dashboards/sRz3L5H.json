@@ -91,8 +91,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 1,
+              "left": 10,
               "width": 2,
               "height": 2
             },
@@ -114,8 +114,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 3,
+              "left": 10,
               "width": 2,
               "height": 2
             },
@@ -145,11 +145,11 @@
   "name": "Density Map of Geopoints",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 19,
+    "versionNumber": 20,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666858538722
+    "lastModifiedOn": 1666858539223
   },
   "creationTag": {
     "versionNumber": 0,
