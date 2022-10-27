@@ -490,7 +490,7 @@
           "useMemTable": false,
           "filter": {
             "distinct": false,
-            "enabled": true
+            "enabled": false
           },
           "partitionSelectionMethod": "ALL",
           "latestPartitionsN": 1,
@@ -498,17 +498,17 @@
             "enabled": false,
             "rules": []
           },
-          "samplingMethod": "RANDOM_FIXED_NB",
-          "maxRecords": 300000,
+          "samplingMethod": "FULL",
+          "maxRecords": 10000,
           "targetRatio": 0.02,
           "withinFirstN": -1,
           "maxReadUncompressedBytes": -1
         },
         "autoRefreshSample": false,
-        "_refreshTrigger": 1666859478419
+        "_refreshTrigger": 1666818494710
       },
       "def": {
-        "type": "scatter_map",
+        "type": "grouped_columns",
         "variant": "normal",
         "name": "New chart",
         "userEditedName": false,
@@ -521,44 +521,18 @@
         "genericMeasures": [],
         "xDimension": [],
         "yDimension": [],
-        "uaXDimension": [
-          {
-            "column": "date_time",
-            "type": "DATE",
-            "treatAsAlphanum": false,
-            "dateMode": "RANGE",
-            "sortBy": "NATURAL",
-            "sortAscending": false,
-            "isA": "ua"
-          }
-        ],
+        "uaXDimension": [],
         "uaYDimension": [],
         "uaSize": [],
         "uaShape": [],
-        "uaColor": [
-          {
-            "column": "screen_name",
-            "type": "ALPHANUM",
-            "treatAsAlphanum": false,
-            "isA": "ua",
-            "adminLevel": 0
-          }
-        ],
+        "uaColor": [],
         "uaTooltip": [],
         "groupDimension": [],
         "xMeasure": [],
         "yMeasure": [],
         "colorMeasure": [],
         "sizeMeasure": [],
-        "geometry": [
-          {
-            "column": "geopoint",
-            "type": "GEOPOINT",
-            "treatAsAlphanum": false,
-            "isA": "ua",
-            "adminLevel": 0
-          }
-        ],
+        "geometry": [],
         "geoLayers": [
           {
             "geometry": [],
@@ -588,7 +562,6 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
-        "filters": [],
         "axis1LogScale": false,
         "axis2LogScale": false,
         "includeZero": true,
@@ -659,7 +632,6 @@
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
         },
-        "computeMode": "NORMAL",
         "xAxisMode": "NORMAL",
         "yAxisMode": "NORMAL",
         "pieOptions": {
@@ -674,10 +646,9 @@
           "lockSquareGrid": false
         },
         "mapGridOptions": {
-          "gridLonDeg": 0.5,
-          "gridLatDeg": 0.5
+          "gridLonDeg": 0.6,
+          "gridLatDeg": 0.6
         },
-        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
@@ -693,7 +664,7 @@
           }
         }
       },
-      "maxDataBytes": -1
+      "maxDataBytes": 209715200
     }
   ],
   "interactiveSearch": {
