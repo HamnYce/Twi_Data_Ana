@@ -92,36 +92,6 @@
       "name": "districts",
       "type": "string",
       "table": 0
-    },
-    {
-      "name": "lang_count",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "lang_distinct",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "place_text_name_distinct",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "governorate_count",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "governorate_distinct",
-      "type": "bigint",
-      "table": 1
-    },
-    {
-      "name": "count",
-      "type": "bigint",
-      "table": 1
     }
   ],
   "resolvedSelectedColumns": [],
@@ -238,30 +208,6 @@
           {
             "name": "districts",
             "type": "string"
-          },
-          {
-            "name": "lang_count",
-            "type": "bigint"
-          },
-          {
-            "name": "lang_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "place_text_name_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "governorate_count",
-            "type": "bigint"
-          },
-          {
-            "name": "governorate_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "count",
-            "type": "bigint"
           }
         ],
         "userModified": false
