@@ -5,29 +5,6 @@
       "grid": {
         "tiles": [
           {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": 1,
-              "left": 0,
-              "width": 5,
-              "height": 5
-            },
-            "clickAction": "DO_NOTHING",
-            "tileParams": {
-              "showXAxis": true,
-              "showYAxis": true,
-              "showLegend": false,
-              "showTooltips": true,
-              "autoPlayAnimation": true
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "UaXp4Cc",
-            "insightType": "chart",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
             "tileType": "TEXT",
             "box": {
               "top": 0,
@@ -69,32 +46,9 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 1,
-              "left": 5,
+              "left": 0,
               "width": 5,
               "height": 5
-            },
-            "clickAction": "DO_NOTHING",
-            "tileParams": {
-              "showXAxis": true,
-              "showYAxis": true,
-              "showLegend": false,
-              "showTooltips": true,
-              "autoPlayAnimation": true
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "fLJt5Kt",
-            "insightType": "chart",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": 1,
-              "left": 10,
-              "width": 2,
-              "height": 2
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -114,10 +68,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 3,
-              "left": 10,
-              "width": 2,
-              "height": 2
+              "top": 1,
+              "left": 5,
+              "width": 5,
+              "height": 5
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -145,11 +99,11 @@
   "name": "Density Map of Geopoints",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 20,
+    "versionNumber": 21,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666858539223
+    "lastModifiedOn": 1666858581661
   },
   "creationTag": {
     "versionNumber": 0,
