@@ -280,6 +280,19 @@
   "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "count",
+          "col": "lang_count",
+          "num": 100,
+          "operator": "\u003e  [number]"
+        }
+      ]
+    },
     "$status": {
       "schema": {
         "columns": [
@@ -316,6 +329,6 @@
       }
     },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   }
 }
