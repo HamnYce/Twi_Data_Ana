@@ -61,7 +61,7 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "lang",
-      "count": false,
+      "count": true,
       "$idx": 2,
       "sum": false,
       "concat": false,
@@ -69,8 +69,9 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -115,7 +116,7 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "place_text_name",
-      "count": false,
+      "count": true,
       "$idx": 5,
       "sum": false,
       "concat": false,
@@ -123,8 +124,9 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -143,6 +145,7 @@
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -205,7 +208,7 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "governorate",
-      "count": false,
+      "count": true,
       "$idx": 10,
       "sum": false,
       "concat": false,
@@ -213,8 +216,9 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -282,6 +286,30 @@
           {
             "name": "screen_name",
             "type": "string"
+          },
+          {
+            "name": "lang_count",
+            "type": "bigint"
+          },
+          {
+            "name": "lang_distinct",
+            "type": "bigint"
+          },
+          {
+            "name": "place_text_name_count",
+            "type": "bigint"
+          },
+          {
+            "name": "place_text_name_distinct",
+            "type": "bigint"
+          },
+          {
+            "name": "governorate_count",
+            "type": "bigint"
+          },
+          {
+            "name": "governorate_distinct",
+            "type": "bigint"
           },
           {
             "name": "count",
