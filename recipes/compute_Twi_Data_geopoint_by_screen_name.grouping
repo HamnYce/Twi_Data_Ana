@@ -116,7 +116,7 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "place_text_name",
-      "count": true,
+      "count": false,
       "$idx": 5,
       "sum": false,
       "concat": false,
@@ -293,10 +293,6 @@
           },
           {
             "name": "lang_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "place_text_name_count",
             "type": "bigint"
           },
           {
