@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666880739897
+    "lastModifiedOn": 1666880846909
   },
   "creationTag": {
     "versionNumber": 0,
@@ -90,7 +90,6 @@
       {"name":"screen_name","type":"string"},
       {"name":"lang_count","type":"bigint"},
       {"name":"lang_distinct","type":"bigint"},
-      {"name":"place_text_name_count","type":"bigint"},
       {"name":"place_text_name_distinct","type":"bigint"},
       {"name":"governorate_count","type":"bigint"},
       {"name":"governorate_distinct","type":"bigint"},
