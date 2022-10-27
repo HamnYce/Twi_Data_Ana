@@ -18,12 +18,12 @@
         },
         "samplingMethod": "RANDOM_FIXED_RATIO",
         "maxRecords": 10000,
-        "targetRatio": 0.25,
+        "targetRatio": 0.5,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 1666879893073
+      "_refreshTrigger": 1666879919769
     },
     "def": {
       "type": "density_heat_map",
@@ -212,11 +212,11 @@
   "name": "Density map on Weekends on Twi_Data_geopoint",
   "dashboardCreationId": "sRz3L5H",
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666879893177
+    "lastModifiedOn": 1666879919804
   },
   "creationTag": {
     "versionNumber": 0,
