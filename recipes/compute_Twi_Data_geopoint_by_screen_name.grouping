@@ -69,7 +69,7 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": true,
+      "countDistinct": false,
       "avg": false,
       "$selected": false,
       "stddev": false,
@@ -124,7 +124,7 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": true,
+      "countDistinct": false,
       "avg": false,
       "$selected": false,
       "stddev": false,
@@ -302,14 +302,6 @@
           },
           {
             "name": "lang_count",
-            "type": "bigint"
-          },
-          {
-            "name": "lang_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "place_text_name_distinct",
             "type": "bigint"
           },
           {
