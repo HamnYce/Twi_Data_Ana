@@ -1,0 +1,234 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "Twi_Data_geopoint",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 1666818494710
+    },
+    "def": {
+      "type": "density_heat_map",
+      "variant": "normal",
+      "name": "Density map on Weekdays",
+      "userEditedName": true,
+      "displayEchart": false,
+      "useEChartsImplementation": false,
+      "genericDimension0": [],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [],
+      "uaYDimension": [],
+      "uaSize": [],
+      "uaShape": [],
+      "uaColor": [],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [
+        {
+          "column": "geopoint",
+          "type": "GEOPOINT",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0
+        }
+      ],
+      "geoLayers": [
+        {
+          "geometry": [],
+          "colorOptions": {
+            "singleColor": "#1f77b4",
+            "transparency": 0.75,
+            "colorPalette": "default",
+            "ccScaleMode": "NORMAL",
+            "customPalette": {
+              "id": "__dku_custom__",
+              "name": "Custom Palette",
+              "colors": [],
+              "values": [],
+              "fixedValues": false
+            },
+            "paletteType": "CONTINUOUS",
+            "quantizationMode": "NONE",
+            "numQuantizeSteps": 5,
+            "paletteMiddleValue": 0.0,
+            "customColors": {},
+            "heatDensityMapIntensity": 0.5,
+            "heatDensityMapRadius": 0.5
+          },
+          "uaColor": []
+        }
+      ],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [
+        {
+          "filterType": "ALPHANUM_FACET",
+          "column": "is_weekend",
+          "columnType": "ALPHANUM",
+          "isA": "filter",
+          "excludedValues": {
+            "True": true
+          },
+          "isAGlobalFilter": false,
+          "active": true,
+          "explicitExclude": false
+        }
+      ],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "yAxisNumberFormattingOptions": {
+        "multiplier": "Auto",
+        "prefix": "",
+        "suffix": ""
+      },
+      "xAxisNumberFormattingOptions": {
+        "multiplier": "Auto",
+        "prefix": "",
+        "suffix": ""
+      },
+      "displayXAxis": true,
+      "displayYAxis": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "yCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "xCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#1f77b4",
+        "transparency": 0.75,
+        "colorPalette": "ryg1",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0,
+        "customColors": {},
+        "heatDensityMapIntensity": 0.37,
+        "heatDensityMapRadius": 0.31
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.6,
+        "gridLatDeg": 0.6
+      },
+      "thumbnailData": "data:image/png;base64,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",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "OUTER_RIGHT",
+      "pivotMeasureDisplayMode": "ROWS",
+      "pivotDisplayTotals": {
+        "subTotals": {
+          "rows": true,
+          "columns": true
+        },
+        "grandTotal": {
+          "row": true,
+          "column": true
+        }
+      }
+    },
+    "maxDataBytes": 209715200
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Density map on Weekdays on Twi_Data_geopoint",
+  "dashboardCreationId": "sRz3L5H",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1666858538721
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1666858538721
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
