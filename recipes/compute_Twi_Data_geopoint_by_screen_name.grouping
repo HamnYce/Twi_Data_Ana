@@ -288,7 +288,7 @@
         {
           "input": "count",
           "col": "lang_count",
-          "num": 100,
+          "num": 500,
           "operator": "\u003e  [number]"
         }
       ]
