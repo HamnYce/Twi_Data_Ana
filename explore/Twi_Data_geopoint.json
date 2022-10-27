@@ -535,7 +535,15 @@
         "uaYDimension": [],
         "uaSize": [],
         "uaShape": [],
-        "uaColor": [],
+        "uaColor": [
+          {
+            "column": "screen_name",
+            "type": "ALPHANUM",
+            "treatAsAlphanum": false,
+            "isA": "ua",
+            "adminLevel": 0
+          }
+        ],
         "uaTooltip": [],
         "groupDimension": [],
         "xMeasure": [],
