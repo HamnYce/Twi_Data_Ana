@@ -508,7 +508,7 @@
         "_refreshTrigger": 1666818494710
       },
       "def": {
-        "type": "grouped_columns",
+        "type": "scatter_map",
         "variant": "normal",
         "name": "New chart",
         "userEditedName": false,
@@ -521,7 +521,17 @@
         "genericMeasures": [],
         "xDimension": [],
         "yDimension": [],
-        "uaXDimension": [],
+        "uaXDimension": [
+          {
+            "column": "date_time",
+            "type": "DATE",
+            "treatAsAlphanum": false,
+            "dateMode": "RANGE",
+            "sortBy": "NATURAL",
+            "sortAscending": false,
+            "isA": "ua"
+          }
+        ],
         "uaYDimension": [],
         "uaSize": [],
         "uaShape": [],
@@ -532,7 +542,15 @@
         "yMeasure": [],
         "colorMeasure": [],
         "sizeMeasure": [],
-        "geometry": [],
+        "geometry": [
+          {
+            "column": "geopoint",
+            "type": "GEOPOINT",
+            "treatAsAlphanum": false,
+            "isA": "ua",
+            "adminLevel": 0
+          }
+        ],
         "geoLayers": [
           {
             "geometry": [],
@@ -562,6 +580,7 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
+        "filters": [],
         "axis1LogScale": false,
         "axis2LogScale": false,
         "includeZero": true,
@@ -646,9 +665,10 @@
           "lockSquareGrid": false
         },
         "mapGridOptions": {
-          "gridLonDeg": 0.6,
-          "gridLatDeg": 0.6
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
         },
+        "thumbnailData": "data:image/png;base64,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",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
