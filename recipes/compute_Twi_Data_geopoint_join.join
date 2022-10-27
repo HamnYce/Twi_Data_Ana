@@ -159,6 +159,7 @@
       }
     }
   },
+  "engineType": "DSS",
   "virtualInputs": [
     {
       "preFilter": {
