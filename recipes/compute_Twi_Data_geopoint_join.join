@@ -4,7 +4,7 @@
       "table2": 1,
       "table1": 0,
       "conditionsMode": "AND",
-      "type": "LEFT",
+      "type": "INNER",
       "outerJoinOnTheLeft": true,
       "on": [
         {
@@ -65,16 +65,6 @@
     },
     {
       "name": "place_name",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "text_first_link",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "text_second_link",
       "type": "string",
       "table": 0
     },
@@ -187,14 +177,6 @@
           },
           {
             "name": "place_name",
-            "type": "string"
-          },
-          {
-            "name": "text_first_link",
-            "type": "string"
-          },
-          {
-            "name": "text_second_link",
             "type": "string"
           },
           {
