@@ -29,16 +29,1431 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "app",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "date_time",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "districts",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "geopoint",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "governorate",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "is_weekend",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "lang",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "place_name",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "place_text_name",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "screen_name",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "tweet_text_clean",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "app",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "app",
+                  "type": "CATEGORICAL"
+                },
+                "id": "owf8bi1"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "app",
+                  "type": "CATEGORICAL"
+                },
+                "id": "fQiGskV"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "app",
+                  "type": "CATEGORICAL"
+                },
+                "id": "9LU9xQq"
+              }
+            ],
+            "id": "RlxqY9F"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "date_time",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "date_time",
+                  "type": "CATEGORICAL"
+                },
+                "id": "St8Bf04"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "date_time",
+                  "type": "CATEGORICAL"
+                },
+                "id": "8OtVxUI"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "date_time",
+                  "type": "CATEGORICAL"
+                },
+                "id": "c6L1WGQ"
+              }
+            ],
+            "id": "quwGscQ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "districts",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "districts",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ABxNgwP"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "districts",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Y4xLrYV"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "districts",
+                  "type": "CATEGORICAL"
+                },
+                "id": "LzVGRW0"
+              }
+            ],
+            "id": "ZXsnnYo"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "geopoint",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "geopoint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "gY29VLj"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "geopoint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "BbBkjG3"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "geopoint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "LMo2fcJ"
+              }
+            ],
+            "id": "Z7hjQr1"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "governorate",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "governorate",
+                  "type": "CATEGORICAL"
+                },
+                "id": "4S9lj0u"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "governorate",
+                  "type": "CATEGORICAL"
+                },
+                "id": "LAKDEe1"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "governorate",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eo6NkpA"
+              }
+            ],
+            "id": "sX5sYSe"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "is_weekend",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "is_weekend",
+                  "type": "CATEGORICAL"
+                },
+                "id": "hKHtgbg"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "is_weekend",
+                  "type": "CATEGORICAL"
+                },
+                "id": "nEbM77Z"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "is_weekend",
+                  "type": "CATEGORICAL"
+                },
+                "id": "svIgvbh"
+              }
+            ],
+            "id": "62AeVWA"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "lang",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "lang",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Yad2wu5"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "lang",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Uyy1y2Q"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "lang",
+                  "type": "CATEGORICAL"
+                },
+                "id": "vTgUexj"
+              }
+            ],
+            "id": "oy5ESme"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "place_name",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "place_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "8iYcLCT"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "place_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "pRHg3nJ"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "place_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "gCtvOGo"
+              }
+            ],
+            "id": "OoW718K"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "place_text_name",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "place_text_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "FdC4RJk"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "place_text_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "lzMjbgj"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "place_text_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "QOlNCDG"
+              }
+            ],
+            "id": "hMtrQnx"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "screen_name",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "screen_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "sMZJmQi"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "screen_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "MWSx1qY"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "screen_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "QQPmw5b"
+              }
+            ],
+            "id": "M41Zunf"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "tweet_text_clean",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "tweet_text_clean",
+                  "type": "CATEGORICAL"
+                },
+                "id": "SMKhOcX"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "tweet_text_clean",
+                  "type": "CATEGORICAL"
+                },
+                "id": "RPwoctl"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "tweet_text_clean",
+                  "type": "CATEGORICAL"
+                },
+                "id": "svacFKr"
+              }
+            ],
+            "id": "eIVYmLx"
+          }
+        ],
+        "id": "UDy2OBb"
+      },
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "app",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "districts",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "geopoint",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "governorate",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "is_weekend",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "lang",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "place_name",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "place_text_name",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "screen_name",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "tweet_text_clean",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "app",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "app",
+                  "type": "CATEGORICAL"
+                },
+                "id": "EtHPbrF"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "app",
+                  "type": "CATEGORICAL"
+                },
+                "id": "rl421Ah"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "app",
+                  "type": "CATEGORICAL"
+                },
+                "id": "4sEOKcs"
+              }
+            ],
+            "id": "iV19LN1"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "districts",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "districts",
+                  "type": "CATEGORICAL"
+                },
+                "id": "SPskYqM"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "districts",
+                  "type": "CATEGORICAL"
+                },
+                "id": "mALwfoR"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "districts",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eAtsFxB"
+              }
+            ],
+            "id": "y4Bmwn1"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "geopoint",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "geopoint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "udn1Ko3"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "geopoint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "VGF4Oqu"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "geopoint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "WwL7OVs"
+              }
+            ],
+            "id": "z3JT5kz"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "governorate",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "governorate",
+                  "type": "CATEGORICAL"
+                },
+                "id": "TvrjjT0"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "governorate",
+                  "type": "CATEGORICAL"
+                },
+                "id": "VyLych3"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "governorate",
+                  "type": "CATEGORICAL"
+                },
+                "id": "tVLReen"
+              }
+            ],
+            "id": "nN0zSV3"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "is_weekend",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "is_weekend",
+                  "type": "CATEGORICAL"
+                },
+                "id": "B5PWhx8"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "is_weekend",
+                  "type": "CATEGORICAL"
+                },
+                "id": "KhJf8wx"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "is_weekend",
+                  "type": "CATEGORICAL"
+                },
+                "id": "II16Vq1"
+              }
+            ],
+            "id": "tMTxUhD"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "lang",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "lang",
+                  "type": "CATEGORICAL"
+                },
+                "id": "BCPVAm7"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "lang",
+                  "type": "CATEGORICAL"
+                },
+                "id": "xHOg76g"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "lang",
+                  "type": "CATEGORICAL"
+                },
+                "id": "jOBMEWw"
+              }
+            ],
+            "id": "WFsSCYX"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "place_name",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "place_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "SJw0NKA"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "place_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "3tYJwUe"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "place_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ckDINXM"
+              }
+            ],
+            "id": "zrtMRDi"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "place_text_name",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "place_text_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "9zH2J4f"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "place_text_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "jVHsu8t"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "place_text_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "UIcVtRU"
+              }
+            ],
+            "id": "Mk7SPir"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "screen_name",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "screen_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "YX0KaIO"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "screen_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "FDMXwmh"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "screen_name",
+                  "type": "CATEGORICAL"
+                },
+                "id": "0bFcyNd"
+              }
+            ],
+            "id": "IGrT67R"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "tweet_text_clean",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "tweet_text_clean",
+                  "type": "CATEGORICAL"
+                },
+                "id": "q8SBMf1"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "tweet_text_clean",
+                  "type": "CATEGORICAL"
+                },
+                "id": "gEjMCUF"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "tweet_text_clean",
+                  "type": "CATEGORICAL"
+                },
+                "id": "q1UrLUf"
+              }
+            ],
+            "id": "W4it6xM"
+          }
+        ],
+        "id": "0y5vkRO"
+      }
+    ],
     "id": "rRmrHfR"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666950122931
+    "lastModifiedOn": 1666957784348
   },
   "creationTag": {
     "versionNumber": 0,
