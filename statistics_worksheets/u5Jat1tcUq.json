@@ -40,14 +40,6 @@
         "showCumulativeDistributionFunction": false,
         "xColumns": [
           {
-            "name": "app",
-            "type": "CATEGORICAL"
-          },
-          {
-            "name": "date_time",
-            "type": "CATEGORICAL"
-          },
-          {
             "name": "districts",
             "type": "CATEGORICAL"
           },
@@ -85,130 +77,6 @@
           }
         ],
         "cards": [
-          {
-            "type": "column_card",
-            "column": {
-              "name": "app",
-              "type": "CATEGORICAL"
-            },
-            "cards": [
-              {
-                "type": "categorical_histogram",
-                "maxValues": 10,
-                "groupOthers": false,
-                "column": {
-                  "name": "app",
-                  "type": "CATEGORICAL"
-                },
-                "id": "owf8bi1"
-              },
-              {
-                "type": "univariate_summary",
-                "confidenceLevel": 0.95,
-                "showConfidenceInterval": false,
-                "compute": {
-                  "totalCount": true,
-                  "mean": true,
-                  "sum": false,
-                  "median": true,
-                  "std": true,
-                  "variance": false,
-                  "skewness": false,
-                  "kurtosis": false,
-                  "sem": false,
-                  "completeCount": true,
-                  "nbEmpty": true,
-                  "zeroCount": false,
-                  "zeroRatio": false,
-                  "nonZeroRatio": false,
-                  "iqr": false,
-                  "distinctCount": true,
-                  "nbNonEmpty": false,
-                  "min": true,
-                  "max": true,
-                  "range": false,
-                  "mode": true
-                },
-                "column": {
-                  "name": "app",
-                  "type": "CATEGORICAL"
-                },
-                "id": "fQiGskV"
-              },
-              {
-                "type": "univariate_frequency_table",
-                "maxValues": 10,
-                "column": {
-                  "name": "app",
-                  "type": "CATEGORICAL"
-                },
-                "id": "9LU9xQq"
-              }
-            ],
-            "id": "RlxqY9F"
-          },
-          {
-            "type": "column_card",
-            "column": {
-              "name": "date_time",
-              "type": "CATEGORICAL"
-            },
-            "cards": [
-              {
-                "type": "categorical_histogram",
-                "maxValues": 10,
-                "groupOthers": false,
-                "column": {
-                  "name": "date_time",
-                  "type": "CATEGORICAL"
-                },
-                "id": "St8Bf04"
-              },
-              {
-                "type": "univariate_summary",
-                "confidenceLevel": 0.95,
-                "showConfidenceInterval": false,
-                "compute": {
-                  "totalCount": true,
-                  "mean": true,
-                  "sum": false,
-                  "median": true,
-                  "std": true,
-                  "variance": false,
-                  "skewness": false,
-                  "kurtosis": false,
-                  "sem": false,
-                  "completeCount": true,
-                  "nbEmpty": true,
-                  "zeroCount": false,
-                  "zeroRatio": false,
-                  "nonZeroRatio": false,
-                  "iqr": false,
-                  "distinctCount": true,
-                  "nbNonEmpty": false,
-                  "min": true,
-                  "max": true,
-                  "range": false,
-                  "mode": true
-                },
-                "column": {
-                  "name": "date_time",
-                  "type": "CATEGORICAL"
-                },
-                "id": "8OtVxUI"
-              },
-              {
-                "type": "univariate_frequency_table",
-                "maxValues": 10,
-                "column": {
-                  "name": "date_time",
-                  "type": "CATEGORICAL"
-                },
-                "id": "c6L1WGQ"
-              }
-            ],
-            "id": "quwGscQ"
-          },
           {
             "type": "column_card",
             "column": {
@@ -1449,11 +1317,11 @@
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666957784348
+    "lastModifiedOn": 1666958057793
   },
   "creationTag": {
     "versionNumber": 0,
