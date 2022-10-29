@@ -2,6 +2,7 @@
   "tags": {
     "initial-data-cleanse": {
       "color": "#ff666b"
-    }
+    },
+    "recipe-editor": {}
   }
 }
