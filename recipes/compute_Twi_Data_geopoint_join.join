@@ -59,17 +59,12 @@
       "table": 0
     },
     {
-      "name": "place_text_name",
+      "name": "geopoint",
       "type": "string",
       "table": 0
     },
     {
       "name": "place_name",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "geopoint",
       "type": "string",
       "table": 0
     },
@@ -80,6 +75,11 @@
     },
     {
       "name": "districts",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "place_text_name",
       "type": "string",
       "table": 0
     }
@@ -122,14 +122,8 @@
   "engineType": "DSS",
   "virtualInputs": [
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
       "autoSelectColumns": false,
-      "originLabel": "Twi_Data_geopoint",
-      "index": 0,
-      "computedColumns": []
+      "index": 1
     },
     {
       "preFilter": {
@@ -138,7 +132,7 @@
       },
       "autoSelectColumns": false,
       "originLabel": "Twi_Data_geopoint_by_screen_name",
-      "index": 1,
+      "index": 0,
       "computedColumns": []
     }
   ],
@@ -172,15 +166,11 @@
             "type": "string"
           },
           {
-            "name": "place_text_name",
+            "name": "geopoint",
             "type": "string"
           },
           {
             "name": "place_name",
-            "type": "string"
-          },
-          {
-            "name": "geopoint",
             "type": "string"
           },
           {
@@ -189,6 +179,10 @@
           },
           {
             "name": "districts",
+            "type": "string"
+          },
+          {
+            "name": "place_text_name",
             "type": "string"
           }
         ],
