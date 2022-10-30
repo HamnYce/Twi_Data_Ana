@@ -9,12 +9,6 @@ Twi_Data_no_links = dataiku.Dataset("Twi_Data_no_links")
 Twi_Data_no_links_df = Twi_Data_no_links.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# #### dropping nill values (about 600ish, hopefully doesn't make a big difference)
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_no_links_df.dropna(inplace=True)
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # #### cleaning text_tweets
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
