@@ -45,7 +45,7 @@
           "disabled": false,
           "type": "FindReplace",
           "params": {
-            "output": "",
+            "output": "place_name_unquoted",
             "mapping": [
               {
                 "from": "\"",
@@ -69,11 +69,11 @@
         {
           "preview": false,
           "metaType": "PROCESSOR",
-          "disabled": true,
+          "disabled": false,
           "type": "CreateColumnWithGREL",
           "params": {
-            "expression": "if(\nendsWith(place_name_unqouted)\n)",
-            "column": "place_name_unquoted"
+            "expression": "if(\ncontains(place_name_unquoted, \u0027\\x\u0027),\n\u0027\u0027,\nplace_name_unquoted)",
+            "column": "place_name_no_weird_encoding"
           },
           "alwaysShowComment": false
         }
@@ -109,14 +109,16 @@
   "columnWidthsByName": {
     "app": 100,
     "place_name": 300,
-    "date_time": 204,
-    "screen_name": 127,
-    "governorate": 134,
     "districts": 148,
     "geopoint": 300,
     "tweet_text_clean": 300,
-    "lang": 100,
     "place_text_name": 218,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "place_name_unquoted": 300,
+    "place_name_no_weird_encoding": 232,
+    "lang": 100,
     "is_weekend": 100
   },
   "sorting": [],
