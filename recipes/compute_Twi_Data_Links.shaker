@@ -3,14 +3,14 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 1667153629839,
+    "_refreshTrigger": 1667154153481,
     "selection": {
       "filter": {
         "distinct": false,
         "enabled": false
       },
       "latestPartitionsN": 1,
-      "maxRecords": 20000,
+      "maxRecords": 10000,
       "maxRecordsForDisplay": -1,
       "ordering": {
         "rules": [],
@@ -57,10 +57,28 @@
       "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "CreateColumnWithGREL",
+      "type": "FindReplace",
       "params": {
-        "expression": "or(startsWith(text_first_link,\u0027\"\u0027), startsWith(text_first_link,\"\u0027\"))",
-        "column": "newcolumn_expression"
+        "output": "",
+        "mapping": [
+          {
+            "from": "\u0027",
+            "to": ""
+          },
+          {
+            "from": "\"",
+            "to": ""
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "text_first_link",
+          "text_second_link",
+          "text_third_link"
+        ],
+        "appliesTo": "COLUMNS",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
       },
       "alwaysShowComment": false
     }
