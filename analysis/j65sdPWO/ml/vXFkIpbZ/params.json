@@ -95,13 +95,13 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [
-          "YEAR",
-          "QUARTER",
           "DAY",
+          "YEAR",
           "HOUR",
-          "WEEK",
+          "MINUTE",
           "MONTH",
-          "MINUTE"
+          "WEEK",
+          "QUARTER"
         ],
         "role": "INPUT",
         "type": "NUMERIC",
@@ -116,7 +116,7 @@
       },
       "screen_name": {
         "category_handling": "DUMMIFY",
-        "missing_handling": "DROP_ROW",
+        "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -138,16 +138,15 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "categorical_rescaling": "AVGSTD",
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
-          "userModified": true,
+          "userModified": false,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
         "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "from sklearn.feature_extraction import text\n\n# Applies count vectorization to the feature\nprocessor \u003d text.CountVectorizer()\n",
+        "customHandlingCode": "",
         "customProcessorWantsMatrix": false,
         "sendToInput": "main"
       },
@@ -210,7 +209,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -246,7 +245,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -309,7 +308,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -380,7 +379,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -452,7 +451,7 @@
       ],
       "enabled": true,
       "seed": 1337,
-      "n_jobs": -1
+      "n_jobs": 1
     },
     "mini_batch_kmeans_clustering": {
       "k": [
