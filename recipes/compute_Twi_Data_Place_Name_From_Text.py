@@ -5,14 +5,14 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
 # Read recipe inputs
-Twi_Data_no_links = dataiku.Dataset("Twi_Data_no_links")
-Twi_Data_no_links_df = Twi_Data_Split_Text_Clean.get_dataframe()
+Twi_Data_Split_Text_Clean = dataiku.Dataset("Twi_Data_Split_Text_Clean")
+Twi_Data_Split_Text_Clean_df = Twi_Data_Split_Text_Clean.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # #### dropping nill values (about 600ish, hopefully doesn't make a big difference)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_no_links_df.dropna(inplace=True)
+Twi_Data_Split_Text_Clean_df.dropna(inplace=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # #### cleaning text_tweets
@@ -21,7 +21,7 @@ Twi_Data_no_links_df.dropna(inplace=True)
 # make new column that says place_name
 place_names = []
 # TODO: loop through text and extract 1 or 2 words after "I'm at"
-for text in Twi_Data_no_links_df['tweet_text_clean']:
+for text in Twi_Data_Split_Text_Clean_df['tweet_text_clean']:
     split_text = text.split()
     if len(split_text) == 1:
         place_names.append(split_text[0])
@@ -34,13 +34,13 @@ for text in Twi_Data_no_links_df['tweet_text_clean']:
         place_names.append("nu")
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_no_links_df['place_text_name'] = place_names
+Twi_Data_Split_Text_Clean_df['place_text_name'] = place_names
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # #### Getting app name from the HTML
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-apps = Twi_Data_no_links_df['app']
+apps = Twi_Data_Split_Text_Clean_df['app']
 clean_apps = []
 try:
     for app in apps:
@@ -52,10 +52,10 @@ except:
     print(app)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_no_links_df['app'] = clean_apps
+Twi_Data_Split_Text_Clean_df['app'] = clean_apps
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_Place_Name_From_Text_df = Twi_Data_no_links_df # For this sample code, simply copy input to output
+Twi_Data_Place_Name_From_Text_df = Twi_Data_Split_Text_Clean_df # For this sample code, simply copy input to output
 
 
 # Write recipe outputs
