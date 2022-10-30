@@ -5,37 +5,7 @@
   },
   "keys": [
     {
-      "column": "screen_name"
-    },
-    {
-      "column": "date_time"
-    },
-    {
-      "column": "is_weekend"
-    },
-    {
-      "column": "lang"
-    },
-    {
-      "column": "app"
-    },
-    {
-      "column": "tweet_text_clean"
-    },
-    {
-      "column": "geopoint"
-    },
-    {
       "column": "place_name_clean"
-    },
-    {
-      "column": "governorate"
-    },
-    {
-      "column": "districts"
-    },
-    {
-      "column": "place_text_name"
     }
   ],
   "globalCount": false,
@@ -75,6 +45,17 @@
   },
   "outputColumnNameOverrides": {},
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "place_name_clean",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
