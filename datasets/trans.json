@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667173019351
+    "lastModifiedOn": 1667173019611
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,7 +88,7 @@
   "schema": {
     "columns": [
       {"name":"place_name_clean","type":"string"},
-      {"name":"place_name_clean_en","type":"string"}
+      {"name":"place_name_clean_en","type":"string","comment":"English translation of the \u0027place_name_clean\u0027 column."}
     ],
     "userModified": false
   },
