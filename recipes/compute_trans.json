@@ -3,7 +3,16 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "show_advanced": true,
+      "use_gpu": false,
+      "split_sentences": true,
+      "batch_size": 1,
+      "num_beams": 5,
+      "text_column": "place_name_clean",
+      "source_language": "ar",
+      "target_language": "en"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -37,11 +46,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667172169780
+    "lastModifiedOn": 1667172200345
   },
   "creationTag": {
     "versionNumber": 0,
