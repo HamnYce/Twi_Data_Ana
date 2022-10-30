@@ -158,6 +158,10 @@
               {
                 "from": "tweet_text_2",
                 "to": "text_second_link"
+              },
+              {
+                "from": "tweet_text_3",
+                "to": "text_third_link"
               }
             ]
           },
