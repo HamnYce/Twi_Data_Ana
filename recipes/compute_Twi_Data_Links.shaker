@@ -3,14 +3,14 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 0,
+    "_refreshTrigger": 1667153629839,
     "selection": {
       "filter": {
         "distinct": false,
         "enabled": false
       },
       "latestPartitionsN": 1,
-      "maxRecords": 10000,
+      "maxRecords": 20000,
       "maxRecordsForDisplay": -1,
       "ordering": {
         "rules": [],
@@ -18,10 +18,10 @@
       },
       "withinFirstN": -1,
       "partitionSelectionMethod": "ALL",
-      "maxStoredBytes": 104857600,
+      "maxStoredBytes": -1,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "RANDOM_FIXED_NB_EXACT",
       "timeout": -1
     },
     "autoRefreshSample": false
@@ -50,6 +50,17 @@
         ],
         "keep": false,
         "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "or(startsWith(text_first_link,\u0027\"\u0027), startsWith(text_first_link,\"\u0027\"))",
+        "column": "newcolumn_expression"
       },
       "alwaysShowComment": false
     }
@@ -88,6 +99,7 @@
     "text_first_link": 225,
     "place_name": 239,
     "districts": 148,
+    "newcolumn_expression": 165,
     "text_second_link": 135,
     "geopoint": 300,
     "tweet_text_clean": 300,
