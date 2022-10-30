@@ -5,7 +5,7 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
 # Read recipe inputs
-Twi_Data_Split_Text_Clean = dataiku.Dataset("Twi_Data_Split_Text_Clean")
+Twi_Data_Split_Text_Clean = dataiku.Dataset("Twi_Data_no_links")
 Twi_Data_Split_Text_Clean_df = Twi_Data_Split_Text_Clean.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
