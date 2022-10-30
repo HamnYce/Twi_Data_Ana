@@ -3,7 +3,16 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "source_language": "auto",
+      "target_language": "en",
+      "format": "text",
+      "fail_on_error": false,
+      "api_configuration_preset": {
+        "mode": "NONE"
+      },
+      "text_column": "place_name_clean"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -37,11 +46,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667171179699
+    "lastModifiedOn": 1667171189665
   },
   "creationTag": {
     "versionNumber": 0,
