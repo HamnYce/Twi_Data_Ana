@@ -211,54 +211,6 @@
     },
     {
       "preview": false,
-      "name": "Clean hashtags",
-      "metaType": "GROUP",
-      "disabled": false,
-      "steps": [
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "FindReplace",
-          "params": {
-            "output": "",
-            "mapping": [
-              {
-                "from": "[],",
-                "to": "[]"
-              }
-            ],
-            "normalization": "EXACT",
-            "columns": [
-              "hashtags"
-            ],
-            "appliesTo": "SINGLE_COLUMN",
-            "stopAfterFirstMatch": false,
-            "matching": "FULL_STRING"
-          },
-          "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "FilterOnBadType",
-          "params": {
-            "booleanMode": "AND",
-            "columns": [
-              "hashtags"
-            ],
-            "action": "CLEAR_CELL",
-            "appliesTo": "SINGLE_COLUMN",
-            "type": "JSONArrayMeaning"
-          },
-          "alwaysShowComment": false
-        }
-      ],
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
       "name": "clean app",
       "metaType": "GROUP",
       "disabled": false,
