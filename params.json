@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 187,
+    "versionNumber": 195,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667136709918
+    "lastModifiedOn": 1667150390111
   },
   "creationTag": {
     "versionNumber": 0,
@@ -357,7 +357,7 @@
         "createdOn": 0,
         "items": [
           {
-            "done": false,
+            "done": true,
             "text": "#### make some initial map graphs: \n- heat maps\n- count of place_names",
             "createdOn": 1666545496172,
             "createdBy": "admin",
