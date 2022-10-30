@@ -447,9 +447,7 @@
       "enabled": false
     },
     "kmeans_clustering": {
-      "k": [
-        5
-      ],
+      "k": [],
       "enabled": true,
       "seed": 1337,
       "n_jobs": -1
@@ -545,9 +543,9 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "FULL",
+      "samplingMethod": "RANDOM_FIXED_RATIO",
       "maxRecords": 100000,
-      "targetRatio": 0.02,
+      "targetRatio": 0.5,
       "withinFirstN": -1,
       "maxReadUncompressedBytes": -1
     },
