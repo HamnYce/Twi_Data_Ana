@@ -43,7 +43,7 @@
         },
         "python": {}
       },
-      "basic": false,
+      "basic": true,
       "countDistinct": false,
       "advanced": true,
       "percentile": false,
