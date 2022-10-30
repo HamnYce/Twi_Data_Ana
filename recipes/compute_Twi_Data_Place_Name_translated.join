@@ -6,25 +6,7 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": [
-        {
-          "column1": {
-            "name": "place_name_clean",
-            "table": 0
-          },
-          "dateDiffUnit": "DAY",
-          "column2": {
-            "name": "place_name_clean",
-            "table": 1
-          },
-          "maxMatches": 1,
-          "caseInsensitive": false,
-          "maxDistance": 0,
-          "normalizeText": false,
-          "type": "EQ",
-          "strict": false
-        }
-      ]
+      "on": []
     }
   ],
   "selectedColumns": [
@@ -82,11 +64,6 @@
       "name": "place_text_name",
       "type": "string",
       "table": 0
-    },
-    {
-      "name": "place_name_clean_en",
-      "type": "string",
-      "table": 1
     }
   ],
   "resolvedSelectedColumns": [],
@@ -136,14 +113,7 @@
       "computedColumns": []
     },
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "autoSelectColumns": false,
-      "originLabel": "trans",
-      "index": 1,
-      "computedColumns": []
+      "index": 1
     }
   ],
   "computedColumns": [],
