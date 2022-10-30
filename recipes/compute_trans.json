@@ -5,7 +5,7 @@
   "params": {
     "customConfig": {
       "show_advanced": true,
-      "use_gpu": false,
+      "use_gpu": true,
       "split_sentences": true,
       "batch_size": 1,
       "num_beams": 5,
@@ -46,11 +46,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667172200345
+    "lastModifiedOn": 1667173672428
   },
   "creationTag": {
     "versionNumber": 0,
