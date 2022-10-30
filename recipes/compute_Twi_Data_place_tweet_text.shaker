@@ -28,7 +28,10 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
   "steps": [],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
@@ -59,7 +62,18 @@
       "meaning": "Text"
     }
   },
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 300,
+    "place_name": 246,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "districts": 148,
+    "geopoint": 300,
+    "tweet_text_clean": 300,
+    "lang": 100,
+    "is_weekend": 100
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
