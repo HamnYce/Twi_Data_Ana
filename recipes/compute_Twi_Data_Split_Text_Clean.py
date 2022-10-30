@@ -53,6 +53,8 @@ Twi_Data_cols_parsed_df['text_second_link'] = second_link_clean
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Split_Text_Clean_df = Twi_Data_cols_parsed_df # For this sample code, simply copy input to output
 
+# Write out the link columns
+Twi_Data_links_df = 
 
 # Write recipe outputs
 Twi_Data_Split_Text_Clean = dataiku.Dataset("Twi_Data_Split_Text_Clean")
