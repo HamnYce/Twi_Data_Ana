@@ -5,43 +5,7 @@
   },
   "keys": [
     {
-      "column": "userid"
-    },
-    {
-      "column": "language"
-    },
-    {
-      "column": "date_local"
-    },
-    {
-      "column": "app"
-    },
-    {
-      "column": "tweet_text"
-    },
-    {
-      "column": "lat"
-    },
-    {
-      "column": "lng"
-    },
-    {
       "column": "place_name"
-    },
-    {
-      "column": "screen_name"
-    },
-    {
-      "column": "hashtags"
-    },
-    {
-      "column": "country"
-    },
-    {
-      "column": "governorate"
-    },
-    {
-      "column": "districts"
     }
   ],
   "globalCount": false,
@@ -81,6 +45,17 @@
   },
   "outputColumnNameOverrides": {},
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "place_name",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
