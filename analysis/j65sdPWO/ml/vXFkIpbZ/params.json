@@ -115,7 +115,7 @@
         "sendToInput": "main"
       },
       "screen_name": {
-        "category_handling": "HASHING",
+        "category_handling": "DUMMIFY",
         "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -147,7 +147,7 @@
           "recordedMeaning": "Text"
         },
         "autoReason": "REJECT_CARDINALITY",
-        "customHandlingCode": "",
+        "customHandlingCode": "from sklearn.feature_extraction import text\n\n# Applies count vectorization to the feature\nprocessor \u003d text.CountVectorizer()\n",
         "customProcessorWantsMatrix": false,
         "sendToInput": "main"
       },
@@ -545,7 +545,7 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "RANDOM_FIXED_RATIO",
+      "samplingMethod": "FULL",
       "maxRecords": 100000,
       "targetRatio": 0.5,
       "withinFirstN": -1,
