@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 203,
+    "versionNumber": 213,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667160611855
+    "lastModifiedOn": 1667170860796
   },
   "creationTag": {
     "versionNumber": 0,
@@ -254,120 +254,29 @@
   "checklists": {
     "checklists": [
       {
-        "id": "9f49b7",
-        "title": "Prepping Twitter Data",
+        "id": "9d654d",
+        "title": "Todo list",
         "createdOn": 0,
         "items": [
           {
-            "done": true,
-            "text": "Normalize language column",
-            "createdOn": 1666314564737,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "See if you can split date_local into 2 columns using prep recipe, with flow",
-            "createdOn": 1666314588245,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "change log and lat meanings",
-            "createdOn": 1666314669252,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "Clean Tweet Text ",
-            "createdOn": 1666352102936,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "add weekend vs weekday column",
-            "createdOn": 1666464536495,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "- split links from tweet text into link column\n",
-            "createdOn": 1666465124696,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "clean tweet text, link1, and link2 from start and end quotes",
-            "createdOn": 1666542461417,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "move links from text to first_link",
-            "createdOn": 1666544144181,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "cluster place_text_names",
-            "createdOn": 1666714003041,
+            "done": false,
+            "text": "change from python code recipes to visual recipes instead",
+            "createdOn": 1667170841291,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
             "done": false,
-            "text": "change place_name to something else (what does it even represent?)",
-            "createdOn": 1666768383155,
+            "text": "translate arabic text to english ( for place name)",
+            "createdOn": 1667170860760,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
         ]
       },
       {
-        "id": "121bb1",
-        "title": "Extracting Locations",
-        "createdOn": 0,
-        "items": [
-          {
-            "done": true,
-            "text": "extract location name column from tweet text (I\u0027m at....)\n\ncall it place_name",
-            "createdOn": 1666545456568,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          },
-          {
-            "done": true,
-            "text": "get website  name, from link\n(can use python with requests library to parse HTML)\n",
-            "createdOn": 1666603094292,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          }
-        ]
-      },
-      {
-        "id": "743d3c",
-        "title": "Statistics",
-        "createdOn": 0,
-        "items": [
-          {
-            "done": true,
-            "text": "#### make some initial map graphs: \n- heat maps\n- count of place_names",
-            "createdOn": 1666545496172,
-            "createdBy": "admin",
-            "stateChangedOn": 0
-          }
-        ]
-      },
-      {
-        "id": "b9d41c",
-        "title": "Modelling",
+        "id": "abb4e5",
+        "title": "Todo list 2",
         "createdOn": 0,
         "items": []
       }
