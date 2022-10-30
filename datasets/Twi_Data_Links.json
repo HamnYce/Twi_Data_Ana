@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667153866447
+    "lastModifiedOn": 1667154245956
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,7 +91,6 @@
       {"name":"date_time","type":"date"},
       {"name":"tweet_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
-      {"name":"newcolumn_expression","type":"boolean"},
       {"name":"text_second_link","type":"string"},
       {"name":"text_third_link","type":"string"}
     ],
