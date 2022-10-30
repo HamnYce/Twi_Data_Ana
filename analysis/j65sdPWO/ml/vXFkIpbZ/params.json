@@ -115,7 +115,7 @@
         "sendToInput": "main"
       },
       "screen_name": {
-        "category_handling": "ORDINAL",
+        "category_handling": "HASHING",
         "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -210,7 +210,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -246,7 +246,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -380,7 +380,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
