@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667152397776
+    "lastModifiedOn": 1667152444083
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,17 +89,10 @@
     "columns": [
       {"name":"screen_name","type":"string"},
       {"name":"date_time","type":"date"},
-      {"name":"is_weekend","type":"boolean"},
-      {"name":"lang","type":"string"},
-      {"name":"app","type":"string"},
       {"name":"tweet_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
-      {"name":"text_third_link","type":"string"},
-      {"name":"geopoint","type":"string"},
-      {"name":"place_name","type":"string","meaning":"Text"},
-      {"name":"governorate","type":"string"},
-      {"name":"districts","type":"string"}
+      {"name":"text_third_link","type":"string"}
     ],
     "userModified": true
   },
