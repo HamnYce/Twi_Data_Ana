@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666804221216
+    "lastModifiedOn": 1667151706632
   },
   "creationTag": {
     "versionNumber": 0,
@@ -90,22 +90,21 @@
   "schema": {
     "columns": [
       {"name":"screen_name","type":"string"},
-      {"name":"date_time","type":"date"},
-      {"name":"is_weekend","type":"boolean"},
+      {"name":"date_time","type":"string"},
+      {"name":"is_weekend","type":"string"},
       {"name":"lang","type":"string"},
       {"name":"app","type":"string"},
       {"name":"tweet_text_clean","type":"string"},
-      {"name":"text_first_link","type":"string"},
-      {"name":"text_second_link","type":"string"},
-      {"name":"latitude","type":"double"},
-      {"name":"longitude","type":"double"},
+      {"name":"text_first_link","type":"double"},
+      {"name":"text_second_link","type":"double"},
+      {"name":"text_third_link","type":"double"},
+      {"name":"geopoint","type":"string"},
       {"name":"place_name","type":"string"},
-      {"name":"hashtags","type":"string"},
-      {"name":"country","type":"string"},
       {"name":"governorate","type":"string"},
-      {"name":"districts","type":"string"}
+      {"name":"districts","type":"string"},
+      {"name":"text","type":"double"}
     ],
-    "userModified": true
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
