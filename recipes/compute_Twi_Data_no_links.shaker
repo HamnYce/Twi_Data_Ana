@@ -28,8 +28,28 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "text_third_link",
+          "text_second_link",
+          "text_first_link"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +79,21 @@
       "meaning": "Text"
     }
   },
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 300,
+    "text_first_link": 225,
+    "place_name": 239,
+    "districts": 148,
+    "text_second_link": 135,
+    "geopoint": 300,
+    "tweet_text_clean": 300,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "text_third_link": 128,
+    "lang": 100,
+    "is_weekend": 100
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
