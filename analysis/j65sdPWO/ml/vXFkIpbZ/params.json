@@ -115,8 +115,8 @@
         "sendToInput": "main"
       },
       "screen_name": {
-        "category_handling": "DUMMIFY",
-        "missing_handling": "NONE",
+        "category_handling": "ORDINAL",
+        "missing_handling": "DROP_ROW",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -138,10 +138,11 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "REJECT",
+        "categorical_rescaling": "AVGSTD",
+        "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -308,7 +309,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -451,7 +452,7 @@
       ],
       "enabled": true,
       "seed": 1337,
-      "n_jobs": 1
+      "n_jobs": -1
     },
     "mini_batch_kmeans_clustering": {
       "k": [
@@ -544,7 +545,7 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "FULL",
       "maxRecords": 100000,
       "targetRatio": 0.02,
       "withinFirstN": -1,
