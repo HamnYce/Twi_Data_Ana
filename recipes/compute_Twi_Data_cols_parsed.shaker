@@ -816,6 +816,57 @@
         }
       ],
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "Extracting Geopoint",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "GeoPointCreator",
+          "params": {
+            "out_column": "geopoint",
+            "lat_column": "latitude",
+            "lon_column": "longitude"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "latitude",
+            "columns": [
+              "geopoint"
+            ],
+            "reorderAction": "BEFORE_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "latitude",
+              "longitude"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
