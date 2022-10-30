@@ -54,6 +54,10 @@
               {
                 "from": "\u0027",
                 "to": ""
+              },
+              {
+                "from": ", Kuwait",
+                "to": ""
               }
             ],
             "normalization": "EXACT",
@@ -85,6 +89,46 @@
           "params": {
             "expression": "if(\nendsWith(place_name_no_weird_encoding, \u0027,\u0027),\nplace_name_no_weird_encoding[0, -1],\nplace_name_no_weird_encoding\n)",
             "column": "place_name_no_end_comma"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "remove other place_names",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "place_name_no_weird_encoding",
+              "place_name_unquoted",
+              "place_name"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "place_name_no_end_comma",
+                "to": "place_name_clean"
+              }
+            ]
           },
           "alwaysShowComment": false
         }
@@ -125,6 +169,7 @@
     "place_name_no_end_comma": 225,
     "tweet_text_clean": 300,
     "place_text_name": 218,
+    "place_name_clean": 225,
     "date_time": 204,
     "screen_name": 127,
     "governorate": 134,
