@@ -28,7 +28,7 @@
     "sorting": [
       {
         "column": "place_name_clean",
-        "ascending": false
+        "ascending": true
       }
     ],
     "analysisColumnData": {},
