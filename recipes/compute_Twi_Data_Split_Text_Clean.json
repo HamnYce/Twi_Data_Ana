@@ -1,0 +1,67 @@
+{
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "envSelection": {
+      "envMode": "INHERIT"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Twi_Data_cols_parsed",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Twi_Data_Split_Text_Clean",
+          "appendMode": false
+        },
+        {
+          "ref": "Twi_Data_links",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 14,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1667152148644
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1666720972422
+  },
+  "tags": [
+    "initial-data-cleanse"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

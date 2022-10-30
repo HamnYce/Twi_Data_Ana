@@ -3,7 +3,6 @@
     "initial-data-cleanse": {
       "color": "#ff666b"
     },
-    "recipe-editor": {},
-    "deleted-recipe-editor": {}
+    "recipe-editor": {}
   }
 }
