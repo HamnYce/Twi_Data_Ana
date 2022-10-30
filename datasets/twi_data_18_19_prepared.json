@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666804221230
+    "lastModifiedOn": 1667162036626
   },
   "creationTag": {
     "versionNumber": 0,
@@ -97,9 +97,6 @@
       {"name":"latitude","type":"double","meaning":"Latitude"},
       {"name":"longitude","type":"double","meaning":"Longitude"},
       {"name":"place_name","type":"string"},
-      {"name":"hashtags","type":"array","arrayContent":{"type":"string"}
-      },
-      {"name":"country","type":"string","meaning":"CountryMeaning"},
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"}
     ],
