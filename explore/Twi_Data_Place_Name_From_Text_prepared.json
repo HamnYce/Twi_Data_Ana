@@ -69,7 +69,8 @@
       "place_name_no_end_comma": 246,
       "governorate": 134,
       "districts": 148,
-      "place_text_name": 211
+      "place_text_name": 211,
+      "place_name_clean": 218
     },
     "columnUseScientificNotationByName": {},
     "coloring": {
@@ -82,7 +83,7 @@
     "explorationSampling": {
       "selection": {
         "maxRecordsForDisplay": -1,
-        "maxStoredBytes": 104857600,
+        "maxStoredBytes": -1,
         "timeout": -1,
         "filter": {
           "distinct": false,
@@ -95,13 +96,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 10000,
+        "maxRecords": 3000000,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 0
+      "_refreshTrigger": 1667170968963
     },
     "vizSampling": {
       "selection": {
