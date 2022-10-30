@@ -447,7 +447,9 @@
       "enabled": false
     },
     "kmeans_clustering": {
-      "k": [],
+      "k": [
+        5
+      ],
       "enabled": true,
       "seed": 1337,
       "n_jobs": -1
