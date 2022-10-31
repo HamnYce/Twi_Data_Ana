@@ -62,7 +62,7 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "lang",
-      "count": true,
+      "count": false,
       "$idx": 2,
       "sum": false,
       "concat": false,
@@ -139,9 +139,10 @@
       "sum": false,
       "concat": false,
       "type": "string",
-      "countDistinct": false,
+      "countDistinct": true,
       "min": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -150,7 +151,7 @@
       "max": false,
       "firstLastNotNull": false,
       "column": "governorate",
-      "count": true,
+      "count": false,
       "$idx": 7,
       "sum": false,
       "concat": false,
@@ -195,7 +196,7 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
       "$selected": false,
       "stddev": false,
@@ -274,15 +275,15 @@
             "type": "bigint"
           },
           {
-            "name": "lang_count",
-            "type": "bigint"
-          },
-          {
-            "name": "governorate_count",
+            "name": "place_name_clean_distinct",
             "type": "bigint"
           },
           {
             "name": "governorate_distinct",
+            "type": "bigint"
+          },
+          {
+            "name": "place_text_name_distinct",
             "type": "bigint"
           },
           {
