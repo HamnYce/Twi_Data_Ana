@@ -30,24 +30,6 @@ for text in Twi_Data_no_links_df['tweet_text_clean']:
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_no_links_df['place_text_name'] = place_names
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# #### Getting app name from the HTML
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-apps = Twi_Data_no_links_df['app']
-clean_apps = []
-try:
-    for app in apps:
-        app = apps[0].split(',')
-        app_com_index = app.index('"com"')
-        app = app[app_com_index - 1].strip('"')
-        clean_apps.append(app)
-except:
-    print(app)
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_no_links_df['app'] = clean_apps
-
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 Twi_Data_Place_Name_From_Text_df = Twi_Data_no_links_df # For this sample code, simply copy input to output
 
