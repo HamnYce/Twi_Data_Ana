@@ -40,11 +40,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667225118157
+    "lastModifiedOn": 1667225130088
   },
   "creationTag": {
     "versionNumber": 0,
@@ -53,7 +53,9 @@
     },
     "lastModifiedOn": 1666729501370
   },
-  "tags": [],
+  "tags": [
+    "change to visual recipe"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []
