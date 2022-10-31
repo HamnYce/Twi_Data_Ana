@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667161978186
+    "lastModifiedOn": 1667204756911
   },
   "creationTag": {
     "versionNumber": 0,
@@ -100,9 +100,6 @@
       {"name":"text_third_link","type":"string"},
       {"name":"geopoint","type":"string"},
       {"name":"place_name","type":"string","meaning":"Text"},
-      {"name":"hashtags","type":"array","arrayContent":{"type":"string"}
-      },
-      {"name":"country","type":"string"},
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"}
     ],
