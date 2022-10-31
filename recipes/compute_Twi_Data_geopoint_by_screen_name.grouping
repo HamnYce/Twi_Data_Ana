@@ -159,7 +159,7 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
       "$selected": false,
       "stddev": false,
@@ -178,8 +178,9 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -276,6 +277,14 @@
           },
           {
             "name": "place_name_clean_distinct",
+            "type": "bigint"
+          },
+          {
+            "name": "governorate_distinct",
+            "type": "bigint"
+          },
+          {
+            "name": "districts_distinct",
             "type": "bigint"
           },
           {
