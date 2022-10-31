@@ -220,6 +220,50 @@
             "stem": false
           },
           "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "\"",
+                "to": ""
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "app"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "SUBSTRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "PythonUDF",
+          "params": {
+            "mode": "CELL",
+            "envSelection": {
+              "envMode": "INHERIT"
+            },
+            "stopOnError": true,
+            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    app \u003d row[\u0027app\u0027][1:-1].split(\u0027,\u0027)\n    if \u0027com\u0027 in app:\n        i \u003d app.index(\u0027com\u0027)\n        return app[i - 1]\n    return app[0]",
+            "useKernel": false,
+            "column": "app",
+            "sourceColumnsList": [],
+            "usePythonUnicode": true,
+            "vectorSize": 256,
+            "vectorize": false
+          },
+          "alwaysShowComment": false
         }
       ],
       "alwaysShowComment": false
