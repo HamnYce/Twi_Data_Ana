@@ -24,21 +24,6 @@
         "alwaysShowComment": false
       },
       {
-        "type": "ColumnReorder",
-        "params": {
-          "reorderAction": "BEFORE_COLUMN",
-          "referenceColumn": "tweet_text_clean",
-          "appliesTo": "SINGLE_COLUMN",
-          "columns": [
-            "app_name"
-          ]
-        },
-        "metaType": "PROCESSOR",
-        "preview": false,
-        "disabled": false,
-        "alwaysShowComment": false
-      },
-      {
         "type": "FindReplace",
         "params": {
           "output": "",
@@ -56,7 +41,22 @@
           ]
         },
         "metaType": "PROCESSOR",
-        "preview": true,
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnReorder",
+        "params": {
+          "reorderAction": "BEFORE_COLUMN",
+          "referenceColumn": "tweet_text_clean",
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "app_name"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
         "disabled": false,
         "alwaysShowComment": false
       }
@@ -151,11 +151,11 @@
   "charts": [],
   "name": "Analyze Twi_Data_cols_parsed",
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667203744423
+    "lastModifiedOn": 1667203885021
   },
   "creationTag": {
     "versionNumber": 0,
