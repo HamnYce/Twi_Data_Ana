@@ -3,7 +3,7 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 0,
+    "_refreshTrigger": 1667227235357,
     "selection": {
       "filter": {
         "distinct": false,
@@ -18,10 +18,10 @@
       },
       "withinFirstN": -1,
       "partitionSelectionMethod": "ALL",
-      "maxStoredBytes": 104857600,
+      "maxStoredBytes": -1,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "RANDOM_FIXED_NB_EXACT",
       "timeout": -1
     },
     "autoRefreshSample": false
