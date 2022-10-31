@@ -187,19 +187,15 @@
     {
       "last": false,
       "max": false,
-      "firstLastNotNull": false,
-      "column": "place_text_name",
+      "column": "place_name_tweet",
       "count": false,
       "$idx": 9,
       "sum": false,
       "concat": false,
       "type": "string",
-      "concatDistinct": false,
-      "sum2": false,
+      "countDistinct": false,
       "min": false,
-      "countDistinct": true,
       "avg": false,
-      "$selected": false,
       "stddev": false,
       "first": false
     }
