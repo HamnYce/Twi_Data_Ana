@@ -64,7 +64,7 @@
       "table": 0
     },
     {
-      "name": "place_name",
+      "name": "place_name_clean",
       "type": "string",
       "table": 0
     },
@@ -170,7 +170,7 @@
             "type": "string"
           },
           {
-            "name": "place_name",
+            "name": "place_name_clean",
             "type": "string"
           },
           {
