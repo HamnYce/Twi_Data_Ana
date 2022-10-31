@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 230,
+    "versionNumber": 232,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667252782193
+    "lastModifiedOn": 1667252852167
   },
   "creationTag": {
     "versionNumber": 0,
@@ -274,7 +274,7 @@
           },
           {
             "done": false,
-            "text": "normalize ",
+            "text": "cluster (in the translated part):\n- place_name\n- place_name_tweet",
             "createdOn": 1667252779181,
             "createdBy": "admin",
             "stateChangedOn": 0
