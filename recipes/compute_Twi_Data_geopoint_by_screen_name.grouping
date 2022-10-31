@@ -159,7 +159,7 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": true,
+      "countDistinct": false,
       "avg": false,
       "$selected": false,
       "stddev": false,
@@ -276,10 +276,6 @@
           },
           {
             "name": "place_name_clean_distinct",
-            "type": "bigint"
-          },
-          {
-            "name": "governorate_distinct",
             "type": "bigint"
           },
           {
