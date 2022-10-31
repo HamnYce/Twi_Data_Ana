@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667174260679
+    "lastModifiedOn": 1667175359619
   },
   "creationTag": {
     "versionNumber": 0,
@@ -97,7 +97,8 @@
       {"name":"place_name_clean","type":"string"},
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"},
-      {"name":"place_text_name","type":"string"}
+      {"name":"place_text_name","type":"string"},
+      {"name":"place_name_clean_en","type":"string","comment":"English translation of the \u0027place_name_clean\u0027 column."}
     ],
     "userModified": true
   },
