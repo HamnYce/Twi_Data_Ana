@@ -97,7 +97,7 @@
     },
     {
       "preview": false,
-      "name": "remove other place_names",
+      "name": "remove intermediate place_names",
       "metaType": "GROUP",
       "disabled": false,
       "steps": [
