@@ -12,7 +12,7 @@
       "postal": true,
       "state": true,
       "country": true,
-      "column_prefix": "",
+      "column_prefix": "lk",
       "lat_column": "lat",
       "lng_column": "lng",
       "provider": "google",
@@ -51,11 +51,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667220944370
+    "lastModifiedOn": 1667220952615
   },
   "creationTag": {
     "versionNumber": 0,
