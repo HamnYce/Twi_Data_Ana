@@ -53,6 +53,108 @@
         "vectorize": false
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "clean place_name",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "place_name_unquoted",
+            "mapping": [
+              {
+                "from": "\"",
+                "to": ""
+              },
+              {
+                "from": "\u0027",
+                "to": ""
+              },
+              {
+                "from": ", Kuwait",
+                "to": ""
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_name"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "SUBSTRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "if(\ncontains(place_name_unquoted, \u0027\\x\u0027),\n\u0027\u0027,\nplace_name_unquoted)",
+            "column": "place_name_no_weird_encoding"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "if(\nendsWith(place_name_no_weird_encoding, \u0027,\u0027),\nplace_name_no_weird_encoding[0, -1],\nplace_name_no_weird_encoding\n)",
+            "column": "place_name_no_end_comma"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "remove intermediate place_names",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "place_name_no_weird_encoding",
+              "place_name_unquoted",
+              "place_name"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "place_name_no_end_comma",
+                "to": "place_name_clean"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -88,6 +190,7 @@
     "app": 300,
     "place_name": 246,
     "place_name_tweet": 135,
+    "place_name_clean": 211,
     "date_time": 204,
     "screen_name": 127,
     "governorate": 134,
