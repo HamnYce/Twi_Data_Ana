@@ -3,7 +3,21 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "cache_enabled": true,
+      "batch_enabled": true,
+      "batch_size_bing": 50,
+      "address": true,
+      "city": true,
+      "postal": true,
+      "state": true,
+      "country": true,
+      "column_prefix": "",
+      "lat_column": "lat",
+      "lng_column": "lng",
+      "provider": "google",
+      "api_key": "AIzaSyDjqOGHZ_3ZO7X6jsPj85HXLs66gw5bygY"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -37,11 +51,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667220726819
+    "lastModifiedOn": 1667220944370
   },
   "creationTag": {
     "versionNumber": 0,
