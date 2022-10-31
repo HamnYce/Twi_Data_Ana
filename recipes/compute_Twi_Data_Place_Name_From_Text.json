@@ -40,11 +40,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 35,
+    "versionNumber": 36,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667204791482
+    "lastModifiedOn": 1667225118161
   },
   "creationTag": {
     "versionNumber": 0,
@@ -53,9 +53,7 @@
     },
     "lastModifiedOn": 1666721786517
   },
-  "tags": [
-    "initial-data-cleanse"
-  ],
+  "tags": [],
   "customFields": {},
   "checklists": {
     "checklists": []

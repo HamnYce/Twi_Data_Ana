@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667155746895
+    "lastModifiedOn": 1667225118142
   },
   "creationTag": {
     "versionNumber": 0,
@@ -73,9 +73,7 @@
     },
     "lastModifiedOn": 1666721784354
   },
-  "tags": [
-    "initial-data-cleanse"
-  ],
+  "tags": [],
   "params": {
     "connection": "filesystem_managed",
     "path": "${projectKey}/Twi_Data_Place_Name_From_Text",
@@ -101,7 +99,7 @@
       {"name":"districts","type":"string"},
       {"name":"place_text_name","type":"string"}
     ],
-    "userModified": false
+    "userModified": true
   },
   "dkuProperties": [],
   "metrics": {

@@ -1,9 +1,7 @@
 {
   "tags": {
-    "initial-data-cleanse": {
-      "color": "#ff666b"
-    },
-    "recipe-editor": {},
-    "deleted-recipe-editor": {}
+    "change to visual recipe": {
+      "color": "#28aadd"
+    }
   }
 }
