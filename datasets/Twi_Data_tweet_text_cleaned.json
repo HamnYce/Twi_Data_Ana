@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667225118146
+    "lastModifiedOn": 1667250653946
   },
   "creationTag": {
     "versionNumber": 0,
@@ -98,7 +98,7 @@
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"}
     ],
-    "userModified": true
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
