@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 232,
+    "versionNumber": 234,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667252852167
+    "lastModifiedOn": 1667252923571
   },
   "creationTag": {
     "versionNumber": 0,
@@ -276,6 +276,13 @@
             "done": false,
             "text": "cluster (in the translated part):\n- place_name\n- place_name_tweet",
             "createdOn": 1667252779181,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "make last python recipe into visual recipe",
+            "createdOn": 1667252923531,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
