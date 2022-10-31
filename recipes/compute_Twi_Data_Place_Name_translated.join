@@ -79,11 +79,6 @@
       "table": 0
     },
     {
-      "name": "place_text_name",
-      "type": "string",
-      "table": 0
-    },
-    {
       "name": "place_name_clean_en",
       "type": "string",
       "table": 1
@@ -126,17 +121,10 @@
   },
   "virtualInputs": [
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "autoSelectColumns": false,
-      "originLabel": "Twi_Data_Place_Name_From_Text_prepared",
-      "index": 0,
-      "computedColumns": []
+      "index": 1
     },
     {
-      "index": 1
+      "index": 0
     }
   ],
   "computedColumns": [],
@@ -182,10 +170,6 @@
           },
           {
             "name": "districts",
-            "type": "string"
-          },
-          {
-            "name": "place_text_name",
             "type": "string"
           },
           {
