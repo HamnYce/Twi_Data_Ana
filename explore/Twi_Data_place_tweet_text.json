@@ -43,9 +43,9 @@
         },
         "python": {}
       },
-      "basic": true,
-      "countDistinct": true,
-      "advanced": true,
+      "basic": false,
+      "countDistinct": false,
+      "advanced": false,
       "percentile": false,
       "validity": false,
       "updateOnAnalyzeBoxOpen": false,
@@ -74,7 +74,12 @@
       "individualColumns": [],
       "valueColoringMode": "HASH"
     },
-    "sorting": [],
+    "sorting": [
+      {
+        "column": "place_name_tweet",
+        "ascending": true
+      }
+    ],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
