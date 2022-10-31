@@ -22,19 +22,20 @@
   "values": [
     {
       "last": false,
-      "max": false,
+      "max": true,
       "firstLastNotNull": false,
       "column": "date_time",
-      "count": false,
+      "count": true,
       "$idx": 0,
       "sum": false,
       "concat": false,
       "type": "date",
       "concatDistinct": false,
       "sum2": false,
-      "min": false,
+      "min": true,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -259,6 +260,18 @@
           {
             "name": "screen_name",
             "type": "string"
+          },
+          {
+            "name": "date_time_min",
+            "type": "date"
+          },
+          {
+            "name": "date_time_max",
+            "type": "date"
+          },
+          {
+            "name": "date_time_count",
+            "type": "bigint"
           },
           {
             "name": "lang_count",
