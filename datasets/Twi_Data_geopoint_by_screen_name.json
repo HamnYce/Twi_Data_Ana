@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667252042907
+    "lastModifiedOn": 1667252056857
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,6 +92,8 @@
       {"name":"date_time_max","type":"date"},
       {"name":"date_time_count","type":"bigint"},
       {"name":"place_name_clean_distinct","type":"bigint"},
+      {"name":"governorate_distinct","type":"bigint"},
+      {"name":"districts_distinct","type":"bigint"},
       {"name":"place_text_name_distinct","type":"bigint"},
       {"name":"count","type":"bigint"}
     ],
