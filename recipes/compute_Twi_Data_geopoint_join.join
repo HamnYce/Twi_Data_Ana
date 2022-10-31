@@ -82,6 +82,11 @@
       "name": "place_text_name",
       "type": "string",
       "table": 0
+    },
+    {
+      "name": "count",
+      "type": "bigint",
+      "table": 1
     }
   ],
   "resolvedSelectedColumns": [],
@@ -184,6 +189,10 @@
           {
             "name": "place_text_name",
             "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
           }
         ],
         "userModified": false
