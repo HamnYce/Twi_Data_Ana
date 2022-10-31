@@ -3,27 +3,6 @@
   "script": {
     "steps": [
       {
-        "type": "PythonUDF",
-        "params": {
-          "mode": "CELL",
-          "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    app \u003d row[\u0027app\u0027]\n    return len(row)\n",
-          "column": "app_name",
-          "stopOnError": true,
-          "usePythonUnicode": true,
-          "useKernel": false,
-          "vectorize": false,
-          "vectorSize": 256,
-          "sourceColumnsList": [],
-          "envSelection": {
-            "envMode": "INHERIT"
-          }
-        },
-        "metaType": "PROCESSOR",
-        "preview": false,
-        "disabled": false,
-        "alwaysShowComment": false
-      },
-      {
         "type": "FindReplace",
         "params": {
           "output": "",
@@ -39,6 +18,27 @@
           "columns": [
             "app"
           ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "PythonUDF",
+        "params": {
+          "mode": "CELL",
+          "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    app \u003d row[\u0027app\u0027][1:-1].split(\u0027,\u0027)\n    return app[0]\n",
+          "column": "app_name",
+          "stopOnError": true,
+          "usePythonUnicode": false,
+          "useKernel": false,
+          "vectorize": false,
+          "vectorSize": 256,
+          "sourceColumnsList": [],
+          "envSelection": {
+            "envMode": "INHERIT"
+          }
         },
         "metaType": "PROCESSOR",
         "preview": false,
@@ -92,6 +92,9 @@
     "sorting": [],
     "analysisColumnData": {
       "place_name": {
+        "meaning": "Text"
+      },
+      "app": {
         "meaning": "Text"
       }
     },
@@ -151,11 +154,11 @@
   "charts": [],
   "name": "Analyze Twi_Data_cols_parsed",
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 21,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667203885021
+    "lastModifiedOn": 1667204172107
   },
   "creationTag": {
     "versionNumber": 0,
