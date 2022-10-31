@@ -36,7 +36,7 @@
     {
       "preview": false,
       "metaType": "PROCESSOR",
-      "disabled": true,
+      "disabled": false,
       "type": "PythonUDF",
       "params": {
         "mode": "CELL",
@@ -44,7 +44,7 @@
           "envMode": "INHERIT"
         },
         "stopOnError": true,
-        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    text \u003d row[\u0027tweet_text_clean\u0027]\n    \n    split_text \u003d text.split()\n    \n    if len(split_text) \u003d\u003d 1:\n        return split_text[0]\n    elif split_text[0] \u003d\u003d \"i\u0027m\" and split_text[1] \u003d\u003d \u0027at\u0027:\n        index \u003d 4\n        if \u0027in\u0027 in split_text:\n            index \u003d split_text.index(\u0027in\u0027)\n        return \u0027 \u0027.join(split_text[2:index])\n    else:\n        return \u0027nu\u0027\n\n",
+        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    text \u003d row[\u0027tweet_text_clean\u0027]\n    return text\n    split_text \u003d text.split()\n    \n    if len(split_text) \u003d\u003d 1:\n        return split_text[0]\n    elif split_text[0] \u003d\u003d \"i\u0027m\" and split_text[1] \u003d\u003d \u0027at\u0027:\n        index \u003d 4\n        if \u0027in\u0027 in split_text:\n            index \u003d split_text.index(\u0027in\u0027)\n        return \u0027 \u0027.join(split_text[2:index])\n    else:\n        return \u0027nu\u0027\n\n",
         "useKernel": false,
         "column": "place_name_tweet",
         "sourceColumnsList": [],
