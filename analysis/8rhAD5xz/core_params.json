@@ -22,7 +22,7 @@
         "params": {
           "mode": "CELL",
           "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    c \u003d ord(row[\u0027place_name_clean\u0027][0])\n    if 122 \u003e\u003d c \u003e\u003d 97:\n        return row[\u0027place_name_clean\u0027]\n    return row[\u0027place_name_clean_en\u0027]\n",
-          "column": "new_col",
+          "column": "place_name",
           "stopOnError": true,
           "usePythonUnicode": true,
           "useKernel": false,
@@ -32,6 +32,51 @@
           "envSelection": {
             "envMode": "INHERIT"
           }
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnReorder",
+        "params": {
+          "reorderAction": "BEFORE_COLUMN",
+          "referenceColumn": "place_name_clean",
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "place_name"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnsSelector",
+        "params": {
+          "keep": false,
+          "appliesTo": "COLUMNS",
+          "columns": [
+            "place_name_clean_en",
+            "place_name_clean"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnReorder",
+        "params": {
+          "reorderAction": "BEFORE_COLUMN",
+          "referenceColumn": "governorate",
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "place_text_name"
+          ]
         },
         "metaType": "PROCESSOR",
         "preview": false,
@@ -57,7 +102,8 @@
       "place_text_name": 211,
       "place_name_clean_en": 225,
       "new": 100,
-      "new_col": 225
+      "new_col": 225,
+      "place_name": 225
     },
     "columnUseScientificNotationByName": {},
     "coloring": {
@@ -127,11 +173,11 @@
   "charts": [],
   "name": "Analyze Twi_Data_Place_Name_translated",
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 17,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667178347087
+    "lastModifiedOn": 1667178707563
   },
   "creationTag": {
     "versionNumber": 0,
