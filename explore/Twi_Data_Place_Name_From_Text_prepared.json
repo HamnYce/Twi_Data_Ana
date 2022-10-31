@@ -102,7 +102,7 @@
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 1667170968963
+      "_refreshTrigger": 1667221507690
     },
     "vizSampling": {
       "selection": {
@@ -130,7 +130,43 @@
       "autoRefresh": true
     },
     "globalSearchQuery": "",
-    "explorationFilters": [],
+    "explorationFilters": [
+      {
+        "column": "place_name_clean",
+        "type": "columnFilter",
+        "currentMode": "SIMPLE_ALPHANUM",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "place_name_clean",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "place_name_clean",
+          "values": [
+            "India"
+          ],
+          "params": {
+            "mode": "substring",
+            "normalization": "lowercase"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "place_name_clean",
+          "params": {
+            "type": "Text",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      }
+    ],
     "previewMode": "ALL_ROWS"
   },
   "charts": [],
