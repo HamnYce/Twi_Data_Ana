@@ -5,11 +5,11 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
 # Read recipe inputs
-Twi_Data_Place_Name_From_Text = dataiku.Dataset("Twi_Data_Place_Name_From_Text")
-Twi_Data_Place_Name_From_Text_df = Twi_Data_Place_Name_From_Text.get_dataframe()
+Twi_Data_place_tweet_text = dataiku.Dataset("Twi_Data_place_tweet_text")
+Twi_Data_place_tweet_text_df = Twi_Data_place_tweet_text.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-place_names = Twi_Data_Place_Name_From_Text_df['place_name']
+place_names = Twi_Data_place_tweet_text_df['place_name']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 stripped_place_names = []
@@ -37,10 +37,10 @@ for place in decoded_places:
         cleaned_decoded.append(place)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_Place_Name_From_Text_df['place_name'] = cleaned_decoded
+Twi_Data_place_tweet_text_df['place_name'] = cleaned_decoded
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-Twi_Data_Place_Name_Clean_df = Twi_Data_Place_Name_From_Text_df # For this sample code, simply copy input to output
+Twi_Data_Place_Name_Clean_df = Twi_Data_place_tweet_text_df # For this sample code, simply copy input to output
 
 
 # Write recipe outputs
