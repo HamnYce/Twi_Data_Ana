@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 223,
+    "versionNumber": 230,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667252594938
+    "lastModifiedOn": 1667252782193
   },
   "creationTag": {
     "versionNumber": 0,
@@ -259,26 +259,27 @@
         "createdOn": 0,
         "items": [
           {
-            "done": false,
+            "done": true,
             "text": "change from python code recipes to visual recipes instead",
             "createdOn": 1667170841291,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
-            "done": false,
+            "done": true,
             "text": "translate arabic text to english ( for place name)",
             "createdOn": 1667170860760,
             "createdBy": "admin",
             "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "normalize ",
+            "createdOn": 1667252779181,
+            "createdBy": "admin",
+            "stateChangedOn": 0
           }
         ]
-      },
-      {
-        "id": "abb4e5",
-        "title": "Todo list 2",
-        "createdOn": 0,
-        "items": []
       }
     ]
   }
