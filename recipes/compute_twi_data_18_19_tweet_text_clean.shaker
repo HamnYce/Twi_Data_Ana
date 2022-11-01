@@ -88,13 +88,43 @@
           "envMode": "INHERIT"
         },
         "stopOnError": true,
-        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    s \u003d row[\u0027tweet_text_cleaned\u0027]\n    # changing all characters to unicode to unify\n    s \u003d codecs.unicode_escape_encode(s)[0]\n    # removing the python added \"b\u0027\" at the beginning generated from previous statement\n    s \u003d str(s)[2:]\n    # removing double or triple backslash from some unicode characters\n    # (this one took a while to find a solution for)\n    s \u003d s.replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027).replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027)\n    # re-encoding text back into normal characters\n    try:\n        s \u003d codecs.unicode_escape_decode(s)[0]\n    except:\n        pass\n    # appending to list to re-import back into table\n    return s\n\n",
+        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    s \u003d row[\u0027tweet_text_cleaned\u0027]\n    # changing all characters to unicode to unify\n    s \u003d codecs.unicode_escape_encode(s)[0]\n    # removing double or triple backslash from some unicode characters\n    # (this one took a while to find a solution for)\n    s \u003d s.replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027).replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027)\n    # re-encoding text back into normal characters\n    s \u003d codecs.unicode_escape_decode(s)[0]\n\n    return s\n\n",
         "useKernel": false,
         "column": "tweet_text_cleaned_2",
         "sourceColumnsList": [],
         "usePythonUnicode": true,
         "vectorSize": 256,
         "vectorize": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "tweet_text",
+          "tweet_text_cleaned"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "tweet_text_cleaned_2",
+            "to": "tweet_text"
+          }
+        ]
       },
       "alwaysShowComment": false
     }
