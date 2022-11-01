@@ -35,1645 +35,1654 @@
   "steps": [
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "normalize place_name_tweet",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "StringTransformer",
-      "params": {
-        "mode": "TO_LOWER",
-        "columns": [
-          "place_name_clean"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "truncate_limit": 0
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FindReplace",
-      "params": {
-        "output": "",
-        "mapping": [
-          {
-            "from": "amman, hashemite kingdom of jordan",
-            "to": "hashemite kingdom of jordan"
-          },
-          {
-            "from": "kingdom of saudi arabia",
-            "to": "riyadh, kingdom of saudi arabia"
-          }
-        ],
-        "normalization": "EXACT",
-        "columns": [
-          "place_name_clean"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "stopAfterFirstMatch": false,
-        "matching": "FULL_STRING"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "StringTransformer",
-      "params": {
-        "mode": "TO_LOWER",
-        "columns": [
-          "place_name_tweet"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "truncate_limit": 0
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "TextSimplifierProcessor",
-      "params": {
-        "inCol": "place_name_tweet",
-        "sortAlphabetically": false,
-        "normalize": true,
-        "language": "english",
-        "clearStopWords": false,
-        "stem": false
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FindReplace",
-      "params": {
-        "output": "",
-        "mapping": [
-          {
-            "from": "adailiya co op adailiya co op",
-            "to": "adailiya co op"
-          },
-          {
-            "from": "crossfit circuit",
-            "to": "circuit crossfit"
-          },
-          {
-            "from": "gym fitness",
-            "to": "fitness gym"
-          },
-          {
-            "from": "amal al",
-            "to": "al amal"
-          },
-          {
-            "from": "dose cafe dose cafe",
-            "to": "dose cafe"
-          },
-          {
-            "from": "dip n dip dip n dip chocolate cafe",
-            "to": "dip n dip chocolate cafe"
-          },
-          {
-            "from": "salon ramses",
-            "to": "ramses salon"
-          },
-          {
-            "from": "الحدود السعودية الكويتية",
-            "to": "الحدود الكويتية السعودية"
-          },
-          {
-            "from": "اشارة صالة التزلج اشارة صالة التزلج",
-            "to": "اشارة صالة التزلج"
-          },
-          {
-            "from": "al surra al surra",
-            "to": "al surra"
-          },
-          {
-            "from": "al ghanim service center",
-            "to": "ali al ghanim service center"
-          },
-          {
-            "from": "shaikh jaber al ahmad cultural center shaikh jaber al ahmad cultural center",
-            "to": "shaikh jaber al ahmad cultural center"
-          },
-          {
-            "from": "ثانوية آحمد",
-            "to": "ثانوية أحمد"
-          },
-          {
-            "from": "cinema cinescape",
-            "to": "cinescape"
-          },
-          {
-            "from": "cinescape cinema",
-            "to": "cinescape"
-          },
-          {
-            "from": "face off cafe face off cafe",
-            "to": "face off cafe"
-          },
-          {
-            "from": "vox cinemas vox cinemas",
-            "to": "vox cinemas"
-          },
-          {
-            "from": "دوانيه المرحوم ضاوي علي الجبر وإبنائه",
-            "to": "دوانيه ضاوي علي الجبر وأبنائه"
-          },
-          {
-            "from": "polished up nails salon polished up1",
-            "to": "polished up nails salon"
-          },
-          {
-            "from": "jumo coffee jumo coffee",
-            "to": "jumo coffee"
-          },
-          {
-            "from": "the gate mall the gate mall",
-            "to": "the gate mall"
-          },
-          {
-            "from": "the el royale cinescape mall360",
-            "to": "360 mall"
-          },
-          {
-            "from": "the el royale cinescape",
-            "to": "360 mall"
-          },
-          {
-            "from": "discovery mall",
-            "to": "discovery mall discovery mall"
-          },
-          {
-            "from": "القصور فرع",
-            "to": "فرع القصور"
-          },
-          {
-            "from": "adailiya adailiya",
-            "to": "adailiya"
-          },
-          {
-            "from": "kuwait international airport kwi",
-            "to": "kuwait international airport kwi kuwait international airport"
-          },
-          {
-            "from": "p f chang s",
-            "to": "p f chang s ba7ar"
-          },
-          {
-            "from": "faiha faiha",
-            "to": "faiha"
-          },
-          {
-            "from": "hawalli",
-            "to": "hawalli hawalli"
-          },
-          {
-            "from": "kuwait city salmiya kuwait city",
-            "to": "salmiya kuwait city"
-          },
-          {
-            "from": "starbucks drive thru starbucks drive thru",
-            "to": "starbucks drive thru"
-          },
-          {
-            "from": "shuwaikh shuwaikh",
-            "to": "shuwaikh"
-          },
-          {
-            "from": "شارع المطاعم",
-            "to": "شارع المطاعم شارع المطاعم"
-          },
-          {
-            "from": "at the airport مطار الكويت الدولي",
-            "to": "the airport مطار الكويت الدولي"
-          },
-          {
-            "from": "kuwait oil tanker company kotc",
-            "to": "kuwait oil tanker company kotc official"
-          },
-          {
-            "from": "starbucks starbucks",
-            "to": "starbucks"
-          },
-          {
-            "from": "حوش بيتنا",
-            "to": "حوش بيتنآ"
-          },
-          {
-            "from": "al rihab complex al rihab complex",
-            "to": "al rihab complex"
-          },
-          {
-            "from": "ardiya",
-            "to": "ardiya ardiya"
-          },
-          {
-            "from": "rumaithiya",
-            "to": "rumaithiya rumaithiya"
-          },
-          {
-            "from": "zahraa medical center zahraa medical center",
-            "to": "zahraa medical center"
-          },
-          {
-            "from": "locker coffe",
-            "to": "locker coffe locker coffe"
-          },
-          {
-            "from": "ardiya s",
-            "to": "ardiya s s"
-          },
-          {
-            "from": "298 chalet",
-            "to": "chalet 298"
-          },
-          {
-            "from": "the chocolate bar the chocolate bar thechocobar",
-            "to": "the chocolate bar"
-          },
-          {
-            "from": "the chocolate bar thechocobar",
-            "to": "the chocolate bar"
-          },
-          {
-            "from": "اشارة تقاطع شويخ و جليب شيوخ اشارة تقاطع شويخ و جليب شيوخ",
-            "to": "اشارة تقاطع شويخ و جليب شيوخ"
-          },
-          {
-            "from": "gate 26 gate 26",
-            "to": "gate 26"
-          },
-          {
-            "from": "ikea ikea",
-            "to": "ikea"
-          },
-          {
-            "from": "sabah al salem area sabah al salem area",
-            "to": "sabah al salem area"
-          },
-          {
-            "from": "mac mishref",
-            "to": "mishref mac"
-          },
-          {
-            "from": "الشويخ شارع الزينه",
-            "to": "شارع الزينه الشويخ"
-          },
-          {
-            "from": "ديسكفري مول",
-            "to": "ديسكفري مول ديسكفري مول"
-          },
-          {
-            "from": "college of basic education",
-            "to": "college of basic education b09"
-          },
-          {
-            "from": "rawda co op rawda co op",
-            "to": "rawda co op"
-          },
-          {
-            "from": "grand avenue grand avenue",
-            "to": "avenues"
-          },
-          {
-            "from": "grand avenue",
-            "to": "avenues"
-          },
-          {
-            "from": "mukha mukha",
-            "to": "mukha"
-          },
-          {
-            "from": "ياقلبي بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي",
-            "to": "زعلان بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي"
-          },
-          {
-            "from": "boubyan bank",
-            "to": "bank boubyan"
-          },
-          {
-            "from": "qortuba trolley",
-            "to": "trolley qortuba"
-          },
-          {
-            "from": "طوارئ مستشفى السيف",
-            "to": "مستشفى السيف طوارئ"
-          },
-          {
-            "from": "بغرفتي ادرس",
-            "to": "ادرس بغرفتي"
-          },
-          {
-            "from": "haute gourmet hot dogs hautekw",
-            "to": "haute gourmet hot dogs"
-          },
-          {
-            "from": "ba7r el",
-            "to": "el ba7r"
-          },
-          {
-            "from": "chalet khairan",
-            "to": "khairan chalet"
-          },
-          {
-            "from": "qurtuba",
-            "to": "qurtuba qurtuba"
-          },
-          {
-            "from": "shrimpy shrimpy",
-            "to": "shrimpy"
-          },
-          {
-            "from": "sabah al ahmad sea city",
-            "to": "sabah al ahmad city"
-          },
-          {
-            "from": "جسر فحيحيل والخامس",
-            "to": "جسر فحيحيل والخامس جسر فحيحيل والخامس"
-          },
-          {
-            "from": "lulu hypermarket lulu hypermarket",
-            "to": "lulu hypermarket"
-          },
-          {
-            "from": "down town kuwait",
-            "to": "kuwait down town"
-          },
-          {
-            "from": "the sultan center the sultan center",
-            "to": "the sultan center"
-          },
-          {
-            "from": "kuwait society of engineers",
-            "to": "kuwait society of engineers kseweb"
-          },
-          {
-            "from": "four points by sheraton kuwait fourpointkuwait",
-            "to": "four points by sheraton kuwait"
-          },
-          {
-            "from": "فندق ومنتجع جميرا شاطئ المسيلة jumeirahmb",
-            "to": "فندق ومنتجع جميرا شاطئ المسيلة"
-          },
-          {
-            "from": "dar al shifa hospital",
-            "to": "dar al shifa hospital dar al shifa hospital"
-          },
-          {
-            "from": "dasman bilingual school",
-            "to": "dasman bilingual school dasman bilingual school"
-          },
-          {
-            "from": "bnaider chalet",
-            "to": "chalet bnaider"
-          },
-          {
-            "from": "grand avenue غراند أڤنيو",
-            "to": "avenues"
-          },
-          {
-            "from": "avenue غراند أڤنيو",
-            "to": "avenues"
-          },
-          {
-            "from": "sharq",
-            "to": "sharq sharq"
-          },
-          {
-            "from": "360 360 mall",
-            "to": "360 mall"
-          },
-          {
-            "from": "costa coffee costa coffee",
-            "to": "costa coffee"
-          },
-          {
-            "from": "kuwait kuwait",
-            "to": "kuwait"
-          },
-          {
-            "from": "al tilal complex al tilal complex",
-            "to": "al tilal complex"
-          },
-          {
-            "from": "starbucks qurain",
-            "to": "starbucks qurain starbucks qurain"
-          },
-          {
-            "from": "shaheed park at alshaheedpark",
-            "to": "al shaheed park at alshaheedpark"
-          },
-          {
-            "from": "kuwait international law school",
-            "to": "kuwait international law school kilaw"
-          },
-          {
-            "from": "w gym",
-            "to": "gym w"
-          },
-          {
-            "from": "89 mall",
-            "to": "89 mall 89 mall"
-          },
-          {
-            "from": "american university of kuwait",
-            "to": "aum"
-          },
-          {
-            "from": "american university of kuwait auktweets",
-            "to": "aum"
-          },
-          {
-            "from": "shuhada co op جمعية الشهداء التعاونية",
-            "to": "shuhada co op جمعية الشهداء"
-          },
-          {
-            "from": "starbucks grand plaza starbucks grand plaza",
-            "to": "starbucks grand plaza"
-          },
-          {
-            "from": "ushk",
-            "to": "ushk ushk"
-          },
-          {
-            "from": "بإتجاه الشاليهات",
-            "to": "بأتجاه الشاليهات"
-          },
-          {
-            "from": "jabriya",
-            "to": "jabriya jabriya"
-          },
-          {
-            "from": "kaifan",
-            "to": "kaifan kaifan"
-          },
-          {
-            "from": "تقاطع اشارة",
-            "to": "اشارة تقاطع"
-          },
-          {
-            "from": "dip",
-            "to": "dip dip"
-          },
-          {
-            "from": "مركز مبارك الكبير الشرقي الصحي",
-            "to": "مركز مبارك الكبير الصحي"
-          },
-          {
-            "from": "الدوار الاول جبد",
-            "to": "جبد الدوار الاول"
-          },
-          {
-            "from": "boulevard بوليفارد",
-            "to": "بوليفارد boulevard"
-          },
-          {
-            "from": "kuwait towers kuwait towers kuwaittourism",
-            "to": "kuwait towers kuwaittourism"
-          },
-          {
-            "from": "commercial bank of kuwait",
-            "to": "commercial bank of kuwait altijaricbk"
-          },
-          {
-            "from": "zahra co op zahra co op",
-            "to": "zahra co op"
-          },
-          {
-            "from": "مسجد ابو الفضل العباس al3abbas",
-            "to": "مسجد ابو الفضل العباس"
-          },
-          {
-            "from": "bayan bayan",
-            "to": "bayan"
-          },
-          {
-            "from": "جسر كبد جسر كبد",
-            "to": "جسر كبد"
-          },
-          {
-            "from": "kfc كنتاكي",
-            "to": "كنتاكي kfc"
-          },
-          {
-            "from": "bwd 140 rig",
-            "to": "bwd rig 140"
-          },
-          {
-            "from": "al thajeej al thajeej",
-            "to": "al thajeej"
-          },
-          {
-            "from": "tobys tobys estate",
-            "to": "tobys estate"
-          },
-          {
-            "from": "بيت التمويل الكويتي kfhgroup",
-            "to": "kfh"
-          },
-          {
-            "from": "abdulwahab restaurant مطعم عبد الوهاب",
-            "to": "abdulwahab lebanese restaurant مطعم عبد الوهاب"
-          },
-          {
-            "from": "south surra",
-            "to": "south surra south surra"
-          },
-          {
-            "from": "الأدارة العامه",
-            "to": "الإدارة العامه"
-          },
-          {
-            "from": "marina mall marina mall themarinamallkw",
-            "to": "marina mall themarinamallkw"
-          },
-          {
-            "from": "al mulla service center",
-            "to": "al mulla behbehani service center"
-          },
-          {
-            "from": "كراجات شرق",
-            "to": "شرق كراجات"
-          },
-          {
-            "from": "عصير الضاحية الافنيوز",
-            "to": "عصير الضاحية الافنيوز عصير الضاحية الافنيوز"
-          },
-          {
-            "from": "kuwait hilton resort",
-            "to": "hilton kuwait resort"
-          },
-          {
-            "from": "بيتنا الي",
-            "to": "الي بيتنا"
-          },
-          {
-            "from": "t g i fridays 360mall",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "t g i fridays",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "kuwait كويتيون كويت الافنيوز صباح الخير فولو عرب كويتيه تصويري تصميمي الكويت هلا السالم",
-            "to": "kuwait كويتيون كويت الافنيوز صباح الخير فولو عرب كويتيه تصويري تصميمي الكويت هلا السالميه"
-          },
-          {
-            "from": "the palms beach hotel spa",
-            "to": "the palms beach hotel and spa"
-          },
-          {
-            "from": "sabah alnasser area sabah alnasser area",
-            "to": "sabah alnasser area"
-          },
-          {
-            "from": "قهوجى صباب قهوة خدمه ضيافه خدمة شاى قهوة تاجير ك",
-            "to": "قهوجى صباب قهوة خدمه ضيافه خدمة شاى قهوة تاجير"
-          },
-          {
-            "from": "exit coffee exit coffee",
-            "to": "exit coffee"
-          },
-          {
-            "from": "dip n dip",
-            "to": "dip n"
-          },
-          {
-            "from": "cafe bazza",
-            "to": "bazza cafe"
-          },
-          {
-            "from": "1660 club 1660 club",
-            "to": "1660 club"
-          },
-          {
-            "from": "ali sabah al salem",
-            "to": "ali sabah al salem hospital"
-          },
-          {
-            "from": "ishbilya ishbilya",
-            "to": "ishbilya"
-          },
-          {
-            "from": "masila masila",
-            "to": "masila"
-          },
-          {
-            "from": "abu alhassaniyah seas abu alhassaniyah seas",
-            "to": "abu alhassaniyah seas"
-          },
-          {
-            "from": "alsalam alsalam salam city",
-            "to": "alsalam salam city"
-          },
-          {
-            "from": "arabica",
-            "to": "arabica arabica"
-          },
-          {
-            "from": "class b9",
-            "to": "b9 class"
-          },
-          {
-            "from": "بزه كافيه",
-            "to": "كافيه بزه"
-          },
-          {
-            "from": "subhan street racing",
-            "to": "subhan street racing subhan street racing"
-          },
-          {
-            "from": "burger factory al nuzha co op burgerfactoryq8",
-            "to": "burger factory al nuzha co op"
-          },
-          {
-            "from": "knpc gas station knpc gas station",
-            "to": "knpc gas station"
-          },
-          {
-            "from": "omariya omariya",
-            "to": "omariya"
-          },
-          {
-            "from": "تركيب اثاث ايكيا 55522175 بالكرتون فنى ايكيا بالكويت نجار تركيب الاثاث99970185 من داخل و خارج",
-            "to": "تركيب اثاث ايكيا 55522175 بالكرتون فنى ايكيا بالكويت نجار تركيب الاثاث من داخل و خارج الكويت بالكرتون"
-          },
-          {
-            "from": "شاطي الفنطاس",
-            "to": "شاطئ الفنطاس"
-          },
-          {
-            "from": "بين سلوى ومشرف",
-            "to": "بين سلوى ومشرف بين سلوى ومشرف"
-          },
-          {
-            "from": "avenues cinescape",
-            "to": "avenues"
-          },
-          {
-            "from": "cinescape avenues",
-            "to": "avenues"
-          },
-          {
-            "from": "كيفان فرع",
-            "to": "فرع كيفان"
-          },
-          {
-            "from": "ack starbucks",
-            "to": "starbucks ack"
-          },
-          {
-            "from": "nbk sabah al naser br nbkpage",
-            "to": "nbk sabah al naser br"
-          },
-          {
-            "from": "mishref mishref",
-            "to": "mishref"
-          },
-          {
-            "from": "love street love street",
-            "to": "love street"
-          },
-          {
-            "from": "assaha restaurant",
-            "to": "assaha restaurant assaha restaurant"
-          },
-          {
-            "from": "خط صبحان",
-            "to": "صبحان خط"
-          },
-          {
-            "from": "the hook boxing gym here",
-            "to": "the hook boxing gym"
-          },
-          {
-            "from": "the avenues phase 4 the avenues phase 4",
-            "to": "avenues"
-          },
-          {
-            "from": "the avenues phase 4",
-            "to": "avenues"
-          },
-          {
-            "from": "ملل",
-            "to": "ملل ملل"
-          },
-          {
-            "from": "meem cafe",
-            "to": "cafe meem"
-          },
-          {
-            "from": "al noor private school",
-            "to": "al noor private school saadalrasheidy"
-          },
-          {
-            "from": "أشارة سلوى",
-            "to": "إشارة سلوى"
-          },
-          {
-            "from": "اشاره جسر",
-            "to": "جسر اشاره"
-          },
-          {
-            "from": "تقاطع الملك فهد مع الدائري السادس تقاطع الملك فهد مع الدائري السادس",
-            "to": "تقاطع الملك فهد مع الدائري السادس"
-          },
-          {
-            "from": "the spot joy joy the spot",
-            "to": "joy the spot"
-          },
-          {
-            "from": "الاتحاد الوطني لطلبة الكويت فرع المملكة المتحدة the national union of kuwait uk branch",
-            "to": "the national union of kuwait uk branch الاتحاد الوطني لطلبة الكويت فرع المملكة المتحدة"
-          },
-          {
-            "from": "new mowasat hospital مستشفى المواساة الجديد",
-            "to": "new mowasat hospital مستشفى المواساة الجديد nmowasat"
-          },
-          {
-            "from": "شارع النوخذه حمد الزوي ر",
-            "to": "شارع حمد الزوي ر"
-          },
-          {
-            "from": "cozmo khairan pearl cozmo khairan pearl",
-            "to": "cozmo khairan pearl"
-          },
-          {
-            "from": "the chocolate bar the chocolate bar",
-            "to": "the chocolate bar"
-          },
-          {
-            "from": "burger classic",
-            "to": "classic burger"
-          },
-          {
-            "from": "مسرحية طارق العلي هلا بالخميس",
-            "to": "مسرحية هلا بالخميس طارق العلي"
-          },
-          {
-            "from": "zone 7",
-            "to": "zone 7 zone 7"
-          },
-          {
-            "from": "nestle toll house cafe nestlecafekw",
-            "to": "nestle toll house cafe"
-          },
-          {
-            "from": "hawalli school oral health program برنامج حولي المدرسي لصحة الفم والأسنان",
-            "to": "برنامج حولي المدرسي لصحة الفم والأسنان hawally school oral health program"
-          },
-          {
-            "from": "kuwait flour mills bakeries co pr",
-            "to": "kuwait flour mills bakeries"
-          },
-          {
-            "from": "kuwait flour mills bakeries co pr kfmkuwait",
-            "to": "kuwait flour mills bakeries"
-          },
-          {
-            "from": "gathering family",
-            "to": "family gathering"
-          },
-          {
-            "from": "cozmo platinum",
-            "to": "platinum cozmo"
-          },
-          {
-            "from": "taiba hospital taiba hospital",
-            "to": "taiba hospital"
-          },
-          {
-            "from": "cinescape cinescape",
-            "to": "cinescape"
-          },
-          {
-            "from": "mishref mishref co op",
-            "to": "mishref co op"
-          },
-          {
-            "from": "الملك فهد باتجاه عربفجان النزهه",
-            "to": "الملك فهد باتجاه عربفجان"
-          },
-          {
-            "from": "فوق جسر",
-            "to": "جسر فوق"
-          },
-          {
-            "from": "the gardens the gardens",
-            "to": "the gardens"
-          },
-          {
-            "from": "mcdonald s mcdonald s",
-            "to": "mcdonalds"
-          },
-          {
-            "from": "mcdonald s",
-            "to": "mcdonalds"
-          },
-          {
-            "from": "فرع سلوى",
-            "to": "سلوى فرع"
-          },
-          {
-            "from": "abdullah al mubarak",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "mubarak al abdullah",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "adan subbah alsalem bridge adan subbah alsalem bridge",
-            "to": "adan subbah alsalem bridge"
-          },
-          {
-            "from": "by joy",
-            "to": "joy by joy"
-          },
-          {
-            "from": "الإدارة العامة للجمارك",
-            "to": "الإدارة العامة للجمارك منطقة٣"
-          },
-          {
-            "from": "jaber alahmad city jaber alahmad city",
-            "to": "jaber alahmad city"
-          },
-          {
-            "from": "it qadisia club swiming pool",
-            "to": "qadisia club swiming pool"
-          },
-          {
-            "from": "farwaniya farwaniya",
-            "to": "farwaniya"
-          },
-          {
-            "from": "college of science كلية العلوم جامعة الكويت",
-            "to": "college of science khalidiya كلية العلوم جامعة الكويت"
-          },
-          {
-            "from": "khiran resort",
-            "to": "khiran khiran resort"
-          },
-          {
-            "from": "جامعه الفلس aou",
-            "to": "aou جامعه الفلس aou"
-          },
-          {
-            "from": "khiran hardees",
-            "to": "hardees khiran"
-          },
-          {
-            "from": "kuwait saudi border",
-            "to": "saudi kuwait border"
-          },
-          {
-            "from": "a a",
-            "to": "a"
-          },
-          {
-            "from": "it again flex fitness executive",
-            "to": "again flex fitness executive"
-          },
-          {
-            "from": "chabd chabd",
-            "to": "chabd"
-          },
-          {
-            "from": "مركز الإسناد",
-            "to": "مركز الأسناد"
-          },
-          {
-            "from": "orb cafe orb cafe",
-            "to": "orb cafe"
-          },
-          {
-            "from": "lexus alsayer",
-            "to": "alsayer lexus"
-          },
-          {
-            "from": "kuwait studio",
-            "to": "studio kuwait"
-          },
-          {
-            "from": "kuwait city kuwait city",
-            "to": "kuwait city"
-          },
-          {
-            "from": "شويخ كافيه",
-            "to": "كافيه شويخ"
-          },
-          {
-            "from": "mughal mahal mughal mahal",
-            "to": "mughal mahal"
-          },
-          {
-            "from": "shishat bnaider shishat bnaider",
-            "to": "shishat bnaider"
-          },
-          {
-            "from": "al khaldiyah al khaldiyah",
-            "to": "al khaldiyah"
-          },
-          {
-            "from": "حسينية سيد محمد سيد محسن علوي",
-            "to": "حسينية سيد محمد سيد محسن علوي بيان"
-          },
-          {
-            "from": "salwa",
-            "to": "salwa salwa"
-          },
-          {
-            "from": "subway subway charley s",
-            "to": "subway"
-          },
-          {
-            "from": "subway charley s",
-            "to": "subway"
-          },
-          {
-            "from": "the blind panda the blind panda",
-            "to": "the blind panda"
-          },
-          {
-            "from": "شيك شاك shakeshack",
-            "to": "shakeshack"
-          },
-          {
-            "from": "shakeshack شيك شاك",
-            "to": "shakeshack"
-          },
-          {
-            "from": "hateen hateen",
-            "to": "hateen"
-          },
-          {
-            "from": "yarmouk yarmouk",
-            "to": "yarmouk"
-          },
-          {
-            "from": "arabica arabica shuwaikh",
-            "to": "arabica"
-          },
-          {
-            "from": "arabica shuwaikh",
-            "to": "arabica"
-          },
-          {
-            "from": "morning الاتحاد الكويتي لالعاب القوى",
-            "to": "الاتحاد الكويتي لالعاب القوى"
-          },
-          {
-            "from": "starbucks ستاربكس",
-            "to": "starbucks"
-          },
-          {
-            "from": "ستاربكس starbucks",
-            "to": "starbucks"
-          },
-          {
-            "from": "mcdonald s drive thru",
-            "to": "mcdonald s ماكدونالدز drive thru"
-          },
-          {
-            "from": "محلات شرق",
-            "to": "شرق محلات"
-          },
-          {
-            "from": "jalboot village jalboot village",
-            "to": "jalboot village"
-          },
-          {
-            "from": "zahra zahra",
-            "to": "zahra"
-          },
-          {
-            "from": "residence juma a",
-            "to": "juma a residence"
-          },
-          {
-            "from": "offside juice offside juice",
-            "to": "offside juice"
-          },
-          {
-            "from": "library ack",
-            "to": "ack library"
-          },
-          {
-            "from": "arabella arabella",
-            "to": "arabella"
-          },
-          {
-            "from": "salhiya complex salhiya complex",
-            "to": "salhiya complex"
-          },
-          {
-            "from": "pizza express pizza express",
-            "to": "pizza express"
-          },
-          {
-            "from": "burger boutique burger boutique",
-            "to": "burger boutique"
-          },
-          {
-            "from": "sabah al",
-            "to": "sabah al salem"
-          },
-          {
-            "from": "al sabah",
-            "to": "sabah al salem"
-          },
-          {
-            "from": "المخيم الي",
-            "to": "الي المخيم"
-          },
-          {
-            "from": "مـعـهـد اتـصـالات و مـلاحـه",
-            "to": "مـعـهـد اتـصـالات و مـلاحـه alrshedy1"
-          },
-          {
-            "from": "movenpick hotel resort al bida a movenpickhotels",
-            "to": "movenpick"
-          },
-          {
-            "from": "movenpick hotel resort al bida a",
-            "to": "movenpick"
-          },
-          {
-            "from": "b f open flame kitchen",
-            "to": "open flame kitchen"
-          },
-          {
-            "from": "b f open flame kitchen ofk360",
-            "to": "open flame kitchen"
-          },
-          {
-            "from": "ras al salmiya health club",
-            "to": "ras salmiya health club"
-          },
-          {
-            "from": "كلية العلوم جامعة الكويت",
-            "to": "جامعة الكويت كلية العلوم"
-          },
-          {
-            "from": "الشاليه seashell julai a hotel resort",
-            "to": "seashell julai a hotel resort"
-          },
-          {
-            "from": "munahi m bin jarbou house",
-            "to": "munahi m bin jarbou house t7a1l0a0l0"
-          },
-          {
-            "from": "saad al",
-            "to": "al saad"
-          },
-          {
-            "from": "joy confections the gate mall",
-            "to": "the gate mall"
-          },
-          {
-            "from": "the gate mall joy confections",
-            "to": "the gate mall"
-          },
-          {
-            "from": "جمعية العارضية فرع ٢٤ ساعة",
-            "to": "جمعية العارضية ٢٤ ساعة"
-          },
-          {
-            "from": "360 mall360",
-            "to": "360 mall"
-          },
-          {
-            "from": "360 360 mall360",
-            "to": "360 mall"
-          },
-          {
-            "from": "souq al mubarakiya souq al mubarakiya",
-            "to": "souq al mubarakiya"
-          },
-          {
-            "from": "b f burgeer boutique burgerboutique",
-            "to": "b f burgeer boutique"
-          },
-          {
-            "from": "nuzha starbucks",
-            "to": "starbucks nuzha"
-          },
-          {
-            "from": "cinescape cinescape mall360",
-            "to": "360 mall"
-          },
-          {
-            "from": "cinescape mall360",
-            "to": "360 mall"
-          },
-          {
-            "from": "australian college of kuwait ack live",
-            "to": "ack australian college of kuwait ack live"
-          },
-          {
-            "from": "بنك الخليج gulf bank",
-            "to": "gulf bank بنك الخليج"
-          },
-          {
-            "from": "mubarak al kabir",
-            "to": "mubarak al kabir mubarak al kabir"
-          },
-          {
-            "from": "murouj",
-            "to": "murouj murouj"
-          },
-          {
-            "from": "dunyasi kahve",
-            "to": "kahve dunyasi"
-          },
-          {
-            "from": "boutique 33",
-            "to": "33 boutique"
-          },
-          {
-            "from": "تقاطع الملك فهد مع الثاني",
-            "to": "تقاطع الثاني مع الملك فهد"
-          },
-          {
-            "from": "الظهر الظهر",
-            "to": "الظهر"
-          },
-          {
-            "from": "melenzane melenzane",
-            "to": "melenzane"
-          },
-          {
-            "from": "sulaibikhat city sulaibikhat city",
-            "to": "sulaibikhat city"
-          },
-          {
-            "from": "miral miral",
-            "to": "miral"
-          },
-          {
-            "from": "enab beirut",
-            "to": "beirut enab"
-          },
-          {
-            "from": "andalous",
-            "to": "andalous andalous"
-          },
-          {
-            "from": "the higher institute of telecommunication and navigation",
-            "to": "the higher institute of telecommunication navigation"
-          },
-          {
-            "from": "the lake the lake",
-            "to": "the lake"
-          },
-          {
-            "from": "adan hospital w 14",
-            "to": "adan hospital"
-          },
-          {
-            "from": "adan hospital adan hospital w 14",
-            "to": "adan hospital"
-          },
-          {
-            "from": "starbucks airport",
-            "to": "airport starbucks"
-          },
-          {
-            "from": "rawda rawda",
-            "to": "rawda"
-          },
-          {
-            "from": "cinescape 360",
-            "to": "360 mall"
-          },
-          {
-            "from": "360 cinescape",
-            "to": "360 mall"
-          },
-          {
-            "from": "ديوان الشيخ مبارك الصباح",
-            "to": "ديوان الشيخ مبارك السالم الصباح"
-          },
-          {
-            "from": "bnaider 258 bnaider 258",
-            "to": "bnaider 258"
-          },
-          {
-            "from": "masilla bridge",
-            "to": "masilla bridge masilla bridge"
-          },
-          {
-            "from": "dar meem dar meem",
-            "to": "dar meem"
-          },
-          {
-            "from": "lamesho restaurant مطعم لاميشو lameshoofficial",
-            "to": "lamesho restaurant مطعم لاميشو"
-          },
-          {
-            "from": "starbucks alshuhada",
-            "to": "starbucks alshuhada starbucks alshuhada"
-          },
-          {
-            "from": "to shamiya",
-            "to": "shamiya to shamiya"
-          },
-          {
-            "from": "aum parking",
-            "to": "parking aum"
-          },
-          {
-            "from": "shuwaikh cafe",
-            "to": "cafe shuwaikh"
-          },
-          {
-            "from": "salmiya salmiya",
-            "to": "salmiya"
-          },
-          {
-            "from": "yanni s concert yanni s concert",
-            "to": "yanni s concert"
-          },
-          {
-            "from": "american college of the middle east acm",
-            "to": "american college of the middle east acm acm college"
-          },
-          {
-            "from": "كلية الآداب",
-            "to": "كلية الأداب"
-          },
-          {
-            "from": "i m at 360mall",
-            "to": "360 mall"
-          },
-          {
-            "from": "i m at 360mall l",
-            "to": "360 mall"
-          },
-          {
-            "from": "downtown downtown",
-            "to": "downtown"
-          },
-          {
-            "from": "qadsiya co op qadsiya co op",
-            "to": "qadsiya co op"
-          },
-          {
-            "from": "al rai",
-            "to": "al rai al rai"
-          },
-          {
-            "from": "arabica arabica al salmiya",
-            "to": "arabica al salmiya"
-          },
-          {
-            "from": "international kuwait",
-            "to": "kuwait international"
-          },
-          {
-            "from": "smart mind institute for training",
-            "to": "smart mind institute for training smartmindkw"
-          },
-          {
-            "from": "al tijaria tower al tijaria tower",
-            "to": "al tijaria tower"
-          },
-          {
-            "from": "كلية التربية الأساسية",
-            "to": "كلية التربية الأساسية بنين"
-          },
-          {
-            "from": "pet zone pet zone",
-            "to": "pet zone"
-          },
-          {
-            "from": "the kuwait ministy of defence",
-            "to": "the kuwait ministy of defence g1"
-          },
-          {
-            "from": "domino s pizza",
-            "to": "pizza domino s"
-          },
-          {
-            "from": "chocolate macaroon شوكولت ماكارون chocoandmacaron",
-            "to": "chocolate macaroon شوكولت ماكارون"
-          },
-          {
-            "from": "boulevard boulevard",
-            "to": "boulevard"
-          },
-          {
-            "from": "alwafra الوفره",
-            "to": "alwafra alwafra الوفره"
-          },
-          {
-            "from": "d d",
-            "to": "d"
-          },
-          {
-            "from": "مواقف بنك الإئتمان الكويتي",
-            "to": "بنك الإئتمان الكويتي"
-          },
-          {
-            "from": "جسر إلي بين حولي والجابريه جسر إلي بين حولي والجابريه",
-            "to": "جسر إلي بين حولي والجابريه"
-          },
-          {
-            "from": "soul coffee house",
-            "to": "soul coffee house soul coffee house"
-          },
-          {
-            "from": "nuzha",
-            "to": "nuzha nuzha"
-          },
-          {
-            "from": "تقاطع اشاره",
-            "to": "اشاره تقاطع"
-          },
-          {
-            "from": "rustica pizza",
-            "to": "pizza rustica"
-          },
-          {
-            "from": "جاخور الأبراهيم",
-            "to": "جاخور الإبراهيم"
-          },
-          {
-            "from": "الملك فهد باتجاه الديره 3bdullah88",
-            "to": "خط الملك فهد باتجاه الديره"
-          },
-          {
-            "from": "الملك فهد باتجاه الديره",
-            "to": "خط الملك فهد باتجاه الديره"
-          },
-          {
-            "from": "x cite alghanim electronics",
-            "to": "x cite"
-          },
-          {
-            "from": "كلماتي مقصوده خاطره حقيقه واقع بصراحه من القلب رساله تصميمي حياتي تصميم خيالي",
-            "to": "صدقيني كلماتي حقيقه واقع تواصل بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي"
-          },
-          {
-            "from": "كلماتي حقيقه واقع الفشل النجاح بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي",
-            "to": "صدقيني كلماتي حقيقه واقع تواصل بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي"
-          },
-          {
-            "from": "opera kuwait house opera kuwait house",
-            "to": "opera kuwait house"
-          },
-          {
-            "from": "kuwait opera house",
-            "to": "opera kuwait house"
-          },
-          {
-            "from": "chalet k278",
-            "to": "chalet k278 chalet k278"
-          },
-          {
-            "from": "chalet chalet k278",
-            "to": "chalet k278 chalet k278"
-          },
-          {
-            "from": "الإدارة العامة للجنسية ووثائق السفر الكويتية",
-            "to": "الإدارة العامة للجنسية ووثائق السفر"
-          },
-          {
-            "from": "الإدارة العامة للجنسية ووثائق السفر الشـامية",
-            "to": "الإدارة العامة للجنسية ووثائق السفر"
-          },
-          {
-            "from": "the sultan center express",
-            "to": "the sultan center express highway"
-          },
-          {
-            "from": "the sultan express center",
-            "to": "the sultan center express highway"
-          },
-          {
-            "from": "the administration college of engineering and petroleum",
-            "to": "college of engineering and petroleum"
-          },
-          {
-            "from": "x cite by alghanim electronics",
-            "to": "x cite"
-          },
-          {
-            "from": "x cite by alghanim electronics x cite by alghanim electronics",
-            "to": "x cite"
-          },
-          {
-            "from": "night x cite by alghanim electronics",
-            "to": "x cite"
-          },
-          {
-            "from": "home sweet",
-            "to": "sweet home"
-          },
-          {
-            "from": "home sweet home",
-            "to": "sweet home"
-          },
-          {
-            "from": "اشارة الضاحيه والديره اشارة الضاحيه و الديره",
-            "to": "اشارة الضاحيه و الديره اشارة الضاحيه و الديره"
-          },
-          {
-            "from": "اشارة الضاحيه و الديره",
-            "to": "اشارة الضاحيه و الديره اشارة الضاحيه و الديره"
-          },
-          {
-            "from": "jaber alahmad international stadium shababjs",
-            "to": "jaber alahmad international stadium"
-          },
-          {
-            "from": "jaber alahmad international stadium jaber alahmad international stadium shababjs",
-            "to": "jaber alahmad international stadium"
-          },
-          {
-            "from": "starbucks college of engineering and petroleum",
-            "to": "college of engineering and petroleum"
-          },
-          {
-            "from": "the college of engineering and petroleum",
-            "to": "college of engineering and petroleum"
-          },
-          {
-            "from": "american university of the middle east",
-            "to": "aum"
-          },
-          {
-            "from": "aum american university of the middle east",
-            "to": "aum"
-          },
-          {
-            "from": "american university of middle east",
-            "to": "aum"
-          },
-          {
-            "from": "grand avenue phase 4 grand avenue phase 4",
-            "to": "avenues"
-          },
-          {
-            "from": "grand avenue phase 4",
-            "to": "avenues"
-          },
-          {
-            "from": "grand grand avenue phase 4",
-            "to": "avenues"
-          },
-          {
-            "from": "grand avenue grand avenue phase 4",
-            "to": "avenues"
-          },
-          {
-            "from": "تنظيف غسيل شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركة نظافة شركة نظافه",
-            "to": "شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة شركة نظافه"
-          },
-          {
-            "from": "تنظيف غسيل شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركة نظافة شركة غسيل",
-            "to": "شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة شركة نظافه"
-          },
-          {
-            "from": "تنظيف غسيل شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة",
-            "to": "شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة شركة نظافه"
-          },
-          {
-            "from": "abdullah al mubarak area home abdullah al mubarak area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "abdullah al mubarak area finally home mubarak al abdullah area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "abdullah al mubarak finally home abdullah al mubarak area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "abdullah al mubarak area finally home abdullah al mubarak area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "abdullah al mubarak abdullah al mubarak area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "abdullah al mubarak area abdullah al mubarak area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "mubarak al abdullah area",
-            "to": "abdullah al mubarak area"
-          },
-          {
-            "from": "kfh بيت التمويل الكويتي kfh بيت التمويل الكويتي",
-            "to": "kfh"
-          },
-          {
-            "from": "بيت التمويل الكويتي kfh",
-            "to": "kfh"
-          },
-          {
-            "from": "kfh بيت التمويل الكويتي",
-            "to": "kfh"
-          },
-          {
-            "from": "kfh بيت التمويل الكويتي kfhgroup",
-            "to": "kfh"
-          },
-          {
-            "from": "the avenues الافنيوز مول the avenues mall",
-            "to": "avenues"
-          },
-          {
-            "from": "the avenues mall الافنيوز مول the avenues mall",
-            "to": "avenues"
-          },
-          {
-            "from": "الافنيوز مول the avenues mall",
-            "to": "avenues"
-          },
-          {
-            "from": "the الافنيوز مول the avenues mall",
-            "to": "avenues"
-          },
-          {
-            "from": "the avenues",
-            "to": "avenues"
-          },
-          {
-            "from": "avenues the avenues",
-            "to": "avenues"
-          },
-          {
-            "from": "the avenues the avenues",
-            "to": "avenues"
-          },
-          {
-            "from": "avenues the",
-            "to": "avenues"
-          },
-          {
-            "from": "360 t g i friday s",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "t g i friday s فرايديز",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "t g i friday s",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "t g i friday s t g i friday s",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "t g i friday s فرايديز t g i friday s فرايديز",
-            "to": "tgi fridays"
-          },
-          {
-            "from": "jumeirah messilah beach hotel spa messilah 1",
-            "to": "jumeirah messilah"
-          },
-          {
-            "from": "jumeirah messilah beach hotel spa",
-            "to": "jumeirah messilah"
-          },
-          {
-            "from": "jumeirah messilah beach hotel spa jumeirahmb",
-            "to": "jumeirah messilah"
-          },
-          {
-            "from": "jumeirah messilah beach hotel spa messilah 1 jumeirahmb",
-            "to": "jumeirah messilah"
-          },
-          {
-            "from": "jumeirah jumeirah messilah beach hotel spa messilah 1 jumeirahmb",
-            "to": "jumeirah messilah"
-          },
-          {
-            "from": "jumeirah messilah beach hotel spa jumeirah messilah beach hotel spa jumeirahmb",
-            "to": "jumeirah messilah"
-          }
-        ],
-        "normalization": "EXACT",
-        "columns": [
-          "place_name_tweet"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "stopAfterFirstMatch": false,
-        "matching": "FULL_STRING"
-      },
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "StringTransformer",
+          "params": {
+            "mode": "TO_LOWER",
+            "columns": [
+              "place_name_clean"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "truncate_limit": 0
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "amman, hashemite kingdom of jordan",
+                "to": "hashemite kingdom of jordan"
+              },
+              {
+                "from": "kingdom of saudi arabia",
+                "to": "riyadh, kingdom of saudi arabia"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_name_clean"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "FULL_STRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "StringTransformer",
+          "params": {
+            "mode": "TO_LOWER",
+            "columns": [
+              "place_name_tweet"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "truncate_limit": 0
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "TextSimplifierProcessor",
+          "params": {
+            "inCol": "place_name_tweet",
+            "sortAlphabetically": false,
+            "normalize": true,
+            "language": "english",
+            "clearStopWords": false,
+            "stem": false
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "adailiya co op adailiya co op",
+                "to": "adailiya co op"
+              },
+              {
+                "from": "crossfit circuit",
+                "to": "circuit crossfit"
+              },
+              {
+                "from": "gym fitness",
+                "to": "fitness gym"
+              },
+              {
+                "from": "amal al",
+                "to": "al amal"
+              },
+              {
+                "from": "dose cafe dose cafe",
+                "to": "dose cafe"
+              },
+              {
+                "from": "dip n dip dip n dip chocolate cafe",
+                "to": "dip n dip chocolate cafe"
+              },
+              {
+                "from": "salon ramses",
+                "to": "ramses salon"
+              },
+              {
+                "from": "الحدود السعودية الكويتية",
+                "to": "الحدود الكويتية السعودية"
+              },
+              {
+                "from": "اشارة صالة التزلج اشارة صالة التزلج",
+                "to": "اشارة صالة التزلج"
+              },
+              {
+                "from": "al surra al surra",
+                "to": "al surra"
+              },
+              {
+                "from": "al ghanim service center",
+                "to": "ali al ghanim service center"
+              },
+              {
+                "from": "shaikh jaber al ahmad cultural center shaikh jaber al ahmad cultural center",
+                "to": "shaikh jaber al ahmad cultural center"
+              },
+              {
+                "from": "ثانوية آحمد",
+                "to": "ثانوية أحمد"
+              },
+              {
+                "from": "cinema cinescape",
+                "to": "cinescape"
+              },
+              {
+                "from": "cinescape cinema",
+                "to": "cinescape"
+              },
+              {
+                "from": "face off cafe face off cafe",
+                "to": "face off cafe"
+              },
+              {
+                "from": "vox cinemas vox cinemas",
+                "to": "vox cinemas"
+              },
+              {
+                "from": "دوانيه المرحوم ضاوي علي الجبر وإبنائه",
+                "to": "دوانيه ضاوي علي الجبر وأبنائه"
+              },
+              {
+                "from": "polished up nails salon polished up1",
+                "to": "polished up nails salon"
+              },
+              {
+                "from": "jumo coffee jumo coffee",
+                "to": "jumo coffee"
+              },
+              {
+                "from": "the gate mall the gate mall",
+                "to": "the gate mall"
+              },
+              {
+                "from": "the el royale cinescape mall360",
+                "to": "360 mall"
+              },
+              {
+                "from": "the el royale cinescape",
+                "to": "360 mall"
+              },
+              {
+                "from": "discovery mall",
+                "to": "discovery mall discovery mall"
+              },
+              {
+                "from": "القصور فرع",
+                "to": "فرع القصور"
+              },
+              {
+                "from": "adailiya adailiya",
+                "to": "adailiya"
+              },
+              {
+                "from": "kuwait international airport kwi",
+                "to": "kuwait international airport kwi kuwait international airport"
+              },
+              {
+                "from": "p f chang s",
+                "to": "p f chang s ba7ar"
+              },
+              {
+                "from": "faiha faiha",
+                "to": "faiha"
+              },
+              {
+                "from": "hawalli",
+                "to": "hawalli hawalli"
+              },
+              {
+                "from": "kuwait city salmiya kuwait city",
+                "to": "salmiya kuwait city"
+              },
+              {
+                "from": "starbucks drive thru starbucks drive thru",
+                "to": "starbucks drive thru"
+              },
+              {
+                "from": "shuwaikh shuwaikh",
+                "to": "shuwaikh"
+              },
+              {
+                "from": "شارع المطاعم",
+                "to": "شارع المطاعم شارع المطاعم"
+              },
+              {
+                "from": "at the airport مطار الكويت الدولي",
+                "to": "the airport مطار الكويت الدولي"
+              },
+              {
+                "from": "kuwait oil tanker company kotc",
+                "to": "kuwait oil tanker company kotc official"
+              },
+              {
+                "from": "starbucks starbucks",
+                "to": "starbucks"
+              },
+              {
+                "from": "حوش بيتنا",
+                "to": "حوش بيتنآ"
+              },
+              {
+                "from": "al rihab complex al rihab complex",
+                "to": "al rihab complex"
+              },
+              {
+                "from": "ardiya",
+                "to": "ardiya ardiya"
+              },
+              {
+                "from": "rumaithiya",
+                "to": "rumaithiya rumaithiya"
+              },
+              {
+                "from": "zahraa medical center zahraa medical center",
+                "to": "zahraa medical center"
+              },
+              {
+                "from": "locker coffe",
+                "to": "locker coffe locker coffe"
+              },
+              {
+                "from": "ardiya s",
+                "to": "ardiya s s"
+              },
+              {
+                "from": "298 chalet",
+                "to": "chalet 298"
+              },
+              {
+                "from": "the chocolate bar the chocolate bar thechocobar",
+                "to": "the chocolate bar"
+              },
+              {
+                "from": "the chocolate bar thechocobar",
+                "to": "the chocolate bar"
+              },
+              {
+                "from": "اشارة تقاطع شويخ و جليب شيوخ اشارة تقاطع شويخ و جليب شيوخ",
+                "to": "اشارة تقاطع شويخ و جليب شيوخ"
+              },
+              {
+                "from": "gate 26 gate 26",
+                "to": "gate 26"
+              },
+              {
+                "from": "ikea ikea",
+                "to": "ikea"
+              },
+              {
+                "from": "sabah al salem area sabah al salem area",
+                "to": "sabah al salem area"
+              },
+              {
+                "from": "mac mishref",
+                "to": "mishref mac"
+              },
+              {
+                "from": "الشويخ شارع الزينه",
+                "to": "شارع الزينه الشويخ"
+              },
+              {
+                "from": "ديسكفري مول",
+                "to": "ديسكفري مول ديسكفري مول"
+              },
+              {
+                "from": "college of basic education",
+                "to": "college of basic education b09"
+              },
+              {
+                "from": "rawda co op rawda co op",
+                "to": "rawda co op"
+              },
+              {
+                "from": "grand avenue grand avenue",
+                "to": "avenues"
+              },
+              {
+                "from": "grand avenue",
+                "to": "avenues"
+              },
+              {
+                "from": "mukha mukha",
+                "to": "mukha"
+              },
+              {
+                "from": "ياقلبي بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي",
+                "to": "زعلان بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي"
+              },
+              {
+                "from": "boubyan bank",
+                "to": "bank boubyan"
+              },
+              {
+                "from": "qortuba trolley",
+                "to": "trolley qortuba"
+              },
+              {
+                "from": "طوارئ مستشفى السيف",
+                "to": "مستشفى السيف طوارئ"
+              },
+              {
+                "from": "بغرفتي ادرس",
+                "to": "ادرس بغرفتي"
+              },
+              {
+                "from": "haute gourmet hot dogs hautekw",
+                "to": "haute gourmet hot dogs"
+              },
+              {
+                "from": "ba7r el",
+                "to": "el ba7r"
+              },
+              {
+                "from": "chalet khairan",
+                "to": "khairan chalet"
+              },
+              {
+                "from": "qurtuba",
+                "to": "qurtuba qurtuba"
+              },
+              {
+                "from": "shrimpy shrimpy",
+                "to": "shrimpy"
+              },
+              {
+                "from": "sabah al ahmad sea city",
+                "to": "sabah al ahmad city"
+              },
+              {
+                "from": "جسر فحيحيل والخامس",
+                "to": "جسر فحيحيل والخامس جسر فحيحيل والخامس"
+              },
+              {
+                "from": "lulu hypermarket lulu hypermarket",
+                "to": "lulu hypermarket"
+              },
+              {
+                "from": "down town kuwait",
+                "to": "kuwait down town"
+              },
+              {
+                "from": "the sultan center the sultan center",
+                "to": "the sultan center"
+              },
+              {
+                "from": "kuwait society of engineers",
+                "to": "kuwait society of engineers kseweb"
+              },
+              {
+                "from": "four points by sheraton kuwait fourpointkuwait",
+                "to": "four points by sheraton kuwait"
+              },
+              {
+                "from": "فندق ومنتجع جميرا شاطئ المسيلة jumeirahmb",
+                "to": "فندق ومنتجع جميرا شاطئ المسيلة"
+              },
+              {
+                "from": "dar al shifa hospital",
+                "to": "dar al shifa hospital dar al shifa hospital"
+              },
+              {
+                "from": "dasman bilingual school",
+                "to": "dasman bilingual school dasman bilingual school"
+              },
+              {
+                "from": "bnaider chalet",
+                "to": "chalet bnaider"
+              },
+              {
+                "from": "grand avenue غراند أڤنيو",
+                "to": "avenues"
+              },
+              {
+                "from": "avenue غراند أڤنيو",
+                "to": "avenues"
+              },
+              {
+                "from": "sharq",
+                "to": "sharq sharq"
+              },
+              {
+                "from": "360 360 mall",
+                "to": "360 mall"
+              },
+              {
+                "from": "costa coffee costa coffee",
+                "to": "costa coffee"
+              },
+              {
+                "from": "kuwait kuwait",
+                "to": "kuwait"
+              },
+              {
+                "from": "al tilal complex al tilal complex",
+                "to": "al tilal complex"
+              },
+              {
+                "from": "starbucks qurain",
+                "to": "starbucks qurain starbucks qurain"
+              },
+              {
+                "from": "shaheed park at alshaheedpark",
+                "to": "al shaheed park at alshaheedpark"
+              },
+              {
+                "from": "kuwait international law school",
+                "to": "kuwait international law school kilaw"
+              },
+              {
+                "from": "w gym",
+                "to": "gym w"
+              },
+              {
+                "from": "89 mall",
+                "to": "89 mall 89 mall"
+              },
+              {
+                "from": "american university of kuwait",
+                "to": "aum"
+              },
+              {
+                "from": "american university of kuwait auktweets",
+                "to": "aum"
+              },
+              {
+                "from": "shuhada co op جمعية الشهداء التعاونية",
+                "to": "shuhada co op جمعية الشهداء"
+              },
+              {
+                "from": "starbucks grand plaza starbucks grand plaza",
+                "to": "starbucks grand plaza"
+              },
+              {
+                "from": "ushk",
+                "to": "ushk ushk"
+              },
+              {
+                "from": "بإتجاه الشاليهات",
+                "to": "بأتجاه الشاليهات"
+              },
+              {
+                "from": "jabriya",
+                "to": "jabriya jabriya"
+              },
+              {
+                "from": "kaifan",
+                "to": "kaifan kaifan"
+              },
+              {
+                "from": "تقاطع اشارة",
+                "to": "اشارة تقاطع"
+              },
+              {
+                "from": "dip",
+                "to": "dip dip"
+              },
+              {
+                "from": "مركز مبارك الكبير الشرقي الصحي",
+                "to": "مركز مبارك الكبير الصحي"
+              },
+              {
+                "from": "الدوار الاول جبد",
+                "to": "جبد الدوار الاول"
+              },
+              {
+                "from": "boulevard بوليفارد",
+                "to": "بوليفارد boulevard"
+              },
+              {
+                "from": "kuwait towers kuwait towers kuwaittourism",
+                "to": "kuwait towers kuwaittourism"
+              },
+              {
+                "from": "commercial bank of kuwait",
+                "to": "commercial bank of kuwait altijaricbk"
+              },
+              {
+                "from": "zahra co op zahra co op",
+                "to": "zahra co op"
+              },
+              {
+                "from": "مسجد ابو الفضل العباس al3abbas",
+                "to": "مسجد ابو الفضل العباس"
+              },
+              {
+                "from": "bayan bayan",
+                "to": "bayan"
+              },
+              {
+                "from": "جسر كبد جسر كبد",
+                "to": "جسر كبد"
+              },
+              {
+                "from": "kfc كنتاكي",
+                "to": "كنتاكي kfc"
+              },
+              {
+                "from": "bwd 140 rig",
+                "to": "bwd rig 140"
+              },
+              {
+                "from": "al thajeej al thajeej",
+                "to": "al thajeej"
+              },
+              {
+                "from": "tobys tobys estate",
+                "to": "tobys estate"
+              },
+              {
+                "from": "بيت التمويل الكويتي kfhgroup",
+                "to": "kfh"
+              },
+              {
+                "from": "abdulwahab restaurant مطعم عبد الوهاب",
+                "to": "abdulwahab lebanese restaurant مطعم عبد الوهاب"
+              },
+              {
+                "from": "south surra",
+                "to": "south surra south surra"
+              },
+              {
+                "from": "الأدارة العامه",
+                "to": "الإدارة العامه"
+              },
+              {
+                "from": "marina mall marina mall themarinamallkw",
+                "to": "marina mall themarinamallkw"
+              },
+              {
+                "from": "al mulla service center",
+                "to": "al mulla behbehani service center"
+              },
+              {
+                "from": "كراجات شرق",
+                "to": "شرق كراجات"
+              },
+              {
+                "from": "عصير الضاحية الافنيوز",
+                "to": "عصير الضاحية الافنيوز عصير الضاحية الافنيوز"
+              },
+              {
+                "from": "kuwait hilton resort",
+                "to": "hilton kuwait resort"
+              },
+              {
+                "from": "بيتنا الي",
+                "to": "الي بيتنا"
+              },
+              {
+                "from": "t g i fridays 360mall",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "t g i fridays",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "kuwait كويتيون كويت الافنيوز صباح الخير فولو عرب كويتيه تصويري تصميمي الكويت هلا السالم",
+                "to": "kuwait كويتيون كويت الافنيوز صباح الخير فولو عرب كويتيه تصويري تصميمي الكويت هلا السالميه"
+              },
+              {
+                "from": "the palms beach hotel spa",
+                "to": "the palms beach hotel and spa"
+              },
+              {
+                "from": "sabah alnasser area sabah alnasser area",
+                "to": "sabah alnasser area"
+              },
+              {
+                "from": "قهوجى صباب قهوة خدمه ضيافه خدمة شاى قهوة تاجير ك",
+                "to": "قهوجى صباب قهوة خدمه ضيافه خدمة شاى قهوة تاجير"
+              },
+              {
+                "from": "exit coffee exit coffee",
+                "to": "exit coffee"
+              },
+              {
+                "from": "dip n dip",
+                "to": "dip n"
+              },
+              {
+                "from": "cafe bazza",
+                "to": "bazza cafe"
+              },
+              {
+                "from": "1660 club 1660 club",
+                "to": "1660 club"
+              },
+              {
+                "from": "ali sabah al salem",
+                "to": "ali sabah al salem hospital"
+              },
+              {
+                "from": "ishbilya ishbilya",
+                "to": "ishbilya"
+              },
+              {
+                "from": "masila masila",
+                "to": "masila"
+              },
+              {
+                "from": "abu alhassaniyah seas abu alhassaniyah seas",
+                "to": "abu alhassaniyah seas"
+              },
+              {
+                "from": "alsalam alsalam salam city",
+                "to": "alsalam salam city"
+              },
+              {
+                "from": "arabica",
+                "to": "arabica arabica"
+              },
+              {
+                "from": "class b9",
+                "to": "b9 class"
+              },
+              {
+                "from": "بزه كافيه",
+                "to": "كافيه بزه"
+              },
+              {
+                "from": "subhan street racing",
+                "to": "subhan street racing subhan street racing"
+              },
+              {
+                "from": "burger factory al nuzha co op burgerfactoryq8",
+                "to": "burger factory al nuzha co op"
+              },
+              {
+                "from": "knpc gas station knpc gas station",
+                "to": "knpc gas station"
+              },
+              {
+                "from": "omariya omariya",
+                "to": "omariya"
+              },
+              {
+                "from": "تركيب اثاث ايكيا 55522175 بالكرتون فنى ايكيا بالكويت نجار تركيب الاثاث99970185 من داخل و خارج",
+                "to": "تركيب اثاث ايكيا 55522175 بالكرتون فنى ايكيا بالكويت نجار تركيب الاثاث من داخل و خارج الكويت بالكرتون"
+              },
+              {
+                "from": "شاطي الفنطاس",
+                "to": "شاطئ الفنطاس"
+              },
+              {
+                "from": "بين سلوى ومشرف",
+                "to": "بين سلوى ومشرف بين سلوى ومشرف"
+              },
+              {
+                "from": "avenues cinescape",
+                "to": "avenues"
+              },
+              {
+                "from": "cinescape avenues",
+                "to": "avenues"
+              },
+              {
+                "from": "كيفان فرع",
+                "to": "فرع كيفان"
+              },
+              {
+                "from": "ack starbucks",
+                "to": "starbucks ack"
+              },
+              {
+                "from": "nbk sabah al naser br nbkpage",
+                "to": "nbk sabah al naser br"
+              },
+              {
+                "from": "mishref mishref",
+                "to": "mishref"
+              },
+              {
+                "from": "love street love street",
+                "to": "love street"
+              },
+              {
+                "from": "assaha restaurant",
+                "to": "assaha restaurant assaha restaurant"
+              },
+              {
+                "from": "خط صبحان",
+                "to": "صبحان خط"
+              },
+              {
+                "from": "the hook boxing gym here",
+                "to": "the hook boxing gym"
+              },
+              {
+                "from": "the avenues phase 4 the avenues phase 4",
+                "to": "avenues"
+              },
+              {
+                "from": "the avenues phase 4",
+                "to": "avenues"
+              },
+              {
+                "from": "ملل",
+                "to": "ملل ملل"
+              },
+              {
+                "from": "meem cafe",
+                "to": "cafe meem"
+              },
+              {
+                "from": "al noor private school",
+                "to": "al noor private school saadalrasheidy"
+              },
+              {
+                "from": "أشارة سلوى",
+                "to": "إشارة سلوى"
+              },
+              {
+                "from": "اشاره جسر",
+                "to": "جسر اشاره"
+              },
+              {
+                "from": "تقاطع الملك فهد مع الدائري السادس تقاطع الملك فهد مع الدائري السادس",
+                "to": "تقاطع الملك فهد مع الدائري السادس"
+              },
+              {
+                "from": "the spot joy joy the spot",
+                "to": "joy the spot"
+              },
+              {
+                "from": "الاتحاد الوطني لطلبة الكويت فرع المملكة المتحدة the national union of kuwait uk branch",
+                "to": "the national union of kuwait uk branch الاتحاد الوطني لطلبة الكويت فرع المملكة المتحدة"
+              },
+              {
+                "from": "new mowasat hospital مستشفى المواساة الجديد",
+                "to": "new mowasat hospital مستشفى المواساة الجديد nmowasat"
+              },
+              {
+                "from": "شارع النوخذه حمد الزوي ر",
+                "to": "شارع حمد الزوي ر"
+              },
+              {
+                "from": "cozmo khairan pearl cozmo khairan pearl",
+                "to": "cozmo khairan pearl"
+              },
+              {
+                "from": "the chocolate bar the chocolate bar",
+                "to": "the chocolate bar"
+              },
+              {
+                "from": "burger classic",
+                "to": "classic burger"
+              },
+              {
+                "from": "مسرحية طارق العلي هلا بالخميس",
+                "to": "مسرحية هلا بالخميس طارق العلي"
+              },
+              {
+                "from": "zone 7",
+                "to": "zone 7 zone 7"
+              },
+              {
+                "from": "nestle toll house cafe nestlecafekw",
+                "to": "nestle toll house cafe"
+              },
+              {
+                "from": "hawalli school oral health program برنامج حولي المدرسي لصحة الفم والأسنان",
+                "to": "برنامج حولي المدرسي لصحة الفم والأسنان hawally school oral health program"
+              },
+              {
+                "from": "kuwait flour mills bakeries co pr",
+                "to": "kuwait flour mills bakeries"
+              },
+              {
+                "from": "kuwait flour mills bakeries co pr kfmkuwait",
+                "to": "kuwait flour mills bakeries"
+              },
+              {
+                "from": "gathering family",
+                "to": "family gathering"
+              },
+              {
+                "from": "cozmo platinum",
+                "to": "platinum cozmo"
+              },
+              {
+                "from": "taiba hospital taiba hospital",
+                "to": "taiba hospital"
+              },
+              {
+                "from": "cinescape cinescape",
+                "to": "cinescape"
+              },
+              {
+                "from": "mishref mishref co op",
+                "to": "mishref co op"
+              },
+              {
+                "from": "الملك فهد باتجاه عربفجان النزهه",
+                "to": "الملك فهد باتجاه عربفجان"
+              },
+              {
+                "from": "فوق جسر",
+                "to": "جسر فوق"
+              },
+              {
+                "from": "the gardens the gardens",
+                "to": "the gardens"
+              },
+              {
+                "from": "mcdonald s mcdonald s",
+                "to": "mcdonalds"
+              },
+              {
+                "from": "mcdonald s",
+                "to": "mcdonalds"
+              },
+              {
+                "from": "فرع سلوى",
+                "to": "سلوى فرع"
+              },
+              {
+                "from": "abdullah al mubarak",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "mubarak al abdullah",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "adan subbah alsalem bridge adan subbah alsalem bridge",
+                "to": "adan subbah alsalem bridge"
+              },
+              {
+                "from": "by joy",
+                "to": "joy by joy"
+              },
+              {
+                "from": "الإدارة العامة للجمارك",
+                "to": "الإدارة العامة للجمارك منطقة٣"
+              },
+              {
+                "from": "jaber alahmad city jaber alahmad city",
+                "to": "jaber alahmad city"
+              },
+              {
+                "from": "it qadisia club swiming pool",
+                "to": "qadisia club swiming pool"
+              },
+              {
+                "from": "farwaniya farwaniya",
+                "to": "farwaniya"
+              },
+              {
+                "from": "college of science كلية العلوم جامعة الكويت",
+                "to": "college of science khalidiya كلية العلوم جامعة الكويت"
+              },
+              {
+                "from": "khiran resort",
+                "to": "khiran khiran resort"
+              },
+              {
+                "from": "جامعه الفلس aou",
+                "to": "aou جامعه الفلس aou"
+              },
+              {
+                "from": "khiran hardees",
+                "to": "hardees khiran"
+              },
+              {
+                "from": "kuwait saudi border",
+                "to": "saudi kuwait border"
+              },
+              {
+                "from": "a a",
+                "to": "a"
+              },
+              {
+                "from": "it again flex fitness executive",
+                "to": "again flex fitness executive"
+              },
+              {
+                "from": "chabd chabd",
+                "to": "chabd"
+              },
+              {
+                "from": "مركز الإسناد",
+                "to": "مركز الأسناد"
+              },
+              {
+                "from": "orb cafe orb cafe",
+                "to": "orb cafe"
+              },
+              {
+                "from": "lexus alsayer",
+                "to": "alsayer lexus"
+              },
+              {
+                "from": "kuwait studio",
+                "to": "studio kuwait"
+              },
+              {
+                "from": "kuwait city kuwait city",
+                "to": "kuwait city"
+              },
+              {
+                "from": "شويخ كافيه",
+                "to": "كافيه شويخ"
+              },
+              {
+                "from": "mughal mahal mughal mahal",
+                "to": "mughal mahal"
+              },
+              {
+                "from": "shishat bnaider shishat bnaider",
+                "to": "shishat bnaider"
+              },
+              {
+                "from": "al khaldiyah al khaldiyah",
+                "to": "al khaldiyah"
+              },
+              {
+                "from": "حسينية سيد محمد سيد محسن علوي",
+                "to": "حسينية سيد محمد سيد محسن علوي بيان"
+              },
+              {
+                "from": "salwa",
+                "to": "salwa salwa"
+              },
+              {
+                "from": "subway subway charley s",
+                "to": "subway"
+              },
+              {
+                "from": "subway charley s",
+                "to": "subway"
+              },
+              {
+                "from": "the blind panda the blind panda",
+                "to": "the blind panda"
+              },
+              {
+                "from": "شيك شاك shakeshack",
+                "to": "shakeshack"
+              },
+              {
+                "from": "shakeshack شيك شاك",
+                "to": "shakeshack"
+              },
+              {
+                "from": "hateen hateen",
+                "to": "hateen"
+              },
+              {
+                "from": "yarmouk yarmouk",
+                "to": "yarmouk"
+              },
+              {
+                "from": "arabica arabica shuwaikh",
+                "to": "arabica"
+              },
+              {
+                "from": "arabica shuwaikh",
+                "to": "arabica"
+              },
+              {
+                "from": "morning الاتحاد الكويتي لالعاب القوى",
+                "to": "الاتحاد الكويتي لالعاب القوى"
+              },
+              {
+                "from": "starbucks ستاربكس",
+                "to": "starbucks"
+              },
+              {
+                "from": "ستاربكس starbucks",
+                "to": "starbucks"
+              },
+              {
+                "from": "mcdonald s drive thru",
+                "to": "mcdonald s ماكدونالدز drive thru"
+              },
+              {
+                "from": "محلات شرق",
+                "to": "شرق محلات"
+              },
+              {
+                "from": "jalboot village jalboot village",
+                "to": "jalboot village"
+              },
+              {
+                "from": "zahra zahra",
+                "to": "zahra"
+              },
+              {
+                "from": "residence juma a",
+                "to": "juma a residence"
+              },
+              {
+                "from": "offside juice offside juice",
+                "to": "offside juice"
+              },
+              {
+                "from": "library ack",
+                "to": "ack library"
+              },
+              {
+                "from": "arabella arabella",
+                "to": "arabella"
+              },
+              {
+                "from": "salhiya complex salhiya complex",
+                "to": "salhiya complex"
+              },
+              {
+                "from": "pizza express pizza express",
+                "to": "pizza express"
+              },
+              {
+                "from": "burger boutique burger boutique",
+                "to": "burger boutique"
+              },
+              {
+                "from": "sabah al",
+                "to": "sabah al salem"
+              },
+              {
+                "from": "al sabah",
+                "to": "sabah al salem"
+              },
+              {
+                "from": "المخيم الي",
+                "to": "الي المخيم"
+              },
+              {
+                "from": "مـعـهـد اتـصـالات و مـلاحـه",
+                "to": "مـعـهـد اتـصـالات و مـلاحـه alrshedy1"
+              },
+              {
+                "from": "movenpick hotel resort al bida a movenpickhotels",
+                "to": "movenpick"
+              },
+              {
+                "from": "movenpick hotel resort al bida a",
+                "to": "movenpick"
+              },
+              {
+                "from": "b f open flame kitchen",
+                "to": "open flame kitchen"
+              },
+              {
+                "from": "b f open flame kitchen ofk360",
+                "to": "open flame kitchen"
+              },
+              {
+                "from": "ras al salmiya health club",
+                "to": "ras salmiya health club"
+              },
+              {
+                "from": "كلية العلوم جامعة الكويت",
+                "to": "جامعة الكويت كلية العلوم"
+              },
+              {
+                "from": "الشاليه seashell julai a hotel resort",
+                "to": "seashell julai a hotel resort"
+              },
+              {
+                "from": "munahi m bin jarbou house",
+                "to": "munahi m bin jarbou house t7a1l0a0l0"
+              },
+              {
+                "from": "saad al",
+                "to": "al saad"
+              },
+              {
+                "from": "joy confections the gate mall",
+                "to": "the gate mall"
+              },
+              {
+                "from": "the gate mall joy confections",
+                "to": "the gate mall"
+              },
+              {
+                "from": "جمعية العارضية فرع ٢٤ ساعة",
+                "to": "جمعية العارضية ٢٤ ساعة"
+              },
+              {
+                "from": "360 mall360",
+                "to": "360 mall"
+              },
+              {
+                "from": "360 360 mall360",
+                "to": "360 mall"
+              },
+              {
+                "from": "souq al mubarakiya souq al mubarakiya",
+                "to": "souq al mubarakiya"
+              },
+              {
+                "from": "b f burgeer boutique burgerboutique",
+                "to": "b f burgeer boutique"
+              },
+              {
+                "from": "nuzha starbucks",
+                "to": "starbucks nuzha"
+              },
+              {
+                "from": "cinescape cinescape mall360",
+                "to": "360 mall"
+              },
+              {
+                "from": "cinescape mall360",
+                "to": "360 mall"
+              },
+              {
+                "from": "australian college of kuwait ack live",
+                "to": "ack australian college of kuwait ack live"
+              },
+              {
+                "from": "بنك الخليج gulf bank",
+                "to": "gulf bank بنك الخليج"
+              },
+              {
+                "from": "mubarak al kabir",
+                "to": "mubarak al kabir mubarak al kabir"
+              },
+              {
+                "from": "murouj",
+                "to": "murouj murouj"
+              },
+              {
+                "from": "dunyasi kahve",
+                "to": "kahve dunyasi"
+              },
+              {
+                "from": "boutique 33",
+                "to": "33 boutique"
+              },
+              {
+                "from": "تقاطع الملك فهد مع الثاني",
+                "to": "تقاطع الثاني مع الملك فهد"
+              },
+              {
+                "from": "الظهر الظهر",
+                "to": "الظهر"
+              },
+              {
+                "from": "melenzane melenzane",
+                "to": "melenzane"
+              },
+              {
+                "from": "sulaibikhat city sulaibikhat city",
+                "to": "sulaibikhat city"
+              },
+              {
+                "from": "miral miral",
+                "to": "miral"
+              },
+              {
+                "from": "enab beirut",
+                "to": "beirut enab"
+              },
+              {
+                "from": "andalous",
+                "to": "andalous andalous"
+              },
+              {
+                "from": "the higher institute of telecommunication and navigation",
+                "to": "the higher institute of telecommunication navigation"
+              },
+              {
+                "from": "the lake the lake",
+                "to": "the lake"
+              },
+              {
+                "from": "adan hospital w 14",
+                "to": "adan hospital"
+              },
+              {
+                "from": "adan hospital adan hospital w 14",
+                "to": "adan hospital"
+              },
+              {
+                "from": "starbucks airport",
+                "to": "airport starbucks"
+              },
+              {
+                "from": "rawda rawda",
+                "to": "rawda"
+              },
+              {
+                "from": "cinescape 360",
+                "to": "360 mall"
+              },
+              {
+                "from": "360 cinescape",
+                "to": "360 mall"
+              },
+              {
+                "from": "ديوان الشيخ مبارك الصباح",
+                "to": "ديوان الشيخ مبارك السالم الصباح"
+              },
+              {
+                "from": "bnaider 258 bnaider 258",
+                "to": "bnaider 258"
+              },
+              {
+                "from": "masilla bridge",
+                "to": "masilla bridge masilla bridge"
+              },
+              {
+                "from": "dar meem dar meem",
+                "to": "dar meem"
+              },
+              {
+                "from": "lamesho restaurant مطعم لاميشو lameshoofficial",
+                "to": "lamesho restaurant مطعم لاميشو"
+              },
+              {
+                "from": "starbucks alshuhada",
+                "to": "starbucks alshuhada starbucks alshuhada"
+              },
+              {
+                "from": "to shamiya",
+                "to": "shamiya to shamiya"
+              },
+              {
+                "from": "aum parking",
+                "to": "parking aum"
+              },
+              {
+                "from": "shuwaikh cafe",
+                "to": "cafe shuwaikh"
+              },
+              {
+                "from": "salmiya salmiya",
+                "to": "salmiya"
+              },
+              {
+                "from": "yanni s concert yanni s concert",
+                "to": "yanni s concert"
+              },
+              {
+                "from": "american college of the middle east acm",
+                "to": "american college of the middle east acm acm college"
+              },
+              {
+                "from": "كلية الآداب",
+                "to": "كلية الأداب"
+              },
+              {
+                "from": "i m at 360mall",
+                "to": "360 mall"
+              },
+              {
+                "from": "i m at 360mall l",
+                "to": "360 mall"
+              },
+              {
+                "from": "downtown downtown",
+                "to": "downtown"
+              },
+              {
+                "from": "qadsiya co op qadsiya co op",
+                "to": "qadsiya co op"
+              },
+              {
+                "from": "al rai",
+                "to": "al rai al rai"
+              },
+              {
+                "from": "arabica arabica al salmiya",
+                "to": "arabica al salmiya"
+              },
+              {
+                "from": "international kuwait",
+                "to": "kuwait international"
+              },
+              {
+                "from": "smart mind institute for training",
+                "to": "smart mind institute for training smartmindkw"
+              },
+              {
+                "from": "al tijaria tower al tijaria tower",
+                "to": "al tijaria tower"
+              },
+              {
+                "from": "كلية التربية الأساسية",
+                "to": "كلية التربية الأساسية بنين"
+              },
+              {
+                "from": "pet zone pet zone",
+                "to": "pet zone"
+              },
+              {
+                "from": "the kuwait ministy of defence",
+                "to": "the kuwait ministy of defence g1"
+              },
+              {
+                "from": "domino s pizza",
+                "to": "pizza domino s"
+              },
+              {
+                "from": "chocolate macaroon شوكولت ماكارون chocoandmacaron",
+                "to": "chocolate macaroon شوكولت ماكارون"
+              },
+              {
+                "from": "boulevard boulevard",
+                "to": "boulevard"
+              },
+              {
+                "from": "alwafra الوفره",
+                "to": "alwafra alwafra الوفره"
+              },
+              {
+                "from": "d d",
+                "to": "d"
+              },
+              {
+                "from": "مواقف بنك الإئتمان الكويتي",
+                "to": "بنك الإئتمان الكويتي"
+              },
+              {
+                "from": "جسر إلي بين حولي والجابريه جسر إلي بين حولي والجابريه",
+                "to": "جسر إلي بين حولي والجابريه"
+              },
+              {
+                "from": "soul coffee house",
+                "to": "soul coffee house soul coffee house"
+              },
+              {
+                "from": "nuzha",
+                "to": "nuzha nuzha"
+              },
+              {
+                "from": "تقاطع اشاره",
+                "to": "اشاره تقاطع"
+              },
+              {
+                "from": "rustica pizza",
+                "to": "pizza rustica"
+              },
+              {
+                "from": "جاخور الأبراهيم",
+                "to": "جاخور الإبراهيم"
+              },
+              {
+                "from": "الملك فهد باتجاه الديره 3bdullah88",
+                "to": "خط الملك فهد باتجاه الديره"
+              },
+              {
+                "from": "الملك فهد باتجاه الديره",
+                "to": "خط الملك فهد باتجاه الديره"
+              },
+              {
+                "from": "x cite alghanim electronics",
+                "to": "x cite"
+              },
+              {
+                "from": "كلماتي مقصوده خاطره حقيقه واقع بصراحه من القلب رساله تصميمي حياتي تصميم خيالي",
+                "to": "صدقيني كلماتي حقيقه واقع تواصل بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي"
+              },
+              {
+                "from": "كلماتي حقيقه واقع الفشل النجاح بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي",
+                "to": "صدقيني كلماتي حقيقه واقع تواصل بصراحه مقصوده من القلب رساله تصميمي حياتي تصميم خيالي"
+              },
+              {
+                "from": "opera kuwait house opera kuwait house",
+                "to": "opera kuwait house"
+              },
+              {
+                "from": "kuwait opera house",
+                "to": "opera kuwait house"
+              },
+              {
+                "from": "chalet k278",
+                "to": "chalet k278 chalet k278"
+              },
+              {
+                "from": "chalet chalet k278",
+                "to": "chalet k278 chalet k278"
+              },
+              {
+                "from": "الإدارة العامة للجنسية ووثائق السفر الكويتية",
+                "to": "الإدارة العامة للجنسية ووثائق السفر"
+              },
+              {
+                "from": "الإدارة العامة للجنسية ووثائق السفر الشـامية",
+                "to": "الإدارة العامة للجنسية ووثائق السفر"
+              },
+              {
+                "from": "the sultan center express",
+                "to": "the sultan center express highway"
+              },
+              {
+                "from": "the sultan express center",
+                "to": "the sultan center express highway"
+              },
+              {
+                "from": "the administration college of engineering and petroleum",
+                "to": "college of engineering and petroleum"
+              },
+              {
+                "from": "x cite by alghanim electronics",
+                "to": "x cite"
+              },
+              {
+                "from": "x cite by alghanim electronics x cite by alghanim electronics",
+                "to": "x cite"
+              },
+              {
+                "from": "night x cite by alghanim electronics",
+                "to": "x cite"
+              },
+              {
+                "from": "home sweet",
+                "to": "sweet home"
+              },
+              {
+                "from": "home sweet home",
+                "to": "sweet home"
+              },
+              {
+                "from": "اشارة الضاحيه والديره اشارة الضاحيه و الديره",
+                "to": "اشارة الضاحيه و الديره اشارة الضاحيه و الديره"
+              },
+              {
+                "from": "اشارة الضاحيه و الديره",
+                "to": "اشارة الضاحيه و الديره اشارة الضاحيه و الديره"
+              },
+              {
+                "from": "jaber alahmad international stadium shababjs",
+                "to": "jaber alahmad international stadium"
+              },
+              {
+                "from": "jaber alahmad international stadium jaber alahmad international stadium shababjs",
+                "to": "jaber alahmad international stadium"
+              },
+              {
+                "from": "starbucks college of engineering and petroleum",
+                "to": "college of engineering and petroleum"
+              },
+              {
+                "from": "the college of engineering and petroleum",
+                "to": "college of engineering and petroleum"
+              },
+              {
+                "from": "american university of the middle east",
+                "to": "aum"
+              },
+              {
+                "from": "aum american university of the middle east",
+                "to": "aum"
+              },
+              {
+                "from": "american university of middle east",
+                "to": "aum"
+              },
+              {
+                "from": "grand avenue phase 4 grand avenue phase 4",
+                "to": "avenues"
+              },
+              {
+                "from": "grand avenue phase 4",
+                "to": "avenues"
+              },
+              {
+                "from": "grand grand avenue phase 4",
+                "to": "avenues"
+              },
+              {
+                "from": "grand avenue grand avenue phase 4",
+                "to": "avenues"
+              },
+              {
+                "from": "تنظيف غسيل شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركة نظافة شركة نظافه",
+                "to": "شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة شركة نظافه"
+              },
+              {
+                "from": "تنظيف غسيل شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركة نظافة شركة غسيل",
+                "to": "شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة شركة نظافه"
+              },
+              {
+                "from": "تنظيف غسيل شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة",
+                "to": "شركة تنظيف شركه تنظيف شركةتنظيف شركةغسيل شركةنظافة شركه نظافه شركات تنظيف شركة نظافة شركة نظافه"
+              },
+              {
+                "from": "abdullah al mubarak area home abdullah al mubarak area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "abdullah al mubarak area finally home mubarak al abdullah area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "abdullah al mubarak finally home abdullah al mubarak area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "abdullah al mubarak area finally home abdullah al mubarak area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "abdullah al mubarak abdullah al mubarak area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "abdullah al mubarak area abdullah al mubarak area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "mubarak al abdullah area",
+                "to": "abdullah al mubarak area"
+              },
+              {
+                "from": "kfh بيت التمويل الكويتي kfh بيت التمويل الكويتي",
+                "to": "kfh"
+              },
+              {
+                "from": "بيت التمويل الكويتي kfh",
+                "to": "kfh"
+              },
+              {
+                "from": "kfh بيت التمويل الكويتي",
+                "to": "kfh"
+              },
+              {
+                "from": "kfh بيت التمويل الكويتي kfhgroup",
+                "to": "kfh"
+              },
+              {
+                "from": "the avenues الافنيوز مول the avenues mall",
+                "to": "avenues"
+              },
+              {
+                "from": "the avenues mall الافنيوز مول the avenues mall",
+                "to": "avenues"
+              },
+              {
+                "from": "الافنيوز مول the avenues mall",
+                "to": "avenues"
+              },
+              {
+                "from": "the الافنيوز مول the avenues mall",
+                "to": "avenues"
+              },
+              {
+                "from": "the avenues",
+                "to": "avenues"
+              },
+              {
+                "from": "avenues the avenues",
+                "to": "avenues"
+              },
+              {
+                "from": "the avenues the avenues",
+                "to": "avenues"
+              },
+              {
+                "from": "avenues the",
+                "to": "avenues"
+              },
+              {
+                "from": "360 t g i friday s",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "t g i friday s فرايديز",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "t g i friday s",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "t g i friday s t g i friday s",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "t g i friday s فرايديز t g i friday s فرايديز",
+                "to": "tgi fridays"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa messilah 1",
+                "to": "jumeirah messilah"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa",
+                "to": "jumeirah messilah"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa jumeirahmb",
+                "to": "jumeirah messilah"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa messilah 1 jumeirahmb",
+                "to": "jumeirah messilah"
+              },
+              {
+                "from": "jumeirah jumeirah messilah beach hotel spa messilah 1 jumeirahmb",
+                "to": "jumeirah messilah"
+              },
+              {
+                "from": "jumeirah messilah beach hotel spa jumeirah messilah beach hotel spa jumeirahmb",
+                "to": "jumeirah messilah"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_name_tweet"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "FULL_STRING"
+          },
+          "alwaysShowComment": false
+        }
+      ],
       "alwaysShowComment": false
     }
   ],
