@@ -86,14 +86,14 @@
         {
           "preview": false,
           "metaType": "PROCESSOR",
-          "disabled": true,
+          "disabled": false,
           "type": "PythonUDF",
           "params": {
             "mode": "CELL",
             "envSelection": {
               "envMode": "INHERIT"
             },
-            "stopOnError": true,
+            "stopOnError": false,
             "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    s \u003d row[\u0027tweet_text_cleaned\u0027]\n    # changing all characters to unicode to unify\n    s \u003d codecs.unicode_escape_encode(s)[0]\n    # removing double or triple backslash from some unicode characters\n    # (this one took a while to find a solution for)\n    s \u003d s.replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027).replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027)\n    # re-encoding text back into normal characters\n    s \u003d codecs.unicode_escape_decode(s)[0]\n\n    return s\n\n",
             "useKernel": false,
             "column": "tweet_text_cleaned_2",
