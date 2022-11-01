@@ -6,9 +6,6 @@
   "keys": [
     {
       "column": "place_name_clean"
-    },
-    {
-      "column": "place_name_tweet"
     }
   ],
   "globalCount": false,
@@ -53,10 +50,6 @@
         "columns": [
           {
             "name": "place_name_clean",
-            "type": "string"
-          },
-          {
-            "name": "place_name_tweet",
             "type": "string"
           }
         ],
