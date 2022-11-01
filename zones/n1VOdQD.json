@@ -1,7 +1,20 @@
 {
   "name": "2018 distinct",
   "color": "#D03713",
-  "items": [],
+  "items": [
+    {
+      "objectId": "2018_twitter_data",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_2018_twitter_data_distinct",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "2018_twitter_data_distinct",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
