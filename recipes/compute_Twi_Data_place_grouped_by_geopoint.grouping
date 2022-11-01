@@ -5,7 +5,37 @@
   },
   "keys": [
     {
-      "column": "geopoint"
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "last": false,
+      "max": false,
+      "column": "geopoint",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "place_name_clean",
+      "count": false,
+      "$idx": 6,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "$selected": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,8 +45,10 @@
       "firstLastNotNull": false,
       "column": "screen_name",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -31,8 +63,10 @@
       "firstLastNotNull": false,
       "column": "date_time",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "date",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -47,8 +81,10 @@
       "firstLastNotNull": false,
       "column": "is_weekend",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "boolean",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -63,13 +99,16 @@
       "firstLastNotNull": false,
       "column": "lang",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
       "first": false
     },
@@ -79,8 +118,10 @@
       "firstLastNotNull": false,
       "column": "app",
       "count": false,
+      "$idx": 4,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -95,24 +136,10 @@
       "firstLastNotNull": false,
       "column": "tweet_text_clean",
       "count": false,
+      "$idx": 5,
       "sum": false,
       "concat": false,
-      "concatDistinct": false,
-      "sum2": false,
-      "min": false,
-      "countDistinct": false,
-      "avg": false,
-      "stddev": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "max": false,
-      "firstLastNotNull": false,
-      "column": "place_name_clean",
-      "count": false,
-      "sum": false,
-      "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -127,8 +154,10 @@
       "firstLastNotNull": false,
       "column": "governorate",
       "count": false,
+      "$idx": 6,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -143,8 +172,10 @@
       "firstLastNotNull": false,
       "column": "districts",
       "count": false,
+      "$idx": 7,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -159,8 +190,10 @@
       "firstLastNotNull": false,
       "column": "place_name_tweet",
       "count": false,
+      "$idx": 8,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -206,9 +239,42 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "count",
+          "col": "place_name_clean",
+          "num": 0,
+          "operator": "\u003d\u003d [number]"
+        }
+      ]
+    },
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "geopoint",
+            "type": "string"
+          },
+          {
+            "name": "place_name_clean",
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   }
 }
