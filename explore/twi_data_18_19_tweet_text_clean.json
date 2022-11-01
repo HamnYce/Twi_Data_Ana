@@ -43,14 +43,14 @@
         },
         "python": {}
       },
-      "basic": true,
-      "countDistinct": true,
+      "basic": false,
+      "countDistinct": false,
       "advanced": true,
       "percentile": false,
       "validity": false,
       "updateOnAnalyzeBoxOpen": false,
       "computeCostFreeMetrics": false,
-      "numberTopValues": 10
+      "numberTopValues": 20
     },
     "columnsSelection": {
       "mode": "ALL"
