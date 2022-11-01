@@ -28,8 +28,56 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "mapping": [
+          {
+            "from": "\u0027\u0027",
+            "to": "\u0027"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "tweet_text"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "PythonUDF",
+      "params": {
+        "mode": "CELL",
+        "envSelection": {
+          "envMode": "INHERIT"
+        },
+        "stopOnError": true,
+        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    clean_text \u003d row[\u0027tweet_text\u0027]\n    \n    clean_text \u003d clean_text[1:] if clean_text.startswith(\u0027u\u0027) else clean_text\n\n    clean_text \u003d clean_text[1:-2] if clean_text.startswith(\"\u0027\") else clean_text\n    # removing common from end of text\n    clean_text \u003d clean_text[:-1] if clean_text.endswith(\",\") else clean_text\n    # unicode escaping lower case u (\\u) characters\n    try:\n        clean_text \u003d codecs.unicode_escape_decode(clean_text)[0] if clean_text.find(\u0027\\\\u\u0027) \u003e -1 else clean_text\n    except:\n        pass\n    # appending to list for next part\n    return clean_text\n",
+        "useKernel": false,
+        "column": "tweet_text_cleaned",
+        "sourceColumnsList": [],
+        "usePythonUnicode": false,
+        "vectorSize": 256,
+        "vectorize": false
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -62,7 +110,19 @@
       "meaning": "Longitude"
     }
   },
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "app": 300,
+    "place_name": 300,
+    "tweet_text_cleaned": 150,
+    "date_time": 183,
+    "screen_name": 127,
+    "governorate": 134,
+    "latitude": 106,
+    "districts": 148,
+    "lang": 100,
+    "tweet_text": 300,
+    "longitude": 113
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
