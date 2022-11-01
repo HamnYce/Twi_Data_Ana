@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667290322875
+    "lastModifiedOn": 1667291223870
   },
   "creationTag": {
     "versionNumber": 0,
@@ -96,7 +96,8 @@
       {"name":"longitude","type":"double","meaning":"Longitude"},
       {"name":"place_name","type":"string"},
       {"name":"governorate","type":"string"},
-      {"name":"districts","type":"string"}
+      {"name":"districts","type":"string"},
+      {"name":"tweet_text_cleaned","type":"string"}
     ],
     "userModified": true
   },
