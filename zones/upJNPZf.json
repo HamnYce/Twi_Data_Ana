@@ -3,10 +3,6 @@
   "color": "#465A64",
   "items": [
     {
-      "objectId": "Twi_Data_geopoint_by_screen_name",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "compute_Twi_Data_geopoint_by_screen_name",
       "objectType": "RECIPE"
     }
