@@ -50,7 +50,7 @@
       "validity": false,
       "updateOnAnalyzeBoxOpen": false,
       "computeCostFreeMetrics": false,
-      "numberTopValues": 10
+      "numberTopValues": 100
     },
     "columnsSelection": {
       "mode": "ALL"
