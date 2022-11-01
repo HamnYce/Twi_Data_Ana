@@ -123,7 +123,7 @@
           "preview": false,
           "designTimeReport": {
             "report": {
-              "createdColumnCount": 4
+              "createdColumnCount": 3
             }
           },
           "metaType": "PROCESSOR",
