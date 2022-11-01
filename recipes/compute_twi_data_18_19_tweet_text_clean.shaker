@@ -35,97 +35,121 @@
   "steps": [
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "Cleaning Tweet Text",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "FindReplace",
-      "params": {
-        "output": "",
-        "mapping": [
-          {
-            "from": "\u0027\u0027",
-            "to": "\u0027"
-          }
-        ],
-        "normalization": "EXACT",
-        "columns": [
-          "tweet_text"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "stopAfterFirstMatch": false,
-        "matching": "SUBSTRING"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "PythonUDF",
-      "params": {
-        "mode": "CELL",
-        "envSelection": {
-          "envMode": "INHERIT"
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "",
+            "mapping": [
+              {
+                "from": "\u0027\u0027",
+                "to": "\u0027"
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "tweet_text"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "SUBSTRING"
+          },
+          "alwaysShowComment": false
         },
-        "stopOnError": true,
-        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    clean_text \u003d row[\u0027tweet_text\u0027]\n    \n    clean_text \u003d clean_text[1:] if clean_text.startswith(\u0027u\u0027) else clean_text\n\n    clean_text \u003d clean_text[1:-2] if clean_text.startswith(\"\u0027\") else clean_text\n    # removing common from end of text\n    clean_text \u003d clean_text[:-1] if clean_text.endswith(\",\") else clean_text\n    # unicode escaping lower case u (\\u) characters\n    try:\n        clean_text \u003d codecs.unicode_escape_decode(clean_text)[0] if clean_text.find(\u0027\\\\u\u0027) \u003e -1 else clean_text\n    except:\n        pass\n    # appending to list for next part\n    return clean_text\n",
-        "useKernel": false,
-        "column": "tweet_text_cleaned",
-        "sourceColumnsList": [],
-        "usePythonUnicode": false,
-        "vectorSize": 256,
-        "vectorize": false
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "PythonUDF",
-      "params": {
-        "mode": "CELL",
-        "envSelection": {
-          "envMode": "INHERIT"
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "PythonUDF",
+          "params": {
+            "mode": "CELL",
+            "envSelection": {
+              "envMode": "INHERIT"
+            },
+            "stopOnError": true,
+            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    clean_text \u003d row[\u0027tweet_text\u0027]\n    \n    clean_text \u003d clean_text[1:] if clean_text.startswith(\u0027u\u0027) else clean_text\n\n    clean_text \u003d clean_text[1:-2] if clean_text.startswith(\"\u0027\") else clean_text\n    # removing common from end of text\n    clean_text \u003d clean_text[:-1] if clean_text.endswith(\",\") else clean_text\n    # unicode escaping lower case u (\\u) characters\n    try:\n        clean_text \u003d codecs.unicode_escape_decode(clean_text)[0] if clean_text.find(\u0027\\\\u\u0027) \u003e -1 else clean_text\n    except:\n        pass\n    # appending to list for next part\n    return clean_text\n",
+            "useKernel": false,
+            "column": "tweet_text_cleaned",
+            "sourceColumnsList": [],
+            "usePythonUnicode": false,
+            "vectorSize": 256,
+            "vectorize": false
+          },
+          "alwaysShowComment": false
         },
-        "stopOnError": true,
-        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    s \u003d row[\u0027tweet_text_cleaned\u0027]\n    # changing all characters to unicode to unify\n    s \u003d codecs.unicode_escape_encode(s)[0]\n    # removing double or triple backslash from some unicode characters\n    # (this one took a while to find a solution for)\n    s \u003d s.replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027).replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027)\n    # re-encoding text back into normal characters\n    s \u003d codecs.unicode_escape_decode(s)[0]\n\n    return s\n\n",
-        "useKernel": false,
-        "column": "tweet_text_cleaned_2",
-        "sourceColumnsList": [],
-        "usePythonUnicode": true,
-        "vectorSize": 256,
-        "vectorize": false
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "tweet_text",
-          "tweet_text_cleaned"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnRenamer",
-      "params": {
-        "renamings": [
-          {
-            "from": "tweet_text_cleaned_2",
-            "to": "tweet_text"
-          }
-        ]
-      },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "PythonUDF",
+          "params": {
+            "mode": "CELL",
+            "envSelection": {
+              "envMode": "INHERIT"
+            },
+            "stopOnError": true,
+            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    import codecs\n    s \u003d row[\u0027tweet_text_cleaned\u0027]\n    # changing all characters to unicode to unify\n    s \u003d codecs.unicode_escape_encode(s)[0]\n    # removing double or triple backslash from some unicode characters\n    # (this one took a while to find a solution for)\n    s \u003d s.replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027).replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027)\n    # re-encoding text back into normal characters\n    s \u003d codecs.unicode_escape_decode(s)[0]\n\n    return s\n\n",
+            "useKernel": false,
+            "column": "tweet_text_cleaned_2",
+            "sourceColumnsList": [],
+            "usePythonUnicode": true,
+            "vectorSize": 256,
+            "vectorize": false
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "tweet_text",
+              "tweet_text_cleaned"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "tweet_text_cleaned_2",
+                "to": "tweet_text"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "latitude",
+            "columns": [
+              "tweet_text"
+            ],
+            "reorderAction": "BEFORE_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        }
+      ],
       "alwaysShowComment": false
     }
   ],
