@@ -43,9 +43,9 @@
         },
         "python": {}
       },
-      "basic": false,
-      "countDistinct": false,
-      "advanced": false,
+      "basic": true,
+      "countDistinct": true,
+      "advanced": true,
       "percentile": false,
       "validity": false,
       "updateOnAnalyzeBoxOpen": false,
@@ -66,7 +66,8 @@
       "place_name": 246,
       "governorate": 134,
       "districts": 148,
-      "place_name_tweet": 162
+      "place_name_tweet": 162,
+      "place_name_clean": 218
     },
     "columnUseScientificNotationByName": {},
     "coloring": {
