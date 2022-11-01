@@ -3,14 +3,14 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 1667339351185,
+    "_refreshTrigger": 1667341498636,
     "selection": {
       "filter": {
         "distinct": false,
         "enabled": false
       },
       "latestPartitionsN": 1,
-      "maxRecords": 2725608,
+      "maxRecords": 10000,
       "maxRecordsForDisplay": -1,
       "ordering": {
         "rules": [],
@@ -21,7 +21,7 @@
       "maxStoredBytes": -1,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "RANDOM_FIXED_NB_EXACT",
       "timeout": -1
     },
     "autoRefreshSample": false
