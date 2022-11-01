@@ -75,12 +75,7 @@
       "individualColumns": [],
       "valueColoringMode": "HASH"
     },
-    "sorting": [
-      {
-        "column": "place_name_tweet",
-        "ascending": true
-      }
-    ],
+    "sorting": [],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
