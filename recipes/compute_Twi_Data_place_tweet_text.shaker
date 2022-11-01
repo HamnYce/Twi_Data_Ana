@@ -1,0 +1,229 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 1667326060583,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 2800000,
+      "maxRecordsForDisplay": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": -1,
+      "targetRatio": 0.05,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "RANDOM_FIXED_RATIO",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "columnUseScientificNotationByName": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "RemoveRowsOnEmpty",
+      "params": {
+        "columns": [
+          "tweet_text_clean"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "clean place_name",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "FindReplace",
+          "params": {
+            "output": "place_name_unquoted",
+            "mapping": [
+              {
+                "from": "\"",
+                "to": ""
+              },
+              {
+                "from": "\u0027",
+                "to": ""
+              },
+              {
+                "from": ", Kuwait",
+                "to": ""
+              }
+            ],
+            "normalization": "EXACT",
+            "columns": [
+              "place_name"
+            ],
+            "appliesTo": "SINGLE_COLUMN",
+            "stopAfterFirstMatch": false,
+            "matching": "SUBSTRING"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "PythonUDF",
+          "params": {
+            "mode": "CELL",
+            "envSelection": {
+              "envMode": "INHERIT"
+            },
+            "stopOnError": true,
+            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    text \u003d row[\u0027tweet_text_clean\u0027]\n\n    split_text \u003d text.split()\n\n    if len(split_text) \u003d\u003d 1:\n        return split_text[0]\n    elif \u0027at\u0027 in split_text:\n        start_index \u003d split_text.index(\u0027at\u0027) + 1\n        end_index \u003d start_index + 2\n        if \u0027in\u0027 in split_text:\n            end_index \u003d split_text.index(\u0027in\u0027)\n        return \u0027 \u0027.join(split_text[start_index : end_index])\n    \n    return \u0027\u0027",
+            "useKernel": false,
+            "column": "place_name_tweet",
+            "sourceColumnsList": [],
+            "usePythonUnicode": false,
+            "vectorSize": 256,
+            "vectorize": false
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "if(\ncontains(place_name_unquoted, \u0027\\x\u0027),\n\u0027\u0027,\nplace_name_unquoted)",
+            "column": "place_name_no_weird_encoding"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "if(\nendsWith(place_name_no_weird_encoding, \u0027,\u0027),\nplace_name_no_weird_encoding[0, -1],\nplace_name_no_weird_encoding\n)",
+            "column": "place_name_no_end_comma"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "remove intermediate place_names",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "place_name_no_weird_encoding",
+              "place_name_unquoted",
+              "place_name"
+            ],
+            "keep": false,
+            "appliesTo": "COLUMNS"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "place_name_no_end_comma",
+                "to": "place_name_clean"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "FULL"
+    },
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {
+    "place_name": {
+      "meaning": "Text"
+    }
+  },
+  "columnWidthsByName": {
+    "app": 300,
+    "place_name": 246,
+    "place_name_tweet": 135,
+    "place_name_clean": 211,
+    "date_time": 204,
+    "screen_name": 127,
+    "governorate": 134,
+    "districts": 148,
+    "geopoint": 300,
+    "tweet_text_clean": 300,
+    "lang": 100,
+    "is_weekend": 100
+  },
+  "sorting": [
+    {
+      "column": "geopoint",
+      "ascending": true
+    }
+  ],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}
