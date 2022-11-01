@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667291223870
+    "lastModifiedOn": 1667291764915
   },
   "creationTag": {
     "versionNumber": 0,
@@ -97,7 +97,8 @@
       {"name":"place_name","type":"string"},
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"},
-      {"name":"tweet_text_cleaned","type":"string"}
+      {"name":"tweet_text_cleaned","type":"string"},
+      {"name":"tweet_text_cleaned_2","type":"bigint"}
     ],
     "userModified": true
   },
