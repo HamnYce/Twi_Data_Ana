@@ -13,7 +13,7 @@
       "state": true,
       "country": true,
       "column_prefix": "",
-      "provider": "arcgis",
+      "provider": "google",
       "api_key": "AIzaSyDH2dzQOvLgxnC7orwcv8Umd2-fFSeLYW8",
       "lat_column": "latitude",
       "lng_column": "longitude"
@@ -51,11 +51,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667343700921
+    "lastModifiedOn": 1667343715378
   },
   "creationTag": {
     "versionNumber": 0,
