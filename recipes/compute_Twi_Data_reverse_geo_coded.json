@@ -19,7 +19,7 @@
       "lng_column": "longitude"
     },
     "containerSelection": {
-      "containerMode": "INHERIT"
+      "containerMode": "NONE"
     }
   },
   "customMeta": {
@@ -51,11 +51,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667343654316
+    "lastModifiedOn": 1667343686593
   },
   "creationTag": {
     "versionNumber": 0,
