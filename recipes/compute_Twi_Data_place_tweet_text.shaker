@@ -3,7 +3,7 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 1667317305175,
+    "_refreshTrigger": 1667317480485,
     "selection": {
       "filter": {
         "distinct": false,
@@ -42,7 +42,7 @@
         {
           "preview": false,
           "metaType": "PROCESSOR",
-          "disabled": false,
+          "disabled": true,
           "type": "PythonUDF",
           "params": {
             "mode": "CELL",
@@ -63,7 +63,7 @@
         {
           "preview": false,
           "metaType": "PROCESSOR",
-          "disabled": false,
+          "disabled": true,
           "type": "FindReplace",
           "params": {
             "output": "place_name_unquoted",
