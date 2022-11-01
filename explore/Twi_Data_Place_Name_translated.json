@@ -27,7 +27,7 @@
     },
     "sorting": [
       {
-        "column": "place_name_clean",
+        "column": "geopoint",
         "ascending": true
       }
     ],
@@ -48,13 +48,13 @@
           "rules": []
         },
         "samplingMethod": "HEAD_SEQUENTIAL",
-        "maxRecords": 10000,
+        "maxRecords": 100000,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 0
+      "_refreshTrigger": 1667338632031
     },
     "vizSampling": {
       "selection": {
