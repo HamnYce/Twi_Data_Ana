@@ -78,9 +78,9 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
-      "disabled": false,
+      "disabled": true,
       "type": "PythonUDF",
       "params": {
         "mode": "CELL",
@@ -88,7 +88,7 @@
           "envMode": "INHERIT"
         },
         "stopOnError": true,
-        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    return len(row)\n",
+        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    return len(row)\nfor t in clean_tweet_text:\n    # changing all characters to unicode to unify\n    s \u003d codecs.unicode_escape_encode(t)[0]\n    # removing the python added \"b\u0027\" at the beginning generated from previous statement\n    s \u003d str(s)[2:]\n    # removing double or triple backslash from some unicode characters\n    # (this one took a while to find a solution for)\n    s \u003d s.replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027).replace(\u0027\\\\\\\\\u0027,\u0027\\\\\u0027)\n    # re-encoding text back into normal characters\n    try:\n        s \u003d codecs.unicode_escape_decode(s)[0]\n    except:\n        pass\n    # appending to list to re-import back into table\n    good_enc_text.append(s)\n",
         "useKernel": false,
         "column": "tweet_text_cleaned_2",
         "sourceColumnsList": [],
