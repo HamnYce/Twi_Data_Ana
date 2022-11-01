@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 246,
+    "versionNumber": 248,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667342844901
+    "lastModifiedOn": 1667342951282
   },
   "creationTag": {
     "versionNumber": 0,
@@ -252,6 +252,21 @@
   "tags": [],
   "customFields": {},
   "checklists": {
-    "checklists": []
+    "checklists": [
+      {
+        "id": "3310d7",
+        "title": "Todo list",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": false,
+            "text": "use geopoint/place_name combo with greatest count as the one to fill in blank",
+            "createdOn": 1667342951180,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          }
+        ]
+      }
+    ]
   }
 }
