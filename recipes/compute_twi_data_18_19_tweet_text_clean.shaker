@@ -76,6 +76,27 @@
         "vectorize": false
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "PythonUDF",
+      "params": {
+        "mode": "CELL",
+        "envSelection": {
+          "envMode": "INHERIT"
+        },
+        "stopOnError": true,
+        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    return len(row)\n",
+        "useKernel": false,
+        "column": "tweet_text_cleaned_2",
+        "sourceColumnsList": [],
+        "usePythonUnicode": true,
+        "vectorSize": 256,
+        "vectorize": false
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -112,6 +133,7 @@
   },
   "columnWidthsByName": {
     "app": 300,
+    "tweet_text_cleaned_2": 165,
     "place_name": 300,
     "tweet_text_cleaned": 150,
     "date_time": 183,
