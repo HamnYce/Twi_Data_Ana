@@ -3,7 +3,7 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 1666720302198,
+    "_refreshTrigger": 1667306525976,
     "selection": {
       "filter": {
         "distinct": false,
@@ -86,7 +86,7 @@
         {
           "preview": false,
           "metaType": "PROCESSOR",
-          "disabled": false,
+          "disabled": true,
           "type": "PythonUDF",
           "params": {
             "mode": "CELL",
