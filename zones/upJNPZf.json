@@ -1,12 +1,7 @@
 {
   "name": "Most Popular Tweets",
   "color": "#465A64",
-  "items": [
-    {
-      "objectId": "compute_Twi_Data_geopoint_by_screen_name",
-      "objectType": "RECIPE"
-    }
-  ],
+  "items": [],
   "shared": [],
   "tags": [],
   "customFields": {},
