@@ -3,7 +3,21 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "cache_enabled": true,
+      "batch_enabled": true,
+      "batch_size_bing": 50,
+      "address": true,
+      "city": true,
+      "postal": true,
+      "state": true,
+      "country": true,
+      "column_prefix": "",
+      "provider": "google",
+      "api_key": "AIzaSyDH2dzQOvLgxnC7orwcv8Umd2-fFSeLYW8",
+      "lat_column": "latitude",
+      "lng_column": "longitude"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -19,7 +33,7 @@
     "input_ds": {
       "items": [
         {
-          "ref": "Twi_Data_place_name_tweet_normalized",
+          "ref": "twi_data_18_19",
           "deps": []
         }
       ]
@@ -37,11 +51,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667343363337
+    "lastModifiedOn": 1667343654316
   },
   "creationTag": {
     "versionNumber": 0,
