@@ -64,7 +64,7 @@
     "main": {
       "items": [
         {
-          "ref": "Twi_Data_normalized",
+          "ref": "Twi_Data_place_name_tweet_normalized",
           "appendMode": false
         }
       ]
@@ -72,11 +72,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667341600151
+    "lastModifiedOn": 1667341635867
   },
   "creationTag": {
     "versionNumber": 0,
