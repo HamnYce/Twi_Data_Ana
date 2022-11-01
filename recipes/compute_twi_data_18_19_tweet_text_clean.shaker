@@ -103,7 +103,16 @@
             "vectorize": false
           },
           "alwaysShowComment": false
-        },
+        }
+      ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "name": "Renaming Intermediate Tweet Texts",
+      "metaType": "GROUP",
+      "disabled": false,
+      "steps": [
         {
           "preview": false,
           "metaType": "PROCESSOR",
