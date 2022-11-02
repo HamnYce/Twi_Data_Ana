@@ -45,12 +45,12 @@
       },
       "basic": true,
       "countDistinct": true,
-      "advanced": false,
+      "advanced": true,
       "percentile": false,
       "validity": false,
       "updateOnAnalyzeBoxOpen": false,
       "computeCostFreeMetrics": false,
-      "numberTopValues": 10
+      "numberTopValues": 20
     },
     "columnsSelection": {
       "mode": "ALL"
