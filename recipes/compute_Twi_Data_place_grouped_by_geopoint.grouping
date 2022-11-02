@@ -248,10 +248,16 @@
       "$filterOptions": "rules",
       "conditions": [
         {
-          "input": "count",
+          "input": "geopoint",
           "col": "place_name_clean",
           "num": 0,
-          "operator": "\u003d\u003d [number]"
+          "operator": "not empty"
+        },
+        {
+          "input": "place_name_clean",
+          "col": "place_name_clean",
+          "num": 0,
+          "operator": "not empty"
         }
       ]
     },
@@ -275,6 +281,6 @@
       }
     },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   }
 }
