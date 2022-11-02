@@ -33,11 +33,13 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": true,
+      "countDistinct": false,
       "avg": false,
-      "$selected": false,
+      "$selected": true,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "geopoint",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -54,7 +56,7 @@
       "min": false,
       "countDistinct": false,
       "avg": false,
-      "$selected": true,
+      "$selected": false,
       "stddev": false,
       "first": false
     }
@@ -106,8 +108,8 @@
             "type": "string"
           },
           {
-            "name": "place_name_clean_distinct",
-            "type": "bigint"
+            "name": "place_name_clean_first",
+            "type": "string"
           },
           {
             "name": "count_max",
