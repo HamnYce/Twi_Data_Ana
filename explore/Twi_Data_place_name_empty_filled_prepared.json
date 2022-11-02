@@ -27,7 +27,7 @@
     },
     "sorting": [
       {
-        "column": "geopoint",
+        "column": "place_name_tweet",
         "ascending": true
       }
     ],
@@ -39,7 +39,7 @@
         "timeout": -1,
         "filter": {
           "distinct": false,
-          "enabled": true,
+          "enabled": false,
           "uiData": {
             "mode": "\u0026\u0026",
             "conditions": [
@@ -59,14 +59,14 @@
           "enabled": false,
           "rules": []
         },
-        "samplingMethod": "RANDOM_FIXED_RATIO",
+        "samplingMethod": "HEAD_SEQUENTIAL",
         "maxRecords": 10000,
         "targetRatio": 1.0,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 1667378536949
+      "_refreshTrigger": 1667390831985
     },
     "vizSampling": {
       "selection": {
