@@ -185,6 +185,7 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
+              "Al-Rai": true,
               "Qibla": true,
               "Sharq": true,
               "Shuwaikh Industrial - 1": true,
@@ -435,7 +436,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAgRJREFUeF7t07FtFlEUROG7iyVE7jZogELIKYDQcgSyEyTcA5FLoguHtuSM/WnhBBv4PJ+NJ5g7375t+pZeYFv6uo6bgBf/CQIOePEFFj+vFxzw4gssfl4vOODFF1j8vF5wwIsvsPh5p73gy81+PzM/5mr7Nsfl53w6Pm9387r4fm/+vFOAL7f70xxzPdv8mZnn+XD8mn/73fZwfH/zCyxe8Bzgm/1x9vk6l5nt4fi4+Gaq884Bvp0vM/Oy/Z6/quvfQdlTgN/BTtoTA9bSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKmAtbSseIBs520qYC1dKx4wGwnbSpgLR0rHjDbSZsKWEvHigfMdtKm/gPgPBtROhISnAAAAABJRU5ErkJggg\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAZtJREFUeF7tk7FNA0EUBd8/7ITIISKgBZfgkB4ohHOChEQCFzmiAgpyRhMEhPYJ31KF7dNotoGvmdlX8aENFJpOuBgY/gkMbGC4ATieCzYw3AAczwUbGG4AjueCDQw3AMdzwQaGG4DjuWADww3A8VywgeEG4Hgu2MBwA3A8F2xguAE4ngs2MNwAHM8FGxhuAI7ngg0MNwDHc8EGhhuA47lgA1/GQHvNbY55yGm5Sp0+03JXw3R/mevcK7NacOsXj0nWaTWma/sc/va1yy9X//nJZhO49TdPmdpXKj/JYlPD+N367q0+ppfza+BemE/g5+69hmnLVX0dstkEvg4+/6qB4Y0NbGC4ATieCzYw3AAczwUbGG4AjueCDQw3AMdzwQaGG4DjuWADww3A8VywgeEG4Hgu2MBwA3A8F2xguAE4ngs2MNwAHM8FGxhuAI7ngg0MNwDHc8EGhhuA47lgA8MNwPFcsIHhBuB4LtjAcANwPBdsYLgBOJ4LNjDcABzPBRsYbgCO54INDDcAx3PBBoYbgOO5YAPDDcDx/gHZtCJRGUXf1QAAAABJRU5ErkJggg\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
@@ -455,11 +456,11 @@
   ],
   "name": "Analyze Twi_Data_place_name_empty_filled_prepared",
   "versionTag": {
-    "versionNumber": 126,
+    "versionNumber": 139,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667396979765
+    "lastModifiedOn": 1667397110722
   },
   "creationTag": {
     "versionNumber": 0,
