@@ -77,7 +77,7 @@
             "renamings": [
               {
                 "from": "place_name_clean_first",
-                "to": "place_name_clean"
+                "to": "place_name_clean_filled"
               }
             ]
           },
@@ -124,6 +124,7 @@
     "screen_name": 127,
     "place_name_clean_first": 225,
     "governorate": 100,
+    "place_name_clean_filled": 225,
     "lang": 100,
     "is_weekend": 100
   },
