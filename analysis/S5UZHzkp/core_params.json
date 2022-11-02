@@ -1,19 +1,53 @@
 {
   "inputDatasetSmartName": "Twi_Data_place_name_empty_filled",
   "script": {
-    "steps": [],
+    "steps": [
+      {
+        "type": "ColumnReorder",
+        "params": {
+          "reorderAction": "BEFORE_COLUMN",
+          "referenceColumn": "governorate",
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "place_name_clean_first"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
       "mode": "ALL"
     },
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "screen_name": 127,
+      "date_time": 183,
+      "is_weekend": 100,
+      "lang": 100,
+      "app": 100,
+      "tweet_text_clean": 300,
+      "geopoint": 197,
+      "place_name_clean": 197,
+      "governorate": 100,
+      "districts": 141,
+      "place_name_tweet": 218,
+      "place_name_clean_first": 225
+    },
     "columnUseScientificNotationByName": {},
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
       "valueColoringMode": "HASH"
     },
-    "sorting": [],
+    "sorting": [
+      {
+        "column": "geopoint",
+        "ascending": true
+      }
+    ],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
@@ -61,7 +95,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -69,11 +105,11 @@
   "charts": [],
   "name": "Analyze Twi_Data_place_name_empty_filled",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667377956515
+    "lastModifiedOn": 1667377967130
   },
   "creationTag": {
     "versionNumber": 0,
