@@ -127,8 +127,11 @@
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": false,
+      "orderColumn": "screen_name",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -255,7 +258,7 @@
         },
         {
           "input": "place_name_clean",
-          "col": "place_name_clean",
+          "col": "geopoint",
           "num": 0,
           "operator": "not empty"
         }
