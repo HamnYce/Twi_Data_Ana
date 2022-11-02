@@ -78,14 +78,236 @@
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
   },
-  "charts": [],
+  "charts": [
+    {
+      "copySelectionFromScript": false,
+      "refreshableSelection": {
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false,
+            "uiData": {
+              "mode": "\u0026\u0026",
+              "conditions": [
+                {
+                  "input": "geopoint",
+                  "operator": "\u003d\u003d [string]",
+                  "col": "is_weekend",
+                  "string": "POINT(46.67543 29.098112)",
+                  "num": 0.0
+                }
+              ]
+            }
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "HEAD_SEQUENTIAL",
+          "maxRecords": 50000,
+          "targetRatio": 1.0,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        },
+        "autoRefreshSample": false,
+        "_refreshTrigger": 1667396643594
+      },
+      "def": {
+        "type": "scatter_map",
+        "variant": "normal",
+        "name": "New chart",
+        "userEditedName": false,
+        "displayEchart": false,
+        "useEChartsImplementation": false,
+        "genericDimension0": [],
+        "genericDimension1": [],
+        "facetDimension": [],
+        "animationDimension": [],
+        "genericMeasures": [],
+        "xDimension": [],
+        "yDimension": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "uaSize": [],
+        "uaShape": [],
+        "uaColor": [],
+        "uaTooltip": [],
+        "groupDimension": [],
+        "xMeasure": [],
+        "yMeasure": [],
+        "colorMeasure": [],
+        "sizeMeasure": [],
+        "geometry": [
+          {
+            "column": "geopoint",
+            "type": "GEOPOINT",
+            "treatAsAlphanum": false,
+            "isA": "ua",
+            "adminLevel": 0
+          }
+        ],
+        "geoLayers": [
+          {
+            "geometry": [],
+            "colorOptions": {
+              "singleColor": "#1f77b4",
+              "transparency": 0.75,
+              "colorPalette": "default",
+              "ccScaleMode": "NORMAL",
+              "customPalette": {
+                "id": "__dku_custom__",
+                "name": "Custom Palette",
+                "colors": [],
+                "values": [],
+                "fixedValues": false
+              },
+              "paletteType": "CONTINUOUS",
+              "quantizationMode": "NONE",
+              "numQuantizeSteps": 5,
+              "paletteMiddleValue": 0.0,
+              "customColors": {},
+              "heatDensityMapIntensity": 0.5,
+              "heatDensityMapRadius": 0.5
+            },
+            "uaColor": []
+          }
+        ],
+        "tooltipMeasures": [],
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "filters": [
+          {
+            "filterType": "ALPHANUM_FACET",
+            "column": "governorate",
+            "columnType": "ALPHANUM",
+            "isA": "filter",
+            "excludedValues": {
+              "Capital": true,
+              "Hawalli": true,
+              "Farwaniya": true,
+              "Ahmadi": true,
+              "Jahra": true
+            },
+            "isAGlobalFilter": false,
+            "active": true,
+            "explicitExclude": false
+          }
+        ],
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "includeZero": true,
+        "smoothing": true,
+        "showLegend": true,
+        "showXAxis": false,
+        "showInChartValues": false,
+        "showInChartLabels": true,
+        "strokeWidth": 1,
+        "fillOpacity": 0.6,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "yAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "xAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "displayXAxis": true,
+        "displayYAxis": true,
+        "hexbinRadius": 20,
+        "hexbinNumber": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "chartHeight": 200,
+        "singleXAxis": true,
+        "multiTooltips": false,
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "colorOptions": {
+          "singleColor": "#FF7703",
+          "transparency": 0.5,
+          "colorPalette": "default",
+          "ccScaleMode": "NORMAL",
+          "customPalette": {
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "colors": [],
+            "values": [],
+            "fixedValues": false
+          },
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
+        },
+        "bubblesOptions": {
+          "defaultRadius": 1.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "mapOptions": {
+          "tilesLayer": "cartodb-positron",
+          "lockSquareGrid": false
+        },
+        "mapGridOptions": {
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
+        },
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAxtJREFUeF7tmbFrU1EUxs/Je4ktiji4OYgoKKKI4CQKBeumozq6OLkV0yRuDwfNSyP9G1zbURfBQUFcHFQUVBTEwc1Vq8l7OZJCIZaG5l3eDbkfX9fee975fr9+8NKo8AeagEKnYzihYPA/AgqmYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHAC4PHYYAoGJwAejw2mYHACMxDPlisDXRlUfKzCBvugOkMzKXgGZFgjeqWd/LyPVSjYB9VdZlq9dkq7vQ/DY3a3dkIf9D75WoOCfZHdYa4lUpHflY8SRzdk0D8gFvdE7J6m+aKvNSjYF9mdBN+Rw/pQvltd9mpXftlt2Sf743Pazp77WoOCPZC11p5j2v77dftoa1bPaNp/5+GRY0dS8BRpWzO6KvP5U+lVT+r9/ttpPJqCp0F5+DIloipi1oyeaJpf2XzBSqSmifR8rkDBPunu9jbdqp7Vdv+NJTInG9FlTfPHZa9DwWUTnWCeNWunNe2932xxK17gS9YE0EI8Ys3ouqb5ms/d2WCfdMfMtvrcEe3++Tb6a1uObonkL3RFvpS5EgWXSbPALGtUPmtncHzriiUSayJZgRETHaXgiTD5PTT6Nm2N6KZ28kdlPZGCyyJZYI6tSSTrInI0vujzBWu4EgUXEFP06PbPuVaPF7WbPbNrEum65LYk87oqG0XnFjlPwUVolXR2+NFIsuz18P/R/71obYlvxhc0zV6W8TgKLoOi4wxrxJekkuXaFn7Z4MgwiGvjvpwoY3k2uAyKIzMskYOayM9JxtqSHNJV+THJWdczFOxKLpB7FByIKNc1KdiVXCD3KDgQUa5rUrAruUDuUXAgolzXpGBXcoHco+BARLmuScGu5AK5R8GBiHJdk4JdyQVy7x+xk5dRObXrVQAAAABJRU5ErkJggg\u003d\u003d",
+        "disableSafetyLimits": false,
+        "useLiveProcessingIfAvailable": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "pivotMeasureDisplayMode": "ROWS",
+        "pivotDisplayTotals": {
+          "subTotals": {
+            "rows": true,
+            "columns": true
+          },
+          "grandTotal": {
+            "row": true,
+            "column": true
+          }
+        }
+      }
+    }
+  ],
   "name": "Analyze Twi_Data_place_name_empty_filled_prepared",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 65,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667396558876
+    "lastModifiedOn": 1667396813656
   },
   "creationTag": {
     "versionNumber": 0,
