@@ -17,9 +17,7 @@
       "type": "string",
       "stddev": false,
       "first": false
-    }
-  ],
-  "values": [
+    },
     {
       "last": false,
       "max": false,
@@ -35,17 +33,19 @@
       "min": false,
       "countDistinct": false,
       "avg": false,
-      "$selected": true,
+      "$selected": false,
       "stddev": false,
       "first": false
-    },
+    }
+  ],
+  "values": [
     {
       "last": false,
       "max": true,
       "firstLastNotNull": false,
       "column": "count",
       "count": false,
-      "$idx": 1,
+      "$idx": 0,
       "sum": false,
       "concat": false,
       "type": "bigint",
@@ -103,6 +103,10 @@
         "columns": [
           {
             "name": "geopoint",
+            "type": "string"
+          },
+          {
+            "name": "place_name_clean",
             "type": "string"
           },
           {
