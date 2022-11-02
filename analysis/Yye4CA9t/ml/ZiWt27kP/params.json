@@ -1,11 +1,2180 @@
 {
-  "weight": {},
+  "weight": {
+    "weightMethod": "CLASS_WEIGHT"
+  },
   "time": {
     "enabled": false,
     "ascending": true
   },
   "calibration": {
     "calibrationMethod": "NO_CALIBRATION"
+  },
+  "preprocessing": {
+    "feature_selection_params": {
+      "method": "NONE",
+      "random_forest_params": {
+        "n_trees": 30,
+        "depth": 10,
+        "n_features": 25
+      },
+      "lasso_params": {
+        "alpha": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ],
+        "cross_validate": true
+      },
+      "pca_params": {
+        "n_features": 25,
+        "variance_proportion": 0.9
+      },
+      "correlation_params": {
+        "min_abs_correlation": 0.0,
+        "max_abs_correlation": 1.0,
+        "n_features": 25
+      },
+      "custom_params": {
+        "code": "# type your code here"
+      }
+    },
+    "preprocessingFitSampleRatio": 1.0,
+    "preprocessingFitSampleSeed": 1337,
+    "target_remapping": [
+      {
+        "sourceValue": "Al Farwaniya",
+        "mappedValue": 0,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "قرادان والحفيرة و الفوار, دولة الكويت",
+        "mappedValue": 1,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Amsterdam, The Netherlands",
+        "mappedValue": 2,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Eastern, Kingdom of Saudi Arabia",
+        "mappedValue": 3,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shamiya",
+        "mappedValue": 4,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Helton, England",
+        "mappedValue": 5,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Islamic Republic of Iran",
+        "mappedValue": 6,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Phuket, Thailand",
+        "mappedValue": 7,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bangkok Noi, Bangkok",
+        "mappedValue": 8,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "West El Jelleb - Ash Shadadiay",
+        "mappedValue": 9,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hawa Caffe - هوى كافيه",
+        "mappedValue": 10,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشرق, دولة الكويت",
+        "mappedValue": 11,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "هديه, دولة الكويت",
+        "mappedValue": 12,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Four Seasons, MO",
+        "mappedValue": 13,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Islington, London",
+        "mappedValue": 14,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ابو حليفه, دولة الكويت",
+        "mappedValue": 15,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "القبله, دولة الكويت",
+        "mappedValue": 16,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشويخ الصحية, دولة الكويت",
+        "mappedValue": 17,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Manchester, England",
+        "mappedValue": 18,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "منطقة المطار, دولة الكويت",
+        "mappedValue": 19,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Seychelles",
+        "mappedValue": 20,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bahrain",
+        "mappedValue": 21,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "فهد الاحمد, دولة الكويت",
+        "mappedValue": 22,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "London, Ontario",
+        "mappedValue": 23,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصليبخات, دولة الكويت",
+        "mappedValue": 24,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الخفجي, المملكة العربية السعودية",
+        "mappedValue": 25,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Subhan",
+        "mappedValue": 26,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "صباح الناصر, دولة الكويت",
+        "mappedValue": 27,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Egypt Lake-Leto, FL",
+        "mappedValue": 28,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Khafji, Kingdom of Saudi Arabia",
+        "mappedValue": 29,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "London, England",
+        "mappedValue": 30,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Four Seasons Kuwait",
+        "mappedValue": 31,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Orlando, FL",
+        "mappedValue": 32,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Azad Kashmir Province, Pakistan",
+        "mappedValue": 33,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "منطقة المعارض جنوب خيطان, دولة الكويت",
+        "mappedValue": 34,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "3 - “5 -“6",
+        "mappedValue": 35,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Maqbara",
+        "mappedValue": 36,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Dhaher",
+        "mappedValue": 37,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "زهراء, دولة الكويت",
+        "mappedValue": 38,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "The Capital",
+        "mappedValue": 39,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Jabriyah",
+        "mappedValue": 40,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Dulay Al Zunif",
+        "mappedValue": 41,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "home sweet home 💙💕",
+        "mappedValue": 42,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Sabah Al Nasser",
+        "mappedValue": 43,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Tokyo-to, Japan",
+        "mappedValue": 44,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hafr Al Batin, Kingdom of Saudi Arabia",
+        "mappedValue": 45,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Ardhiya Government Uses",
+        "mappedValue": 46,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Qairawan - South Doha",
+        "mappedValue": 47,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "شمال غرب الصليبخات, دولة الكويت",
+        "mappedValue": 48,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Egaila",
+        "mappedValue": 49,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "United Arab Emirates",
+        "mappedValue": 50,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Tulsa, OK",
+        "mappedValue": 51,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الرقعي, دولة الكويت",
+        "mappedValue": 52,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "French Polynesia",
+        "mappedValue": 53,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sikrab",
+        "mappedValue": 54,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مدينة جابر الأحمد, دولة الكويت",
+        "mappedValue": 55,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "LENÔTRE (لونوتر)",
+        "mappedValue": 56,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "صباح السالم, دولة الكويت",
+        "mappedValue": 57,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العديليه, دولة الكويت",
+        "mappedValue": 58,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "نافورة الكوت",
+        "mappedValue": 59,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Starbucks (ستاربكس)",
+        "mappedValue": 60,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Qibla",
+        "mappedValue": 61,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Madrid, Spain",
+        "mappedValue": 62,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Nuzha walkaway",
+        "mappedValue": 63,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kifan",
+        "mappedValue": 64,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العمريه, دولة الكويت",
+        "mappedValue": 65,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Oregon, USA",
+        "mappedValue": 66,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الرابية, دولة الكويت",
+        "mappedValue": 67,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Adailiya",
+        "mappedValue": 68,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الرقه, دولة الكويت",
+        "mappedValue": 69,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Surra",
+        "mappedValue": 70,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "بنيد القار, دولة الكويت",
+        "mappedValue": 71,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Ardhiya Storage Zone",
+        "mappedValue": 72,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Doha, Qatar",
+        "mappedValue": 73,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "South Al Sabahiya",
+        "mappedValue": 74,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Wafra Farms",
+        "mappedValue": 75,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Dasma",
+        "mappedValue": 76,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ضاحيه عبد الله السالم, دولة الكويت",
+        "mappedValue": 77,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "غرناطة, دولة الكويت",
+        "mappedValue": 78,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mishrif",
+        "mappedValue": 79,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Jahra, Koweït",
+        "mappedValue": 80,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shuwaikh Industrial",
+        "mappedValue": 81,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Faizabad, India",
+        "mappedValue": 82,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kaprun, Austria",
+        "mappedValue": 83,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Italy",
+        "mappedValue": 84,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kerala, India",
+        "mappedValue": 85,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الخالديه, دولة الكويت",
+        "mappedValue": 86,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الري, دولة الكويت",
+        "mappedValue": 87,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Andalous",
+        "mappedValue": 88,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Fahaheel",
+        "mappedValue": 89,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الاحمدى, دولة الكويت",
+        "mappedValue": 90,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Riyadh, Kingdom of Saudi Arabia",
+        "mappedValue": 91,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "حطين, دولة الكويت",
+        "mappedValue": 92,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Vatican City",
+        "mappedValue": 93,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Farwaniyya",
+        "mappedValue": 94,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Ghornata",
+        "mappedValue": 95,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مزارع الوفرة, دولة الكويت",
+        "mappedValue": 96,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Riqqa",
+        "mappedValue": 97,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جنوب الشعيبة, دولة الكويت",
+        "mappedValue": 98,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Los Angeles, CA",
+        "mappedValue": 99,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Ashbeliah",
+        "mappedValue": 100,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Salam",
+        "mappedValue": 101,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Los Angeles♡",
+        "mappedValue": 102,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفردوس | AlFerdous",
+        "mappedValue": 103,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Surra",
+        "mappedValue": 104,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mumbai, India",
+        "mappedValue": 105,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bneid Al Qar",
+        "mappedValue": 106,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Salwa | سلوى",
+        "mappedValue": 107,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "القصور, دولة الكويت",
+        "mappedValue": 108,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Ardiya Small Industrial",
+        "mappedValue": 109,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشريط الساحلى ب, دولة الكويت",
+        "mappedValue": 110,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Portugal",
+        "mappedValue": 111,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "International Falls, MN",
+        "mappedValue": 112,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Morocco",
+        "mappedValue": 113,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Área do Aeroporto, Koweit",
+        "mappedValue": 114,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kingdom of Saudi Arabia",
+        "mappedValue": 115,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Rumaithiya",
+        "mappedValue": 116,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصليبية الزراعية, دولة الكويت",
+        "mappedValue": 117,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مدينة صباح الأحمد البحرية - لؤلؤة الخيران, دولة الكويت",
+        "mappedValue": 118,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mina Abdulla",
+        "mappedValue": 119,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Torino, Piemonte",
+        "mappedValue": 120,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Jaber Al Ahmad City",
+        "mappedValue": 121,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Dhaka, Bangladesh",
+        "mappedValue": 122,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Khaldiya",
+        "mappedValue": 123,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "صبحان, دولة الكويت",
+        "mappedValue": 124,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشويخ الصناعية, دولة الكويت",
+        "mappedValue": 125,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جمهوری اسلامی ایران",
+        "mappedValue": 126,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "بيان, دولة الكويت",
+        "mappedValue": 127,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "India",
+        "mappedValue": 128,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shaab",
+        "mappedValue": 129,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الرحاب, دولة الكويت",
+        "mappedValue": 130,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشدادية, دولة الكويت",
+        "mappedValue": 131,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المملكة العربية السعودية",
+        "mappedValue": 132,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Nirmal, India",
+        "mappedValue": 133,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Masayel",
+        "mappedValue": 134,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Dubai, United Arab Emirates",
+        "mappedValue": 135,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفنطاس, دولة الكويت",
+        "mappedValue": 136,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sulaibiya Residential",
+        "mappedValue": 137,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Coast Strip A",
+        "mappedValue": 138,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "امغرة, دولة الكويت",
+        "mappedValue": 139,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "شمال الشعيبه, دولة الكويت",
+        "mappedValue": 140,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Longford, England",
+        "mappedValue": 141,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kuwait Towers | أبراج الكويت",
+        "mappedValue": 142,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kensington, London",
+        "mappedValue": 143,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Lucknow, India",
+        "mappedValue": 144,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Egypt, PA",
+        "mappedValue": 145,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Zeil am Main, Deutschland",
+        "mappedValue": 146,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Mirqab",
+        "mappedValue": 147,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العارضية استعمالات حكومية, دولة الكويت",
+        "mappedValue": 148,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Coast Strip B",
+        "mappedValue": 149,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Mansouriyah",
+        "mappedValue": 150,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Coast Strip C",
+        "mappedValue": 151,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shaddadiyah",
+        "mappedValue": 152,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Islamische Republik Iran",
+        "mappedValue": 153,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشويخ الإدارية, دولة الكويت",
+        "mappedValue": 154,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Italia",
+        "mappedValue": 155,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Khaitan",
+        "mappedValue": 156,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Yahra",
+        "mappedValue": 157,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الجابريه, دولة الكويت",
+        "mappedValue": 158,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Aeraifjan",
+        "mappedValue": 159,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "قرطبه, دولة الكويت",
+        "mappedValue": 160,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ميناء الشويخ, دولة الكويت",
+        "mappedValue": 161,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kuwait International Airport (KWI)",
+        "mappedValue": 162,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الخيران السكنية, دولة الكويت",
+        "mappedValue": 163,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الدعية, دولة الكويت",
+        "mappedValue": 164,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shuwaikh Educational",
+        "mappedValue": 165,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Nahda - South Sulibikhat",
+        "mappedValue": 166,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "North Al Shuaiba",
+        "mappedValue": 167,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Loft",
+        "mappedValue": 168,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Yarmouk",
+        "mappedValue": 169,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشاميه, دولة الكويت",
+        "mappedValue": 170,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "القرين, دولة الكويت",
+        "mappedValue": 171,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "North Sinai, Egypt",
+        "mappedValue": 172,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الرميثيه, دولة الكويت",
+        "mappedValue": 173,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mubarak Al Kabeer",
+        "mappedValue": 174,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mina Doha",
+        "mappedValue": 175,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Abdullah Al Mubarak - West Jleeb",
+        "mappedValue": 176,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "George, South Africa",
+        "mappedValue": 177,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Qusour",
+        "mappedValue": 178,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Trapani, Sicily",
+        "mappedValue": 179,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "The Green Belt",
+        "mappedValue": 180,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Abdulla Al Salem",
+        "mappedValue": 181,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Amman, Hashemite Kingdom of Jordan",
+        "mappedValue": 182,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المسايل, دولة الكويت",
+        "mappedValue": 183,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "أم الهيمان, دولة الكويت",
+        "mappedValue": 184,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sulaibiya Agricultural",
+        "mappedValue": 185,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Sabah Al Salem University City",
+        "mappedValue": 186,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفروانيه, دولة الكويت",
+        "mappedValue": 187,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shuwaikh Port",
+        "mappedValue": 188,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "The Coffe Bean \u0026 Tea Leaf",
+        "mappedValue": 189,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفردوس, دولة الكويت",
+        "mappedValue": 190,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Jahra Camps",
+        "mappedValue": 191,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Chandigarh, India",
+        "mappedValue": 192,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المملكة المغربية",
+        "mappedValue": 193,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mallala, South Australia",
+        "mappedValue": 194,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Accra, Ghana",
+        "mappedValue": 195,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Landgraaf, Nederland",
+        "mappedValue": 196,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Toby’s Estate",
+        "mappedValue": 197,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hashemite Kingdom of Jordan",
+        "mappedValue": 198,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kuwait City",
+        "mappedValue": 199,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Venice, LA",
+        "mappedValue": 200,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Shuwaikh Administration",
+        "mappedValue": 201,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Failaka Island",
+        "mappedValue": 202,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جابر العلى, دولة الكويت",
+        "mappedValue": 203,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جنوب الصباحية, دولة الكويت",
+        "mappedValue": 204,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "عريفجان, دولة الكويت",
+        "mappedValue": 205,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مملكة البحرين",
+        "mappedValue": 206,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Riqai",
+        "mappedValue": 207,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "İstanbul, Türkiye",
+        "mappedValue": 208,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المنصوريه, دولة الكويت",
+        "mappedValue": 209,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Abu Ftaira",
+        "mappedValue": 210,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Mahboula",
+        "mappedValue": 211,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Doha Residential",
+        "mappedValue": 212,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ضليع الزنيف, دولة الكويت",
+        "mappedValue": 213,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Salon, France",
+        "mappedValue": 214,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المنقف, دولة الكويت",
+        "mappedValue": 215,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "السالمية, دولة الكويت",
+        "mappedValue": 216,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "منفذ النويصيب",
+        "mappedValue": 217,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Sabah Al Salem",
+        "mappedValue": 218,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Rio de Janeiro, Brazil",
+        "mappedValue": 219,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشويخ التعليمية, دولة الكويت",
+        "mappedValue": 220,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الضجيج - جنوب الفروانية, دولة الكويت",
+        "mappedValue": 221,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ميناء عبدالله, دولة الكويت",
+        "mappedValue": 222,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفيحاء, دولة الكويت",
+        "mappedValue": 223,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Las Vegas, NV",
+        "mappedValue": 224,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sulaibikhat",
+        "mappedValue": 225,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Abu Dhabi, United Arab Emirates",
+        "mappedValue": 226,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Paris, France",
+        "mappedValue": 227,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Umm Al Naml Island",
+        "mappedValue": 228,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Rai",
+        "mappedValue": 229,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "أبو فطيرة, دولة الكويت",
+        "mappedValue": 230,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hitteen",
+        "mappedValue": 231,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مبارك الكبير, دولة الكويت",
+        "mappedValue": 232,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "النزهه, دولة الكويت",
+        "mappedValue": 233,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Daiyah",
+        "mappedValue": 234,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشريط الساحلى أ, دولة الكويت",
+        "mappedValue": 235,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "اليرموك, دولة الكويت",
+        "mappedValue": 236,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Istanbul, Turkey",
+        "mappedValue": 237,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مطعم الريف اللبناني",
+        "mappedValue": 238,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "حولى, دولة الكويت",
+        "mappedValue": 239,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الوسطى, دولة الكويت",
+        "mappedValue": 240,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hawalli, Koweït",
+        "mappedValue": 241,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الدسمه, دولة الكويت",
+        "mappedValue": 242,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Venezia, Veneto",
+        "mappedValue": 243,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مشرف, دولة الكويت",
+        "mappedValue": 244,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bayan",
+        "mappedValue": 245,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Jaber Al Ali",
+        "mappedValue": 246,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Marina, CA",
+        "mappedValue": 247,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "República Islámica de Irán",
+        "mappedValue": 248,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جامعة الشدادية",
+        "mappedValue": 249,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصباحيه, دولة الكويت",
+        "mappedValue": 250,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الظهر, دولة الكويت",
+        "mappedValue": 251,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bidar, India",
+        "mappedValue": 252,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "كيفان, دولة الكويت",
+        "mappedValue": 253,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "89 Mall",
+        "mappedValue": 254,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Starbucks | ستاربكس",
+        "mappedValue": 255,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مقبرة, دولة الكويت",
+        "mappedValue": 256,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Provincia Oriental, Reino de Arabia Saudi",
+        "mappedValue": 257,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الجهراء, دولة الكويت",
+        "mappedValue": 258,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Qadisiyah",
+        "mappedValue": 259,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Royaume dArabie Saoudite",
+        "mappedValue": 260,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hadiya",
+        "mappedValue": 261,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Siddiq",
+        "mappedValue": 262,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Airport Area",
+        "mappedValue": 263,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Medellin, Central Visayas",
+        "mappedValue": 264,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "حولي, دولة الكويت",
+        "mappedValue": 265,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "النويصيب, دولة الكويت",
+        "mappedValue": 266,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "غرب الجليب - الشدادية, دولة الكويت",
+        "mappedValue": 267,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الروضه, دولة الكويت",
+        "mappedValue": 268,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Ahmady",
+        "mappedValue": 269,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Jleeb Al Shiyoukh",
+        "mappedValue": 270,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Suhayed Al Awazim - Airport",
+        "mappedValue": 271,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Makkah Al Mukarrama, Kingdom of Saudi Arabia",
+        "mappedValue": 272,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Line Cafe",
+        "mappedValue": 273,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ابو الحصاني",
+        "mappedValue": 274,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشرقي, المملكة العربية السعودية",
+        "mappedValue": 275,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Wusta",
+        "mappedValue": 276,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "معسكرات الجهراء, دولة الكويت",
+        "mappedValue": 277,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Seattle, WA",
+        "mappedValue": 278,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "القادسيه, دولة الكويت",
+        "mappedValue": 279,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الأندلس, دولة الكويت",
+        "mappedValue": 280,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Julayah - Al Zour - Sulah - Al Dubaiy",
+        "mappedValue": 281,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Udangudi, India",
+        "mappedValue": 282,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الوفرة السكنية, دولة الكويت",
+        "mappedValue": 283,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "السكراب, دولة الكويت",
+        "mappedValue": 284,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Singapore",
+        "mappedValue": 285,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Wafra Residential",
+        "mappedValue": 286,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Adan",
+        "mappedValue": 287,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Marbella, Spain",
+        "mappedValue": 288,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Qortuba",
+        "mappedValue": 289,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مدينة صباح السالم الجامعية, دولة الكويت",
+        "mappedValue": 290,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "République islamique dIran",
+        "mappedValue": 291,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العارضية الحرفية, دولة الكويت",
+        "mappedValue": 292,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Mangaf",
+        "mappedValue": 293,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Zahra",
+        "mappedValue": 294,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Saad Al Abdullah",
+        "mappedValue": 295,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشهداء, دولة الكويت",
+        "mappedValue": 296,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ديوان ابوحدرية العبيوي المطيري",
+        "mappedValue": 297,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "دسمان, دولة الكويت",
+        "mappedValue": 298,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Khairan Residential",
+        "mappedValue": 299,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفحيحيل, دولة الكويت",
+        "mappedValue": 300,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Rawda",
+        "mappedValue": 301,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Ferdous",
+        "mappedValue": 302,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "شويخ - شارع الكافيهات",
+        "mappedValue": 303,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mubarakpur, India",
+        "mappedValue": 304,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hilton Beach, Ontario",
+        "mappedValue": 305,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Um Al Hayman",
+        "mappedValue": 306,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kwuait",
+        "mappedValue": 307,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المقوع, دولة الكويت",
+        "mappedValue": 308,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "دولة الكويت",
+        "mappedValue": 309,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العقيلة, دولة الكويت",
+        "mappedValue": 310,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Mubarakiya Camps",
+        "mappedValue": 311,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Ardiya city",
+        "mappedValue": 312,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Omariya",
+        "mappedValue": 313,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "إشبيلية, دولة الكويت",
+        "mappedValue": 314,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Ahmady City",
+        "mappedValue": 315,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الجليعة والزور وصولة والضباعية, دولة الكويت",
+        "mappedValue": 316,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "صديق, دولة الكويت",
+        "mappedValue": 317,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Iraq",
+        "mappedValue": 318,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sharq",
+        "mappedValue": 319,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Province de lEst, Royaume dArabie Saoudite",
+        "mappedValue": 320,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الفنيطيس, دولة الكويت",
+        "mappedValue": 321,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الواجهة البحرية, دولة الكويت",
+        "mappedValue": 322,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bengaluru South, India",
+        "mappedValue": 323,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Salmiyah",
+        "mappedValue": 324,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sabahiya",
+        "mappedValue": 325,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Abu Halifa",
+        "mappedValue": 326,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Republic of the Philippines",
+        "mappedValue": 327,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Starbucks",
+        "mappedValue": 328,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جزيرة فيلكا, دولة الكويت",
+        "mappedValue": 329,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مكة المكرمة, المملكة العربية السعودية",
+        "mappedValue": 330,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Qurain",
+        "mappedValue": 331,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العارضية, دولة الكويت",
+        "mappedValue": 332,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "The Sea Front",
+        "mappedValue": 333,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Rabiya",
+        "mappedValue": 334,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "عبدالله المبارك - غ جليب الشيوخ, دولة الكويت",
+        "mappedValue": 335,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "South Australia, Australia",
+        "mappedValue": 336,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Qibla, Koweït",
+        "mappedValue": 337,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Amghara",
+        "mappedValue": 338,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "خيطان, دولة الكويت",
+        "mappedValue": 339,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hyde Park, IN",
+        "mappedValue": 340,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "South Al Shoaib",
+        "mappedValue": 341,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصبيه",
+        "mappedValue": 342,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Kuwait",
+        "mappedValue": 343,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "South West Sulibikhat",
+        "mappedValue": 344,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Nuwaiseeb",
+        "mappedValue": 345,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Sri Lanka",
+        "mappedValue": 346,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hawalli",
+        "mappedValue": 347,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العدان, دولة الكويت",
+        "mappedValue": 348,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shuhada",
+        "mappedValue": 349,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "United Kingdom",
+        "mappedValue": 350,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Caribou, ME",
+        "mappedValue": 351,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصليبية الصناعية 2, دولة الكويت",
+        "mappedValue": 352,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Fahaheel Block 10",
+        "mappedValue": 353,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Sabah Al Ahmad Marine City - Loloat Al Khairan",
+        "mappedValue": 354,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "معسكرات المباركية, دولة الكويت",
+        "mappedValue": 355,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Hawally",
+        "mappedValue": 356,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ضاحية مبارك العبدالله, دولة الكويت",
+        "mappedValue": 357,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "النهضة - شرق الصليبخات, دولة الكويت",
+        "mappedValue": 358,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Magwa",
+        "mappedValue": 359,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Noord-Holland, Nederland",
+        "mappedValue": 360,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "The Palms, Queensland",
+        "mappedValue": 361,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشويخ, دولة الكويت",
+        "mappedValue": 362,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العارضية مخازن, دولة الكويت",
+        "mappedValue": 363,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "اغث كلاس",
+        "mappedValue": 364,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "صهيد العوازم - المطار, دولة الكويت",
+        "mappedValue": 365,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "ميناء الدوحة, دولة الكويت",
+        "mappedValue": 366,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "South East Jahra",
+        "mappedValue": 367,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جليعه",
+        "mappedValue": 368,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shuwaikh Health",
+        "mappedValue": 369,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصليبية السكنية, دولة الكويت",
+        "mappedValue": 370,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشعب, دولة الكويت",
+        "mappedValue": 371,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "السره, دولة الكويت",
+        "mappedValue": 372,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "السلام, دولة الكويت",
+        "mappedValue": 373,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Austria",
+        "mappedValue": 374,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Indore, India",
+        "mappedValue": 375,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shuwaikh",
+        "mappedValue": 376,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Alahmadi (Ahmadi)",
+        "mappedValue": 377,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Qaradan - Al Hafirah - Al Fawwar",
+        "mappedValue": 378,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "القيروان - جنوب الدوحة, دولة الكويت",
+        "mappedValue": 379,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Faiha",
+        "mappedValue": 380,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Mubarak Al Abdullah",
+        "mappedValue": 381,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الدوحه السكنية, دولة الكويت",
+        "mappedValue": 382,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Dschahra",
+        "mappedValue": 383,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Dasman",
+        "mappedValue": 384,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Salwa",
+        "mappedValue": 385,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Farwaniyah",
+        "mappedValue": 386,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Blackpool, England",
+        "mappedValue": 387,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "العاصمه, دولة الكويت",
+        "mappedValue": 388,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Prestige - The Avenues",
+        "mappedValue": 389,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Fintas",
+        "mappedValue": 390,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Egypt",
+        "mappedValue": 391,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Paddington, London",
+        "mappedValue": 392,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Pakistan",
+        "mappedValue": 393,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Giza, Egypt",
+        "mappedValue": 394,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الحزام الاخضر, دولة الكويت",
+        "mappedValue": 395,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Rehab",
+        "mappedValue": 396,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sulaibiya Industrial 1",
+        "mappedValue": 397,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Sulaibiya Industrial 2",
+        "mappedValue": 398,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Jahra",
+        "mappedValue": 399,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "مدينة الأحمدي, دولة الكويت",
+        "mappedValue": 400,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المهبولة, دولة الكويت",
+        "mappedValue": 401,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Fahad Al Ahmad",
+        "mappedValue": 402,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Fnaitees",
+        "mappedValue": 403,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الصليبية الصناعية 1, دولة الكويت",
+        "mappedValue": 404,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Shaheed Park | حديقة الشهيد",
+        "mappedValue": 405,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "City of London, London",
+        "mappedValue": 406,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Bangladesh",
+        "mappedValue": 407,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "سلوى, دولة الكويت",
+        "mappedValue": 408,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Dhajeej - South Farwaniya",
+        "mappedValue": 409,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "الشريط الساحلى ج, دولة الكويت",
+        "mappedValue": 410,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Nuzha",
+        "mappedValue": 411,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "جليب الشيوخ, دولة الكويت",
+        "mappedValue": 412,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "Al Ardhiya",
+        "mappedValue": 413,
+        "sampleFreq": 1
+      },
+      {
+        "sourceValue": "المرقاب, دولة الكويت",
+        "mappedValue": 414,
+        "sampleFreq": 1
+      }
+    ],
+    "per_feature": {
+      "place_name_clean": {
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "min_samples": 10,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200,
+        "nb_bins_hashing": 1048576,
+        "hash_whole_categories": true,
+        "dummy_drop": "NONE",
+        "impact_method": "M_ESTIMATOR",
+        "impact_m": 10,
+        "impact_kfold": true,
+        "impact_kfold_k": 5,
+        "impact_kfold_seed": 1337,
+        "ordinal_order": "COUNT",
+        "ordinal_ascending": false,
+        "ordinal_default_mode": "HIGHEST",
+        "ordinal_default_value": 0,
+        "frequency_default_mode": "EXPLICIT",
+        "frequency_default_value": 0.0,
+        "frequency_normalized": true,
+        "role": "TARGET",
+        "type": "CATEGORY",
+        "state": {
+          "userModified": false,
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "FreeText"
+        },
+        "customHandlingCode": "",
+        "customProcessorWantsMatrix": false,
+        "sendToInput": "main"
+      }
+    },
+    "feature_generation": {
+      "pairwise_linear": {
+        "behavior": "DISABLED"
+      },
+      "polynomial_combinations": {
+        "behavior": "DISABLED"
+      },
+      "manual_interactions": {
+        "interactions": []
+      },
+      "numericals_clustering": {
+        "k": 0,
+        "all_features": false,
+        "input_features": [],
+        "behavior": "DISABLED"
+      },
+      "categoricals_count_transformer": {
+        "all_features": false,
+        "input_features": [],
+        "behavior": "DISABLED"
+      }
+    }
   },
   "assertionsParams": {
     "assertions": []
@@ -32,7 +2201,2736 @@
       "maxReadUncompressedBytes": -1
     }
   },
+  "modeling": {
+    "skipExpensiveReports": false,
+    "random_forest_regression": {
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          100
+        ],
+        "range": {
+          "min": 80,
+          "max": 200,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "n_jobs": 1,
+      "max_tree_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          8
+        ],
+        "range": {
+          "min": 10,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "selection_mode": "auto",
+      "max_features": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_feature_prop": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.3
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "enabled": false
+    },
+    "random_forest_classification": {
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          100
+        ],
+        "range": {
+          "min": 80,
+          "max": 200,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "n_jobs": 4,
+      "max_tree_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          6,
+          11
+        ],
+        "range": {
+          "min": 6,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "selection_mode": "auto",
+      "max_features": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_feature_prop": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.3
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "enabled": true
+    },
+    "extra_trees": {
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          100
+        ],
+        "range": {
+          "min": 50,
+          "max": 150,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "n_jobs": 4,
+      "max_tree_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          8
+        ],
+        "range": {
+          "min": 6,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "selection_mode": "auto",
+      "max_features": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_feature_prop": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.3
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "enabled": false
+    },
+    "gbt_classification": {
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          100
+        ],
+        "range": {
+          "min": 80,
+          "max": 300,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "selection_mode": "auto",
+      "max_features": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          0
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_feature_prop": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.3
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.05,
+          "max": 0.5,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "loss": {
+        "values": {
+          "deviance": {
+            "enabled": true
+          },
+          "exponential": {
+            "enabled": false
+          }
+        }
+      },
+      "enabled": false
+    },
+    "gbt_regression": {
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          100
+        ],
+        "range": {
+          "min": 80,
+          "max": 300,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "selection_mode": "auto",
+      "max_features": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          0
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_feature_prop": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.3
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.05,
+          "max": 0.5,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "loss": {
+        "values": {
+          "huber": {
+            "enabled": false
+          },
+          "lad": {
+            "enabled": false
+          },
+          "ls": {
+            "enabled": true
+          }
+        }
+      },
+      "enabled": false
+    },
+    "decision_tree_classification": {
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 3,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "criterion": {
+        "values": {
+          "entropy": {
+            "enabled": false
+          },
+          "gini": {
+            "enabled": true
+          }
+        }
+      },
+      "splitter": {
+        "values": {
+          "best": {
+            "enabled": true
+          },
+          "random": {
+            "enabled": false
+          }
+        }
+      },
+      "enabled": false
+    },
+    "decision_tree_regression": {
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 3,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_samples_leaf": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "criterion": {
+        "values": {
+          "entropy": {
+            "enabled": false
+          },
+          "gini": {
+            "enabled": true
+          }
+        }
+      },
+      "splitter": {
+        "values": {
+          "best": {
+            "enabled": true
+          },
+          "random": {
+            "enabled": false
+          }
+        }
+      },
+      "enabled": false
+    },
+    "ridge_regression": {
+      "alphaMode": "MANUAL",
+      "alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.1,
+          1.0,
+          3.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 3.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "enabled": false
+    },
+    "lasso_regression": {
+      "alphaMode": "AUTO_CV",
+      "alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "enabled": false
+    },
+    "leastsquare_regression": {
+      "n_jobs": 2,
+      "enabled": false
+    },
+    "sgd_regression": {
+      "epsilon": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.01
+        ],
+        "range": {
+          "min": 0.01,
+          "max": 0.1,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "loss": {
+        "values": {
+          "huber": {
+            "enabled": false
+          },
+          "squared_loss": {
+            "enabled": true
+          }
+        }
+      },
+      "penalty": {
+        "values": {
+          "elasticnet": {
+            "enabled": false
+          },
+          "l1": {
+            "enabled": true
+          },
+          "l2": {
+            "enabled": false
+          }
+        }
+      },
+      "alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.001,
+          1.0E-4,
+          1.0E-5
+        ],
+        "range": {
+          "min": 1.0E-5,
+          "max": 0.001,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "l1_ratio": 0.15,
+      "max_iter": 1000,
+      "tol": 0.001,
+      "n_jobs": 2,
+      "enabled": false
+    },
+    "sgd_classifier": {
+      "loss": {
+        "values": {
+          "log": {
+            "enabled": true
+          },
+          "modified_huber": {
+            "enabled": false
+          }
+        }
+      },
+      "penalty": {
+        "values": {
+          "elasticnet": {
+            "enabled": false
+          },
+          "l1": {
+            "enabled": true
+          },
+          "l2": {
+            "enabled": false
+          }
+        }
+      },
+      "alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.001,
+          1.0E-4,
+          1.0E-5
+        ],
+        "range": {
+          "min": 1.0E-5,
+          "max": 0.001,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "l1_ratio": 0.15,
+      "max_iter": 1000,
+      "tol": 0.001,
+      "n_jobs": 2,
+      "enabled": false
+    },
+    "knn": {
+      "k": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 3,
+          "max": 7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "distance_weighting": false,
+      "algorithm": "auto",
+      "p": 2,
+      "leaf_size": 30,
+      "enabled": false
+    },
+    "logistic_regression": {
+      "multi_class": "multinomial",
+      "penalty": {
+        "values": {
+          "l1": {
+            "enabled": false
+          },
+          "l2": {
+            "enabled": true
+          }
+        }
+      },
+      "C": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ],
+        "range": {
+          "min": 0.01,
+          "max": 100.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "n_jobs": 2,
+      "enabled": true
+    },
+    "neural_network": {
+      "layer_sizes": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          10
+        ],
+        "range": {
+          "min": 8,
+          "max": 16,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.001,
+      "batch_size": 200,
+      "auto_batch": true,
+      "max_iter": 200,
+      "seed": 1337,
+      "tol": 1.0E-4,
+      "early_stopping": false,
+      "validation_fraction": 0.1,
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "epsilon": 1.0E-8,
+      "learning_rate": "constant",
+      "power_t": 0.5,
+      "momentum": 0.8,
+      "nesterovs_momentum": true,
+      "shuffle": true,
+      "learning_rate_init": 0.001,
+      "enabled": false
+    },
+    "svc_classifier": {
+      "C": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "gamma": {
+        "values": {
+          "auto": {
+            "enabled": false
+          },
+          "custom": {
+            "enabled": false
+          },
+          "scale": {
+            "enabled": true
+          }
+        }
+      },
+      "custom_gamma": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.001
+        ],
+        "range": {
+          "min": 1.0E-4,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "kernel": {
+        "values": {
+          "linear": {
+            "enabled": false
+          },
+          "poly": {
+            "enabled": false
+          },
+          "rbf": {
+            "enabled": true
+          },
+          "sigmoid": {
+            "enabled": false
+          }
+        }
+      },
+      "coef0": 0.0,
+      "tol": 0.001,
+      "max_iter": -1,
+      "enabled": false
+    },
+    "svm_regression": {
+      "C": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "gamma": {
+        "values": {
+          "auto": {
+            "enabled": false
+          },
+          "custom": {
+            "enabled": false
+          },
+          "scale": {
+            "enabled": true
+          }
+        }
+      },
+      "custom_gamma": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          0.001
+        ],
+        "range": {
+          "min": 1.0E-4,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "kernel": {
+        "values": {
+          "linear": {
+            "enabled": false
+          },
+          "poly": {
+            "enabled": false
+          },
+          "rbf": {
+            "enabled": true
+          },
+          "sigmoid": {
+            "enabled": false
+          }
+        }
+      },
+      "coef0": 0.0,
+      "tol": 0.001,
+      "max_iter": -1,
+      "enabled": false
+    },
+    "lars_params": {
+      "max_features": 0,
+      "K": 100,
+      "enabled": false
+    },
+    "lightgbm_regression": {
+      "boosting_type": {
+        "values": {
+          "gbdt": {
+            "enabled": true
+          },
+          "goss": {
+            "enabled": false
+          }
+        }
+      },
+      "num_leaves": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          31
+        ],
+        "range": {
+          "min": 20,
+          "max": 500,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1,
+          0.2
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.6,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          75
+        ],
+        "range": {
+          "min": 50,
+          "max": 200,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_split_gain": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_child_weight": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.001
+        ],
+        "range": {
+          "min": 0.001,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_child_samples": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          10,
+          30
+        ],
+        "range": {
+          "min": 1,
+          "max": 100,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "colsample_bytree": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.7,
+          0.9
+        ],
+        "range": {
+          "min": 0.5,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "reg_alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "reg_lambda": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "early_stopping": true,
+      "early_stopping_rounds": 4,
+      "random_state": 1337,
+      "n_jobs": 4,
+      "max_depth": -1,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "use_bagging": false,
+      "enabled": false
+    },
+    "lightgbm_classification": {
+      "boosting_type": {
+        "values": {
+          "gbdt": {
+            "enabled": true
+          },
+          "goss": {
+            "enabled": false
+          }
+        }
+      },
+      "num_leaves": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          31
+        ],
+        "range": {
+          "min": 20,
+          "max": 500,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1,
+          0.2
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.6,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "n_estimators": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          75
+        ],
+        "range": {
+          "min": 50,
+          "max": 200,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_split_gain": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_child_weight": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.001
+        ],
+        "range": {
+          "min": 0.001,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_child_samples": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          10,
+          30
+        ],
+        "range": {
+          "min": 1,
+          "max": 100,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "colsample_bytree": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.7,
+          0.9
+        ],
+        "range": {
+          "min": 0.5,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "reg_alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "reg_lambda": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "early_stopping": true,
+      "early_stopping_rounds": 4,
+      "random_state": 1337,
+      "n_jobs": 4,
+      "max_depth": -1,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "use_bagging": false,
+      "enabled": false
+    },
+    "xgboost": {
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.2
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 0.5,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "gamma": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "min_child_weight": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.5,
+          "max": 5.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_delta_step": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "EXPLICIT",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "subsample": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.5,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "colsample_bytree": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.5,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "colsample_bylevel": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.5,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "lambda": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.01,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "booster": {
+        "values": {
+          "dart": {
+            "enabled": false
+          },
+          "gbtree": {
+            "enabled": true
+          }
+        }
+      },
+      "objective": {
+        "values": {
+          "binary_logistic": {
+            "enabled": false
+          },
+          "multi_softprob": {
+            "enabled": false
+          },
+          "reg_gamma": {
+            "enabled": false
+          },
+          "reg_linear": {
+            "enabled": true
+          },
+          "reg_logistic": {
+            "enabled": false
+          }
+        }
+      },
+      "n_estimators": 300,
+      "nthread": 4,
+      "scale_pos_weight": 1.0,
+      "base_score": 0.5,
+      "impute_missing": false,
+      "missing": 0.0,
+      "cpu_tree_method": "auto",
+      "gpu_tree_method": "gpu_exact",
+      "enable_cuda": false,
+      "seed": 1337,
+      "enable_early_stopping": true,
+      "early_stopping_rounds": 4,
+      "enabled": false
+    },
+    "multi_layer_perceptron_regression": {
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.2
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "hidden_layers": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 1,
+          "max": 1024,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "enabled": false
+    },
+    "multi_layer_perceptron_classification": {
+      "learning_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.2
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "hidden_layers": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          5
+        ],
+        "range": {
+          "min": 1,
+          "max": 1024,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "enabled": false
+    },
+    "deep_learning_sparkling": {
+      "enabled": false,
+      "hidden": [
+        10,
+        10
+      ],
+      "activation": "RECTIFIER",
+      "epochs": 10.0,
+      "l1": 0.0,
+      "l2": 0.0,
+      "max_w2": -1.0,
+      "dropout": false,
+      "input_dropout_ratio": 0.0,
+      "hidden_dropout_ratios": [
+        0.1,
+        0.2
+      ],
+      "use_adaptative": true,
+      "rho": 0.99,
+      "epsilon": 1.0E-8,
+      "rate": 0.005,
+      "rate_annealing": 1.0E-6,
+      "rate_decay": 1.0,
+      "momentum_start": 0.0,
+      "momentum_ramp": 1000000.0,
+      "momentum_stable": 0.0
+    },
+    "gbm_sparkling": {
+      "enabled": false,
+      "learn_rate": 0.1,
+      "ntrees": 50,
+      "max_depth": 5,
+      "min_rows": 10,
+      "family": "AUTO",
+      "nbins": 20,
+      "nbins_cats": 1024,
+      "balance_classes": false,
+      "max_after_balance_size": 2.0,
+      "tweedie_power": 1.5
+    },
+    "glm_sparkling": {
+      "enabled": false,
+      "family": "gaussian",
+      "alpha": 0.5,
+      "lambda": 0.0,
+      "max_iter": 100,
+      "beta_epsilon": 1.0E-4,
+      "tweedie_variance_power": 0.5
+    },
+    "rf_sparkling": {
+      "enabled": false,
+      "ntrees": 50,
+      "max_depth": 5,
+      "min_rows": 1,
+      "mtries": -1,
+      "sample_rate": 0.6666,
+      "nbins": 20,
+      "nbins_cats": 1024
+    },
+    "nb_sparkling": {
+      "enabled": false,
+      "laplace": 0.0,
+      "min_std_dev": 0.001
+    },
+    "mllib_naive_bayes": {
+      "enabled": false,
+      "lambda": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      }
+    },
+    "mllib_logit": {
+      "enabled": false,
+      "max_iter": 30,
+      "reg_param": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.001,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "enet_param": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      }
+    },
+    "mllib_linreg": {
+      "enabled": false,
+      "max_iter": 30,
+      "reg_param": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.001,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LOGARITHMIC"
+        }
+      },
+      "enet_param": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 1.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      }
+    },
+    "mllib_dt": {
+      "enabled": false,
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 8,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_bins": 32,
+      "max_memory_mb": 256,
+      "min_info_gain": 0.0,
+      "min_instance_per_node": 1,
+      "cache_node_ids": false,
+      "checkpoint_interval": 10
+    },
+    "mllib_rf": {
+      "enabled": false,
+      "cache_node_ids": false,
+      "checkpoint_interval": 10,
+      "impurity": "gini",
+      "max_bins": 32,
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 8,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_memory_mb": 256,
+      "min_info_gain": 0.0,
+      "min_instance_per_node": 1,
+      "seed": 1337,
+      "subsampling_rate": 1.0,
+      "num_trees": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          20
+        ],
+        "range": {
+          "min": 10,
+          "max": 50,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "subset_strategy": "auto",
+      "step_size": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.05,
+          "max": 0.5,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      }
+    },
+    "mllib_gbt": {
+      "enabled": false,
+      "cache_node_ids": false,
+      "checkpoint_interval": 10,
+      "impurity": "gini",
+      "max_bins": 32,
+      "max_depth": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 8,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "max_memory_mb": 256,
+      "min_info_gain": 0.0,
+      "min_instance_per_node": 1,
+      "seed": 1337,
+      "subsampling_rate": 1.0,
+      "num_trees": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          20
+        ],
+        "range": {
+          "min": 10,
+          "max": 50,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "subset_strategy": "auto",
+      "step_size": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.05,
+          "max": 0.5,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      }
+    },
+    "vertica_linear_regression": {
+      "enabled": false,
+      "maxIterations": 200,
+      "epsilon": 1.0E-6,
+      "optimizer": "BFGS"
+    },
+    "vertica_logistic_regression": {
+      "enabled": false,
+      "maxIterations": 200,
+      "epsilon": 1.0E-6,
+      "optimizer": "BFGS"
+    },
+    "custom_python": [],
+    "plugin_python": {},
+    "keras": {
+      "epochs": 10,
+      "batchSize": 32,
+      "trainOnAllData": true,
+      "stepsPerEpoch": 100,
+      "shuffleData": true,
+      "cachePreprocessedData": true,
+      "perGPUMemoryFraction": 0.5,
+      "gpuAllowGrowth": false,
+      "advancedFitMode": false,
+      "enabled": false,
+      "kerasInputs": [
+        "main"
+      ],
+      "useGPU": false,
+      "gpuList": [
+        0
+      ]
+    },
+    "trivial_identity_timeseries": {
+      "enabled": false
+    },
+    "seasonal_naive_timeseries": {
+      "season_length": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "enabled": false
+    },
+    "autoarima_timeseries": {
+      "m": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "information_criterion": {
+        "values": {
+          "aic": {
+            "enabled": true
+          },
+          "aicc": {
+            "enabled": false
+          },
+          "bic": {
+            "enabled": false
+          },
+          "hqic": {
+            "enabled": false
+          },
+          "oob": {
+            "enabled": false
+          }
+        }
+      },
+      "test": {
+        "values": {
+          "adf": {
+            "enabled": false
+          },
+          "kpss": {
+            "enabled": true
+          },
+          "pp": {
+            "enabled": false
+          }
+        }
+      },
+      "seasonal_test": {
+        "values": {
+          "ch": {
+            "enabled": false
+          },
+          "ocsb": {
+            "enabled": true
+          }
+        }
+      },
+      "method": {
+        "values": {
+          "basinhopping": {
+            "enabled": false
+          },
+          "bfgs": {
+            "enabled": false
+          },
+          "cg": {
+            "enabled": false
+          },
+          "lbfgs": {
+            "enabled": true
+          },
+          "ncg": {
+            "enabled": false
+          },
+          "newton": {
+            "enabled": false
+          },
+          "nm": {
+            "enabled": false
+          },
+          "powell": {
+            "enabled": false
+          }
+        }
+      },
+      "start_p": 2,
+      "max_p": 5,
+      "max_d": 2,
+      "start_q": 2,
+      "max_q": 5,
+      "start_P": 1,
+      "max_P": 2,
+      "max_D": 1,
+      "start_Q": 1,
+      "max_Q": 2,
+      "max_order": 5,
+      "stationary": false,
+      "enabled": false
+    },
+    "seasonal_loess_timeseries": {
+      "period": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 2
+        },
+        "values": [
+          2
+        ],
+        "range": {
+          "min": 2,
+          "max": 7,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "seasonal": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 3
+        },
+        "values": [
+          7
+        ],
+        "range": {
+          "min": 3,
+          "max": 31,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "trend": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 3
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 11,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "low_pass": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 3
+        },
+        "values": [
+          3
+        ],
+        "range": {
+          "min": 3,
+          "max": 11,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "seasonal_deg": {
+        "values": {
+          "0": {
+            "enabled": false
+          },
+          "1": {
+            "enabled": true
+          }
+        }
+      },
+      "trend_deg": {
+        "values": {
+          "0": {
+            "enabled": false
+          },
+          "1": {
+            "enabled": true
+          }
+        }
+      },
+      "low_pass_deg": {
+        "values": {
+          "0": {
+            "enabled": false
+          },
+          "1": {
+            "enabled": true
+          }
+        }
+      },
+      "seasonal_jump": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "trend_jump": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "low_pass_jump": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "auto_trend": true,
+      "auto_low_pass": true,
+      "enabled": false
+    },
+    "gluonts_npts_timeseries": {
+      "context_length": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 10,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "kernel_type": {
+        "values": {
+          "exponential": {
+            "enabled": true
+          },
+          "uniform": {
+            "enabled": false
+          }
+        }
+      },
+      "exp_kernel_weights": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          1.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 10.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "feature_scale": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23
+        },
+        "values": [
+          1000.0
+        ],
+        "range": {
+          "min": 0.1,
+          "max": 10000.0,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "full_context": true,
+      "use_seasonal_model": true,
+      "use_default_time_features": true,
+      "seed": 1337,
+      "enabled": false
+    },
+    "gluonts_simple_feed_forward_timeseries": {
+      "context_length": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 1,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "distr_output": {
+        "values": {
+          "GaussianOutput": {
+            "enabled": false
+          },
+          "NegativeBinomialOutput": {
+            "enabled": false
+          },
+          "StudentTOutput": {
+            "enabled": true
+          }
+        }
+      },
+      "batch_normalization": {
+        "values": {
+          "false": {
+            "enabled": true
+          },
+          "true": {
+            "enabled": false
+          }
+        }
+      },
+      "mean_scaling": {
+        "values": {
+          "false": {
+            "enabled": false
+          },
+          "true": {
+            "enabled": true
+          }
+        }
+      },
+      "num_hidden_dimensions": [
+        40,
+        40
+      ],
+      "full_context": true,
+      "num_parallel_samples": 100,
+      "batch_size": 32,
+      "epochs": 10,
+      "auto_num_batches_per_epoch": true,
+      "num_batches_per_epoch": 50,
+      "seed": 1337,
+      "enabled": false
+    },
+    "gluonts_deepar_timeseries": {
+      "context_length": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 10,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "num_layers": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          2
+        ],
+        "range": {
+          "min": 1,
+          "max": 4,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "num_cells": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          40
+        ],
+        "range": {
+          "min": 30,
+          "max": 50,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "cell_type": {
+        "values": {
+          "gru": {
+            "enabled": false
+          },
+          "lstm": {
+            "enabled": true
+          }
+        }
+      },
+      "dropoutcell_type": {
+        "values": {
+          "RNNZoneoutCell": {
+            "enabled": false
+          },
+          "VariationalDropoutCell": {
+            "enabled": false
+          },
+          "VariationalZoneoutCell": {
+            "enabled": false
+          },
+          "ZoneoutCell": {
+            "enabled": true
+          }
+        }
+      },
+      "dropout_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.05,
+          "max": 0.2,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "alpha": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 0.2,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "beta": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "values": [
+          0.0
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 0.2,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "distr_output": {
+        "values": {
+          "GaussianOutput": {
+            "enabled": false
+          },
+          "NegativeBinomialOutput": {
+            "enabled": false
+          },
+          "StudentTOutput": {
+            "enabled": true
+          }
+        }
+      },
+      "full_context": true,
+      "scaling": true,
+      "num_parallel_samples": 100,
+      "minimum_scale": 1.0E-10,
+      "batch_size": 32,
+      "epochs": 10,
+      "auto_num_batches_per_epoch": true,
+      "num_batches_per_epoch": 50,
+      "seed": 1337,
+      "enabled": false
+    },
+    "gluonts_transformer_timeseries": {
+      "context_length": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 10,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "model_dim": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          32
+        ],
+        "range": {
+          "min": 16,
+          "max": 64,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "inner_ff_dim_scale": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          4
+        ],
+        "range": {
+          "min": 1,
+          "max": 10,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "num_heads": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          8
+        ],
+        "range": {
+          "min": 4,
+          "max": 8,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "dropout_rate": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1.0E-23,
+          "max": 1.0
+        },
+        "values": [
+          0.1
+        ],
+        "range": {
+          "min": 0.05,
+          "max": 0.2,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "distr_output": {
+        "values": {
+          "GaussianOutput": {
+            "enabled": false
+          },
+          "NegativeBinomialOutput": {
+            "enabled": false
+          },
+          "StudentTOutput": {
+            "enabled": true
+          }
+        }
+      },
+      "full_context": true,
+      "num_parallel_samples": 100,
+      "batch_size": 32,
+      "epochs": 10,
+      "auto_num_batches_per_epoch": true,
+      "num_batches_per_epoch": 50,
+      "seed": 1337,
+      "enabled": false
+    },
+    "gluonts_mqcnn_timeseries": {
+      "context_length": {
+        "gridMode": "EXPLICIT",
+        "randomMode": "RANGE",
+        "limit": {
+          "min": 1
+        },
+        "values": [
+          1
+        ],
+        "range": {
+          "min": 10,
+          "max": 20,
+          "nbValues": 3,
+          "scaling": "LINEAR"
+        }
+      },
+      "full_context": true,
+      "seed": 1337,
+      "decoder_mlp_dim_seq": [
+        30
+      ],
+      "channels_seq": [
+        30,
+        30,
+        30
+      ],
+      "dilation_seq": [
+        1,
+        3,
+        5
+      ],
+      "kernel_size_seq": [
+        7,
+        3,
+        3
+      ],
+      "scaling": true,
+      "batch_size": 32,
+      "epochs": 10,
+      "auto_num_batches_per_epoch": true,
+      "num_batches_per_epoch": 50,
+      "enabled": false
+    },
+    "gluonts_gpu_params": {
+      "useGPU": false,
+      "gpuList": [
+        0
+      ]
+    },
+    "grid_search": true,
+    "gridSearchParams": {
+      "mode": "KFOLD",
+      "splitRatio": 0.8,
+      "shuffleIterations": 1,
+      "nFolds": 5,
+      "cvSeed": 1337,
+      "stratified": true,
+      "strategy": "GRID",
+      "bayesianOptimizer": "SCIKIT_OPTIMIZE",
+      "randomized": true,
+      "seed": 1337,
+      "nIter": 0,
+      "nIterRandom": 5,
+      "timeout": 0,
+      "nJobs": 4,
+      "distributed": false,
+      "nContainers": 4,
+      "foldOffset": true
+    },
+    "metrics": {
+      "customMetrics": [],
+      "evaluationMetric": "ROC_AUC",
+      "customEvaluationMetricGIB": true,
+      "customEvaluationMetricNeedsProba": false,
+      "costMatrixWeights": {
+        "tpGain": 1.0,
+        "tnGain": 0.0,
+        "fpGain": -0.3,
+        "fnGain": 0.0
+      },
+      "liftPoint": 0.4,
+      "unitaryTreatmentCost": 0.0,
+      "unitaryConversionBenefit": 0.0
+    },
+    "custom_mllib": [],
+    "max_ensemble_nodes_serialized": 6000
+  },
+  "predictionType": "MULTICLASS",
   "targetVariable": "place_name_clean",
+  "splitParams": {
+    "ttPolicy": "SPLIT_SINGLE_DATASET",
+    "ssdSplitMode": "RANDOM",
+    "splitBeforePrepare": true,
+    "ssdSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "ssdTrainingRatio": 0.8,
+    "ssdStratified": false,
+    "ssdSeed": 1337,
+    "testOnLargerValues": true,
+    "streamAll": false,
+    "kfold": false,
+    "nFolds": 5,
+    "instanceIdRefresher": 0,
+    "subSamplingSeed": 1337
+  },
   "id": "ZiWt27kP",
   "initiator": "admin",
   "diagnosticsSettings": {
