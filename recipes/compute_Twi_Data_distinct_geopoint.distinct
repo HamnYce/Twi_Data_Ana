@@ -1,50 +1,28 @@
 {
   "preFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "screen_name",
+          "col": "is_weekend",
+          "num": 0,
+          "operator": "contains"
+        }
+      ]
+    },
+    "$status": {},
     "distinct": false,
     "enabled": false
   },
   "keys": [
     {
-      "column": "screen_name"
-    },
-    {
-      "column": "date_time"
-    },
-    {
-      "column": "is_weekend"
-    },
-    {
-      "column": "lang"
-    },
-    {
-      "column": "app"
-    },
-    {
-      "column": "tweet_text_clean"
-    },
-    {
-      "column": "text_first_link"
-    },
-    {
-      "column": "text_second_link"
-    },
-    {
-      "column": "text_third_link"
-    },
-    {
       "column": "geopoint"
-    },
-    {
-      "column": "place_name"
-    },
-    {
-      "column": "governorate"
-    },
-    {
-      "column": "districts"
     }
   ],
-  "globalCount": false,
+  "globalCount": true,
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -81,6 +59,34 @@
   },
   "outputColumnNameOverrides": {},
   "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "screen_name",
+          "col": "is_weekend",
+          "num": 0,
+          "operator": "contains"
+        }
+      ]
+    },
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "geopoint",
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
