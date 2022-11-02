@@ -235,11 +235,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 249,
+    "versionNumber": 253,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667373396199
+    "lastModifiedOn": 1667397300017
   },
   "creationTag": {
     "versionNumber": 0,
@@ -259,9 +259,16 @@
         "createdOn": 0,
         "items": [
           {
-            "done": false,
+            "done": true,
             "text": "use geopoint/place_name combo with greatest count as the one to fill in blank",
             "createdOn": 1667342951180,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "repeat geopoint/place_name combo to place_name_tweet_text",
+            "createdOn": 1667397299230,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
