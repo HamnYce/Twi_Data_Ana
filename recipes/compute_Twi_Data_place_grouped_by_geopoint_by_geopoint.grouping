@@ -21,7 +21,7 @@
   ],
   "values": [
     {
-      "last": false,
+      "last": true,
       "max": false,
       "firstLastNotNull": false,
       "column": "place_name_clean",
@@ -109,6 +109,10 @@
           },
           {
             "name": "place_name_clean_first",
+            "type": "string"
+          },
+          {
+            "name": "place_name_clean_last",
             "type": "string"
           },
           {
