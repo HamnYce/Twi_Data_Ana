@@ -6,60 +6,86 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "geopoint",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "column2": {
+            "name": "geopoint",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "screen_name",
+      "type": "string",
       "table": 0
     },
     {
       "name": "date_time",
+      "type": "date",
       "table": 0
     },
     {
       "name": "is_weekend",
+      "type": "boolean",
       "table": 0
     },
     {
       "name": "lang",
+      "type": "string",
       "table": 0
     },
     {
       "name": "app",
+      "type": "string",
       "table": 0
     },
     {
       "name": "tweet_text_clean",
+      "type": "string",
       "table": 0
     },
     {
       "name": "geopoint",
+      "type": "string",
       "table": 0
     },
     {
       "name": "place_name_clean",
+      "type": "string",
       "table": 0
     },
     {
       "name": "governorate",
+      "type": "string",
       "table": 0
     },
     {
       "name": "districts",
+      "type": "string",
       "table": 0
     },
     {
       "name": "place_name_tweet",
+      "type": "string",
       "table": 0
     },
     {
       "name": "place_name_clean_first",
-      "table": 1
-    },
-    {
-      "name": "count_max",
+      "type": "string",
       "table": 1
     }
   ],
@@ -120,5 +146,63 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "screen_name",
+            "type": "string"
+          },
+          {
+            "name": "date_time",
+            "type": "date"
+          },
+          {
+            "name": "is_weekend",
+            "type": "boolean"
+          },
+          {
+            "name": "lang",
+            "type": "string"
+          },
+          {
+            "name": "app",
+            "type": "string"
+          },
+          {
+            "name": "tweet_text_clean",
+            "type": "string"
+          },
+          {
+            "name": "geopoint",
+            "type": "string"
+          },
+          {
+            "name": "place_name_clean",
+            "type": "string"
+          },
+          {
+            "name": "governorate",
+            "type": "string"
+          },
+          {
+            "name": "districts",
+            "type": "string"
+          },
+          {
+            "name": "place_name_tweet",
+            "type": "string"
+          },
+          {
+            "name": "place_name_clean_first",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
