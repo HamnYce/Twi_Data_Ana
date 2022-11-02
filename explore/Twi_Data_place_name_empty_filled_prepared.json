@@ -39,7 +39,19 @@
         "timeout": -1,
         "filter": {
           "distinct": false,
-          "enabled": false
+          "enabled": true,
+          "uiData": {
+            "mode": "\u0026\u0026",
+            "conditions": [
+              {
+                "input": "geopoint",
+                "operator": "\u003d\u003d [string]",
+                "col": "is_weekend",
+                "string": "POINT(46.67543 29.098112)",
+                "num": 0.0
+              }
+            ]
+          }
         },
         "partitionSelectionMethod": "ALL",
         "latestPartitionsN": 1,
@@ -54,7 +66,7 @@
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 1667378196333
+      "_refreshTrigger": 1667378536949
     },
     "vizSampling": {
       "selection": {
