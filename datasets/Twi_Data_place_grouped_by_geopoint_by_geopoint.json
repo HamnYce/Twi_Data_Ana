@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667377129085
+    "lastModifiedOn": 1667377139658
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,6 +88,7 @@
   "schema": {
     "columns": [
       {"name":"geopoint","type":"string"},
+      {"name":"count_max","type":"bigint"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
