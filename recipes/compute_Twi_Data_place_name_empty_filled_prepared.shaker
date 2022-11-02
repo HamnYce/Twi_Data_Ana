@@ -35,58 +35,55 @@
   "steps": [
     {
       "preview": false,
-      "metaType": "PROCESSOR",
+      "name": "place_name_clean",
+      "metaType": "GROUP",
       "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "referenceColumn": "governorate",
-        "columns": [
-          "place_name_clean_first"
-        ],
-        "reorderAction": "BEFORE_COLUMN",
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "if(place_name_clean \u003d\u003d \u0027\u0027,\nplace_name_clean_first,\nplace_name_clean)",
-        "column": "place_name_filled"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnReorder",
-      "params": {
-        "referenceColumn": "place_name_clean",
-        "columns": [
-          "place_name_filled"
-        ],
-        "reorderAction": "BEFORE_COLUMN",
-        "appliesTo": "SINGLE_COLUMN"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "place_name_clean_first",
-          "place_name_clean"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
-      },
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnReorder",
+          "params": {
+            "referenceColumn": "place_name_clean",
+            "columns": [
+              "place_name_clean_first"
+            ],
+            "reorderAction": "BEFORE_COLUMN",
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnsSelector",
+          "params": {
+            "columns": [
+              "place_name_clean"
+            ],
+            "keep": false,
+            "appliesTo": "SINGLE_COLUMN"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "place_name_clean_first",
+                "to": "place_name_clean"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        }
+      ],
       "alwaysShowComment": false
     }
   ],
