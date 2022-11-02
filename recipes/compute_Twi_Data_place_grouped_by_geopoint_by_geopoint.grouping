@@ -17,7 +17,9 @@
       "type": "string",
       "stddev": false,
       "first": false
-    },
+    }
+  ],
+  "values": [
     {
       "last": false,
       "max": false,
@@ -31,21 +33,19 @@
       "concatDistinct": false,
       "sum2": false,
       "min": false,
-      "countDistinct": false,
+      "countDistinct": true,
       "avg": false,
       "$selected": false,
       "stddev": false,
       "first": false
-    }
-  ],
-  "values": [
+    },
     {
       "last": false,
       "max": true,
       "firstLastNotNull": false,
       "column": "count",
       "count": false,
-      "$idx": 0,
+      "$idx": 1,
       "sum": false,
       "concat": false,
       "type": "bigint",
@@ -59,7 +59,7 @@
       "first": false
     }
   ],
-  "globalCount": true,
+  "globalCount": false,
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -106,15 +106,11 @@
             "type": "string"
           },
           {
-            "name": "place_name_clean",
-            "type": "string"
-          },
-          {
-            "name": "count_max",
+            "name": "place_name_clean_distinct",
             "type": "bigint"
           },
           {
-            "name": "count",
+            "name": "count_max",
             "type": "bigint"
           }
         ],
