@@ -3,14 +3,14 @@
     "mode": "ALL"
   },
   "explorationSampling": {
-    "_refreshTrigger": 1667326060583,
+    "_refreshTrigger": 1667394351751,
     "selection": {
       "filter": {
         "distinct": false,
         "enabled": false
       },
       "latestPartitionsN": 1,
-      "maxRecords": 2800000,
+      "maxRecords": 10000,
       "maxRecordsForDisplay": -1,
       "ordering": {
         "rules": [],
@@ -21,7 +21,7 @@
       "maxStoredBytes": -1,
       "targetRatio": 0.05,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "RANDOM_FIXED_RATIO",
+      "samplingMethod": "RANDOM_FIXED_NB_EXACT",
       "timeout": -1
     },
     "autoRefreshSample": false
@@ -95,7 +95,7 @@
               "envMode": "INHERIT"
             },
             "stopOnError": true,
-            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    text \u003d row[\u0027tweet_text_clean\u0027]\n\n    split_text \u003d text.split()\n\n    if len(split_text) \u003d\u003d 1:\n        return split_text[0]\n    elif \u0027at\u0027 in split_text:\n        start_index \u003d split_text.index(\u0027at\u0027) + 1\n        end_index \u003d start_index + 2\n        if \u0027in\u0027 in split_text:\n            end_index \u003d split_text.index(\u0027in\u0027)\n        return \u0027 \u0027.join(split_text[start_index : end_index])\n    \n    return \u0027\u0027",
+            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    text \u003d row[\u0027tweet_text_clean\u0027]\n\n    split_text \u003d text.split()\n\n    if len(split_text) \u003d\u003d 1:\n        return split_text[0]\n    elif \u0027at\u0027 in split_text:\n        start_index \u003d split_text.index(\u0027at\u0027) + 1\n        end_index \u003d start_index + 2\n        if \u0027in\u0027 in split_text:\n            end_index \u003d split_text.index(\u0027in\u0027)\n        return \u0027 \u0027.join(split_text[start_index : end_index])\n    elif \u0027@\u0027 in split_text or \u0027(@\u0027 in split_text:\n        try:\n            start_index \u003d split_text.index(\u0027@\u0027) + 1\n        except:\n            start_index \u003d split_text.index(\u0027(@\u0027) + 1\n        return \u0027 \u0027.join(split_text[start_index : start_index + 2])\n    elif \u0027@)\u0027 in split_text:\n        end_index \u003d split_text.index(\u0027@)\u0027)\n        return \u0027 \u0027.join(split_index[max(end_index - 3, 0): end_index])\n    return \u0027\u0027",
             "useKernel": false,
             "column": "place_name_tweet",
             "sourceColumnsList": [],
@@ -168,6 +168,21 @@
           "alwaysShowComment": false
         }
       ],
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "geopoint",
+        "columns": [
+          "place_name_tweet"
+        ],
+        "reorderAction": "BEFORE_COLUMN",
+        "appliesTo": "SINGLE_COLUMN"
+      },
       "alwaysShowComment": false
     }
   ],
