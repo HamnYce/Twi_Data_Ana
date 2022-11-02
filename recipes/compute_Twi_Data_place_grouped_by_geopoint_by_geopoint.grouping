@@ -5,7 +5,18 @@
   },
   "keys": [
     {
-      "column": "geopoint"
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "last": false,
+      "max": false,
+      "column": "geopoint",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,29 +26,35 @@
       "firstLastNotNull": false,
       "column": "place_name_clean",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
       "first": false
     },
     {
       "last": false,
-      "max": false,
+      "max": true,
       "firstLastNotNull": false,
       "column": "count",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": true,
       "stddev": false,
       "first": false
     }
@@ -78,8 +95,28 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "geopoint",
+            "type": "string"
+          },
+          {
+            "name": "count_max",
+            "type": "bigint"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
