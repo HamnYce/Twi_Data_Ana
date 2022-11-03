@@ -46,6 +46,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Twi_Data_place_name_tweet_normalized_prepared",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -235,11 +244,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 258,
+    "versionNumber": 259,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667435476045
+    "lastModifiedOn": 1667490172645
   },
   "creationTag": {
     "versionNumber": 0,
