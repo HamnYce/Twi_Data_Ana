@@ -28,6 +28,7 @@
   },
   "explorationFilters": [],
   "columnUseScientificNotationByName": {},
+  "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
   },
