@@ -135,17 +135,110 @@
       "copySelectionFromScript": true,
       "engineType": "LINO",
       "def": {
-        "type": "density_heat_map",
+        "type": "stacked_area",
         "variant": "normal",
-        "name": "New chart",
+        "name": "Avg of longitude by latitude",
         "userEditedName": false,
         "displayEchart": false,
         "useEChartsImplementation": false,
-        "genericDimension0": [],
+        "genericDimension0": [
+          {
+            "column": "latitude",
+            "type": "NUMERICAL",
+            "numParams": {
+              "mode": "FIXED_NB",
+              "nbBins": 30,
+              "binSize": 100,
+              "emptyBinsMode": "ZEROS"
+            },
+            "maxValues": 100,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of longitude, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of longitude, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
         "genericDimension1": [],
         "facetDimension": [],
-        "animationDimension": [],
-        "genericMeasures": [],
+        "animationDimension": [
+          {
+            "column": "date_time",
+            "type": "DATE",
+            "numParams": {
+              "emptyBinsMode": "AVERAGE"
+            },
+            "dateParams": {
+              "mode": "AUTOMATIC"
+            },
+            "maxValues": 0,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of longitude, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of longitude, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
+        "genericMeasures": [
+          {
+            "column": "longitude",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "showDisplayLabel": true,
+            "labelPosition": "BOTTOM",
+            "colorRules": []
+          }
+        ],
         "xDimension": [],
         "yDimension": [],
         "uaXDimension": [],
@@ -234,7 +327,7 @@
         "chartHeight": 200,
         "singleXAxis": true,
         "multiTooltips": false,
-        "animationFrameDuration": 3000,
+        "animationFrameDuration": 500,
         "animationRepeat": true,
         "colorOptions": {
           "singleColor": "#2678B1",
@@ -278,6 +371,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
+        "thumbnailData": "data:image/png;base64,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\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
