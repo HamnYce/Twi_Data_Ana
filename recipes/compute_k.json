@@ -3,7 +3,24 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "customConfig": {},
+    "customConfig": {
+      "type_of_pois": [
+        "shop",
+        "leisure",
+        "tourism",
+        "historic",
+        "amenity",
+        "railway"
+      ],
+      "request_by_batch": false,
+      "pois_enrichment": false,
+      "enrichment_keys": [
+        "brand",
+        "operator",
+        "name"
+      ],
+      "polygon_column": "geopoint"
+    },
     "containerSelection": {
       "containerMode": "INHERIT"
     }
@@ -37,11 +54,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667435553072
+    "lastModifiedOn": 1667470183429
   },
   "creationTag": {
     "versionNumber": 0,
