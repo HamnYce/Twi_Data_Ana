@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667154775563
+    "lastModifiedOn": 1667472182000
   },
   "creationTag": {
     "versionNumber": 0,
@@ -93,7 +93,7 @@
       {"name":"lang","type":"string"},
       {"name":"app","type":"string"},
       {"name":"tweet_text_clean","type":"string"},
-      {"name":"geopoint","type":"string"},
+      {"name":"geopoint","type":"geopoint"},
       {"name":"place_name","type":"string","meaning":"Text"},
       {"name":"governorate","type":"string"},
       {"name":"districts","type":"string"}
