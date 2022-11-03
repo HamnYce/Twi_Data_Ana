@@ -45,7 +45,7 @@
       },
       "basic": true,
       "countDistinct": true,
-      "advanced": false,
+      "advanced": true,
       "percentile": false,
       "validity": false,
       "updateOnAnalyzeBoxOpen": false,
