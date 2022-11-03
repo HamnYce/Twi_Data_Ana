@@ -1,0 +1,214 @@
+{
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "keys": [
+    {
+      "column": "date_time"
+    }
+  ],
+  "values": [
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "screen_name",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "is_weekend",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "lang",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "app",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "tweet_text_clean",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "geopoint",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "place_name_clean",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "governorate",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "districts",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "place_name_tweet",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "stddev": false,
+      "first": false
+    }
+  ],
+  "globalCount": true,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "enlargeYourBits": true,
+  "computedColumns": [],
+  "postFilter": {
+    "distinct": false,
+    "enabled": false
+  }
+}
