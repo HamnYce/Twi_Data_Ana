@@ -11,6 +11,9 @@
           "map": {
             "twi_data_18_19": {
               "repartition": 10
+            },
+            "Twitter_Data_Proper": {
+              "repartition": 10
             }
           }
         },
@@ -72,11 +75,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667673787364
+    "lastModifiedOn": 1667673796768
   },
   "creationTag": {
     "versionNumber": 0,
