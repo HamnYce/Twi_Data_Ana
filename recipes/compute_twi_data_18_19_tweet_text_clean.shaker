@@ -142,21 +142,6 @@
             ]
           },
           "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "ColumnReorder",
-          "params": {
-            "referenceColumn": "latitude",
-            "columns": [
-              "tweet_text"
-            ],
-            "reorderAction": "BEFORE_COLUMN",
-            "appliesTo": "SINGLE_COLUMN"
-          },
-          "alwaysShowComment": false
         }
       ],
       "alwaysShowComment": false
@@ -210,16 +195,20 @@
   },
   "columnWidthsByName": {
     "app": 300,
-    "tweet_text_cleaned_2": 165,
     "place_name": 300,
+    "lng": 134,
+    "latitude": 106,
+    "districts": 148,
+    "userid": 134,
+    "tweet_text_cleaned_2": 165,
     "tweet_text_cleaned": 150,
+    "Area": 148,
     "date_time": 183,
     "screen_name": 127,
     "governorate": 134,
-    "latitude": 106,
-    "districts": 148,
     "lang": 100,
     "tweet_text": 300,
+    "lat": 134,
     "longitude": 113
   },
   "sorting": [],
