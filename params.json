@@ -186,7 +186,7 @@
     },
     "dkuProperties": []
   },
-  "name": "Twitter Geo Analysis",
+  "name": "twi_ana_smull_ds",
   "imgPattern": 3,
   "metrics": {
     "probes": [],
@@ -243,11 +243,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 263,
+    "versionNumber": 264,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667673693779
+    "lastModifiedOn": 1667673699751
   },
   "creationTag": {
     "versionNumber": 0,
@@ -256,7 +256,7 @@
     },
     "lastModifiedOn": 1666312020068
   },
-  "shortDesc": "The project *Twitter Geo Analysis* was created by Hamad Bouabbas on Oct 21st 2022",
+  "shortDesc": "The project *Twitter Geo Analysis* was created by Hamad Bouabbas on Oct 21st 2022\nThe project *TWI_ANA_SMULL_DS* was copied from *TWITTERGEOANALYSIS* by Hamad Bouabbas on Nov 05th 2022",
   "tags": [
     "duplicated"
   ],
