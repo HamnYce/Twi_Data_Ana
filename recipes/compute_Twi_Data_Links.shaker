@@ -40,45 +40,13 @@
       "type": "ColumnsSelector",
       "params": {
         "columns": [
-          "is_weekend",
-          "lang",
-          "app",
-          "geopoint",
-          "place_name",
-          "governorate",
-          "districts"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FindReplace",
-      "params": {
-        "output": "",
-        "mapping": [
-          {
-            "from": "\u0027",
-            "to": ""
-          },
-          {
-            "from": "\"",
-            "to": ""
-          }
-        ],
-        "normalization": "EXACT",
-        "columns": [
+          "userid",
+          "date_time",
           "text_first_link",
-          "text_second_link",
-          "text_third_link"
+          "text_second_link"
         ],
-        "appliesTo": "COLUMNS",
-        "stopAfterFirstMatch": false,
-        "matching": "SUBSTRING"
+        "keep": true,
+        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     }
@@ -121,6 +89,8 @@
     "text_second_link": 135,
     "geopoint": 300,
     "tweet_text_clean": 300,
+    "userid": 134,
+    "Area": 148,
     "date_time": 204,
     "screen_name": 127,
     "governorate": 134,
