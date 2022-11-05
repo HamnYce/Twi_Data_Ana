@@ -43,26 +43,11 @@
           "preview": false,
           "metaType": "PROCESSOR",
           "disabled": false,
-          "type": "ColumnReorder",
-          "params": {
-            "referenceColumn": "lang",
-            "columns": [
-              "date_local"
-            ],
-            "reorderAction": "BEFORE_COLUMN",
-            "appliesTo": "SINGLE_COLUMN"
-          },
-          "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
           "type": "DateParser",
           "params": {
             "outCol": "date_local_parsed",
             "formats": [
-              "yyyy-MM-dd HH:mm:ss"
+              "MM/dd/yyyy HH:mm"
             ],
             "columns": [
               "date_local"
@@ -111,6 +96,21 @@
       "metaType": "GROUP",
       "disabled": false,
       "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "ColumnRenamer",
+          "params": {
+            "renamings": [
+              {
+                "from": "language",
+                "to": "lang"
+              }
+            ]
+          },
+          "alwaysShowComment": false
+        },
         {
           "preview": false,
           "metaType": "PROCESSOR",
@@ -170,73 +170,6 @@
           "alwaysShowComment": false
         }
       ],
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "name": "make screen_name into id",
-      "metaType": "GROUP",
-      "disabled": false,
-      "steps": [
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "ColumnReorder",
-          "params": {
-            "columns": [
-              "screen_name"
-            ],
-            "reorderAction": "AT_START",
-            "appliesTo": "SINGLE_COLUMN"
-          },
-          "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "ColumnsSelector",
-          "params": {
-            "columns": [
-              "user_id"
-            ],
-            "keep": false,
-            "appliesTo": "SINGLE_COLUMN"
-          },
-          "alwaysShowComment": false
-        }
-      ],
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "StringTransformer",
-      "params": {
-        "mode": "XML_UNESCAPE",
-        "columns": [
-          "tweet_text"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "truncate_limit": 0
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "country",
-          "hashtags"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
-      },
       "alwaysShowComment": false
     }
   ],
