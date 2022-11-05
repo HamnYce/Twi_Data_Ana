@@ -10,26 +10,7 @@
               "top": 0,
               "left": 0,
               "width": 5,
-              "height": 1
-            },
-            "clickAction": "DO_NOTHING",
-            "tileParams": {
-              "text": "Weekend",
-              "textAlign": "CENTER",
-              "isTransparent": true
-            },
-            "autoLoad": true,
-            "showTitle": "NO",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "TEXT",
-            "box": {
-              "top": 0,
-              "left": 5,
-              "width": 5,
-              "height": 1
+              "height": 3
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -39,52 +20,6 @@
             },
             "autoLoad": true,
             "showTitle": "NO",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": 1,
-              "left": 0,
-              "width": 5,
-              "height": 5
-            },
-            "clickAction": "DO_NOTHING",
-            "tileParams": {
-              "showXAxis": true,
-              "showYAxis": true,
-              "showLegend": false,
-              "showTooltips": true,
-              "autoPlayAnimation": true
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "YgMySZW",
-            "insightType": "chart",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": 1,
-              "left": 5,
-              "width": 5,
-              "height": 5
-            },
-            "clickAction": "DO_NOTHING",
-            "tileParams": {
-              "showXAxis": true,
-              "showYAxis": true,
-              "showLegend": false,
-              "showTooltips": true,
-              "autoPlayAnimation": true
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "NIxQYYn",
-            "insightType": "chart",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
           }
@@ -99,11 +34,11 @@
   "name": "Density Map of Geopoints",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 21,
+    "versionNumber": 22,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1666858581661
+    "lastModifiedOn": 1667670044615
   },
   "creationTag": {
     "versionNumber": 0,
