@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667472142396
+    "lastModifiedOn": 1667674323869
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,18 +88,16 @@
   "schema": {
     "columns": [
       {"name":"screen_name","type":"string"},
+      {"name":"userid","type":"double"},
+      {"name":"lang","type":"string"},
       {"name":"date_time","type":"date"},
       {"name":"is_weekend","type":"boolean"},
-      {"name":"lang","type":"string"},
-      {"name":"app","type":"string"},
+      {"name":"governorate","type":"string"},
+      {"name":"Area","type":"string"},
       {"name":"tweet_text_clean","type":"string"},
       {"name":"text_first_link","type":"string"},
       {"name":"text_second_link","type":"string"},
-      {"name":"text_third_link","type":"string"},
-      {"name":"geopoint","type":"geopoint"},
-      {"name":"place_name","type":"string","meaning":"Text"},
-      {"name":"governorate","type":"string"},
-      {"name":"districts","type":"string"}
+      {"name":"geopoint","type":"geopoint"}
     ],
     "userModified": true
   },
