@@ -77,7 +77,7 @@
         "columns": [
           {
             "name": "geopoint",
-            "type": "string"
+            "type": "geopoint"
           },
           {
             "name": "count",
