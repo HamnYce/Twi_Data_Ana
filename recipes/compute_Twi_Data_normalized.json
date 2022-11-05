@@ -11,6 +11,9 @@
           "map": {
             "Twi_Data_place_tweet_text": {
               "repartition": 10
+            },
+            "Twi_Data_no_links": {
+              "repartition": 10
             }
           }
         },
@@ -72,11 +75,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667674751954
+    "lastModifiedOn": 1667674756604
   },
   "creationTag": {
     "versionNumber": 0,
