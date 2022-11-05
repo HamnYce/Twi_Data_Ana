@@ -123,7 +123,7 @@
           "preview": false,
           "designTimeReport": {
             "report": {
-              "createdColumnCount": 4
+              "createdColumnCount": 3
             }
           },
           "metaType": "PROCESSOR",
@@ -158,10 +158,6 @@
               {
                 "from": "tweet_text_2",
                 "to": "text_second_link"
-              },
-              {
-                "from": "tweet_text_3",
-                "to": "text_third_link"
               }
             ]
           },
@@ -201,75 +197,6 @@
     },
     {
       "preview": false,
-      "name": "clean app",
-      "metaType": "GROUP",
-      "disabled": false,
-      "steps": [
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "Tokenizer",
-          "params": {
-            "inCol": "app",
-            "sortAlphabetically": false,
-            "normalize": false,
-            "language": "english",
-            "operation": "TO_JSON",
-            "clearStopWords": false,
-            "stem": false
-          },
-          "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "FindReplace",
-          "params": {
-            "output": "",
-            "mapping": [
-              {
-                "from": "\"",
-                "to": ""
-              }
-            ],
-            "normalization": "EXACT",
-            "columns": [
-              "app"
-            ],
-            "appliesTo": "SINGLE_COLUMN",
-            "stopAfterFirstMatch": false,
-            "matching": "SUBSTRING"
-          },
-          "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "PythonUDF",
-          "params": {
-            "mode": "CELL",
-            "envSelection": {
-              "envMode": "INHERIT"
-            },
-            "stopOnError": true,
-            "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    app \u003d row[\u0027app\u0027][1:-1].split(\u0027,\u0027)\n    if \u0027com\u0027 in app:\n        i \u003d app.index(\u0027com\u0027)\n        return app[i - 1]\n    return app[0]",
-            "useKernel": false,
-            "column": "app",
-            "sourceColumnsList": [],
-            "usePythonUnicode": true,
-            "vectorSize": 256,
-            "vectorize": false
-          },
-          "alwaysShowComment": false
-        }
-      ],
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
       "name": "Extracting Geopoint",
       "metaType": "GROUP",
       "disabled": false,
@@ -281,23 +208,8 @@
           "type": "GeoPointCreator",
           "params": {
             "out_column": "geopoint",
-            "lat_column": "latitude",
-            "lon_column": "longitude"
-          },
-          "alwaysShowComment": false
-        },
-        {
-          "preview": false,
-          "metaType": "PROCESSOR",
-          "disabled": false,
-          "type": "ColumnReorder",
-          "params": {
-            "referenceColumn": "latitude",
-            "columns": [
-              "geopoint"
-            ],
-            "reorderAction": "BEFORE_COLUMN",
-            "appliesTo": "SINGLE_COLUMN"
+            "lat_column": "lat",
+            "lon_column": "lng"
           },
           "alwaysShowComment": false
         },
@@ -308,8 +220,8 @@
           "type": "ColumnsSelector",
           "params": {
             "columns": [
-              "latitude",
-              "longitude"
+              "lat",
+              "lng"
             ],
             "keep": false,
             "appliesTo": "COLUMNS"
@@ -351,6 +263,7 @@
     "latitude": 141,
     "districts": 148,
     "tweet_text_clean": 300,
+    "userid": 134,
     "date_time": 204,
     "tweet_text_1": 134,
     "screen_name": 127,
@@ -363,14 +276,17 @@
     "text": 300,
     "lang": 100,
     "tweet_text": 300,
+    "lat": 134,
     "longitude": 141,
     "is_weekend": 100,
     "app": 300,
     "text_first_link": 225,
     "place_name": 246,
+    "lng": 134,
     "text_second_link": 135,
     "geopoint": 300,
-    "te": 100
+    "te": 100,
+    "Area": 148
   },
   "sorting": [],
   "globalSearchQuery": "",
