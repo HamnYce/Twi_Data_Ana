@@ -1,9 +1,12 @@
 {
   "tags": {
-    "change to visual recipe": {
-      "color": "#28aadd"
+    "duplicated": {
+      "color": "#3A85AD"
     },
     "deleted-recipe-editor": {},
-    "recipe-editor": {}
+    "recipe-editor": {},
+    "change to visual recipe": {
+      "color": "#28aadd"
+    }
   }
 }

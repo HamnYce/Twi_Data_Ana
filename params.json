@@ -187,7 +187,6 @@
     "dkuProperties": []
   },
   "name": "Twitter Geo Analysis",
-  "projectStatus": "Sandbox",
   "imgPattern": 3,
   "metrics": {
     "probes": [],
@@ -244,11 +243,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 262,
+    "versionNumber": 263,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1667508228111
+    "lastModifiedOn": 1667673693779
   },
   "creationTag": {
     "versionNumber": 0,
@@ -258,7 +257,9 @@
     "lastModifiedOn": 1666312020068
   },
   "shortDesc": "The project *Twitter Geo Analysis* was created by Hamad Bouabbas on Oct 21st 2022",
-  "tags": [],
+  "tags": [
+    "duplicated"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": [
