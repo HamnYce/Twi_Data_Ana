@@ -3,11 +3,7 @@
     "distinct": false,
     "enabled": false
   },
-  "keys": [
-    {
-      "column": "place_name_clean"
-    }
-  ],
+  "keys": [],
   "globalCount": false,
   "engineParams": {
     "hive": {
